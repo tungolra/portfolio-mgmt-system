@@ -1,0 +1,28 @@
+export const projects = [
+    {name: "Chatter[Box]", img: "", skills: ["MongoDB", "Express", "Node.js", "React", "Socket.io", "AWS S3"], details: ""},
+    {name: "Culinarian", img: "", skills: [], details: ""},
+    {name: "StudySmart", img: "", skills: [], details: ""},
+    {name: "Othello", img: "", skills: [], details: ""},
+    {name: "Book Collector", img: "", skills: [], details: ""},
+]
+export const skills = [
+    {skill: "HTML5", img: "./images/html.svg"},
+    {skill: "CSS3", img: "./images/css.svg"},
+    {skill: "Materialize", img: "./images/materialize.png"},
+    {skill: "Material UI", img: "./images/materialui.svg"},
+    {skill: "Bootstrap", img: "./images/bootstrap.svg"},
+    {skill: "React", img: "./images/react.svg"},
+    {skill: "Redux", img: "./images/redux.svg"},
+    {skill: "Node.js", img: "./images/node.svg"},
+    {skill: "Javascript", img: "./images/javascript.svg"},
+    {skill: "MongoDB", img: "./images/mongo.svg"},
+    {skill: "Mongoose ODM", img: "./images/mongoose.png"},
+    {skill: "PostgreSQL", img: "./images/postgresql.svg"},
+    {skill: "Heroku", img: "./images/heroku.svg"},
+    {skill: "Git", img: "./images/git.svg"},
+    {skill: "AWS S3", img: "./images/aws.svg"},
+    {skill: "Django", img: "./images/django.svg"},
+    {skill: "Python", img: "./images/python.svg"},
+    {skill: "Express", img: "./images/express.svg"},
+    {skill: "Socket.io", img: "./images/socket.svg"},
+]
