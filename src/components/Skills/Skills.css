@@ -1,4 +1,9 @@
 .skills-container { 
     height: auto;
     border: 1px solid black;
+    display: grid;
+    
+}
+.tech-icons { 
+    height: 50px;
 }
