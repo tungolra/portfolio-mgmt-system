@@ -1,0 +1,16 @@
+.header-container {
+  height: 30vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  width: auto;
+}
+.header-container > h3 {
+  text-align: center;
+}
+.header-container > h4 {
+  text-align: center;
+}
