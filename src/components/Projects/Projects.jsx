@@ -3,11 +3,7 @@ import "./Projects.css";
 import * as seed from "../../seed.js";
 
 export default function Projects() {
-  function handleClick() {
-    //if next...
-    //if previous...
-  }
-  // console.log(seed.projects)
+
   return (
     // credits and thanks to Christian Schaefer
     <>
@@ -16,6 +12,7 @@ export default function Projects() {
           <ol className="carousel__viewport">
             {seed.projects.map((project, idx) => (
               <li
+                key={idx}
                 id={`carousel__slide${idx + 1}`}
                 tabindex="0"
                 className="carousel__slide"

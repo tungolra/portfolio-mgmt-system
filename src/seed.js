@@ -4,11 +4,12 @@ export const projects = [
     img: "",
     skills: ["MongoDB", "Express", "Node.js", "React", "Socket.io", "AWS S3"],
     details: "",
+    site: "https://chatterbox-sei-55.herokuapp.com/",
   },
-  { name: "Culinarian", img: "", skills: [], details: "" },
-  { name: "StudySmart", img: "", skills: [], details: "" },
-  { name: "Othello", img: "", skills: [], details: "" },
-  { name: "Book Collector", img: "", skills: [], details: "" },
+  { name: "Culinarian", img: "", skills: [], details: "", site: "" },
+  { name: "StudySmart", img: "", skills: [], details: "", site: "" },
+  { name: "Othello", img: "", skills: [], details: "", site: "https://tungolra.github.io/Othello/" },
+  { name: "Book Collector", img: "", skills: [], details: "", site: "" },
 ];
 export const skills = [
   { skill: "HTML5", img: "https://i.imgur.com/xMMSqAc.png" },

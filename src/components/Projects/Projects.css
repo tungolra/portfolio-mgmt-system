@@ -84,17 +84,17 @@ ol, li {
   left: 0; */
   display: flex;
   overflow-x: scroll;
-  counter-reset: item;
+  /* counter-reset: item; */
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
 
 .carousel__slide {
-  /* position: relative; */
+  position: relative;
   flex: 0 0 100%;
   width: 100%;
   /* background-color: #f99; */
-  counter-increment: item;
+  /* counter-increment: item; */
 }
 
 /* .carousel__slide:nth-child(even) {
@@ -185,7 +185,7 @@ ol, li {
 }
 
 img { 
-  height: fit-content;
+  /* height: fit-content; */
 }
 
 .carousel__link { 

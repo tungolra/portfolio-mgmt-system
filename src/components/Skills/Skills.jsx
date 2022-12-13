@@ -7,12 +7,10 @@ export default function Skills() {
     <>
       <label> Skills </label>
       <section className="skills-container">
-        {seeds.skills.map((skill) => (
-          <div className="skill-item">
+        {seeds.skills.map((skill, idx) => (
+          <div key={idx} className="skill-item">
             <div>{skill.skill}</div>
             <img className="tech-icons" src={skill.img} alt={skill.skill} />
-            {/* <SVG src={skill.img}/> */}
-            {console.log(skill.img)}
           </div>
         ))}
       </section>

@@ -2,25 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
-  scrollbar-width: 0px;
+  /* scrollbar-color: transparent transparent; thumb and track color */
+  /* scrollbar-width: 0px; */
 }
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   width: 0;
-}
+} */
 
-*::-webkit-scrollbar-track {
+/* *::-webkit-scrollbar-track {
   background: transparent;
-}
+} */
 
-*::-webkit-scrollbar-thumb {
+/* *::-webkit-scrollbar-thumb {
   background: transparent;
   border: none;
-}
+} */
 
-* {
+/* * {
   -ms-overflow-style: none;
-}
+} */
 
 .App {
   text-align: center;
