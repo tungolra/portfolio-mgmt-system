@@ -6,7 +6,9 @@
   justify-content: center;
   margin: 3vh 0;
 }
-
+.projects-title { 
+  border: 1px solid black;
+}
 .projects-container > div {
   border: 1px solid black;
 }
@@ -189,7 +191,7 @@ li {
 } */
 
 .carousel__link {
-  height: 15vmin;
+  height: 30px;
   border: 1px solid black;
 }
 /* .carousel::before,

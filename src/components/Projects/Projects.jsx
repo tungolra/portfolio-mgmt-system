@@ -7,6 +7,7 @@ export default function Projects() {
     // credits and thanks to Christian Schaefer
     <>
       <div id="projects" className="projects-container">
+      <label className="projects-title">Projects</label>
         <section className="carousel" aria-label="Gallery">
           <ol className="carousel__viewport">
             {seed.projects.map((project, idx) => (
