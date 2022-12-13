@@ -5,7 +5,7 @@ import * as seeds from "../../seed.js";
 export default function Skills() {
   return (
     <>
-      <label> Skills </label>
+      <label id="skills"> Skills </label>
       <section className="skills-container">
         {seeds.skills.map((skill, idx) => (
           <div key={idx} className="skill-item">

@@ -1,3 +1,4 @@
+import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import Home from "../Home/Home";
 import Blog from "../Blog/Blog";
@@ -7,7 +8,10 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
+      
       {/* <Blog /> */}
     </div>
   );

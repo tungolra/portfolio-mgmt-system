@@ -5,6 +5,10 @@
   justify-content: center;
   align-items: center;
 }
+
+.title { 
+  border: 1px solid black;
+}
 .row {
   width: auto;
 }

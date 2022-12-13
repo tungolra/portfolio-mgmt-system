@@ -1,4 +1,22 @@
 footer {
   border: 1px solid black;
   margin-top: auto;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contact-details { 
+  display: flex;
+  flex-direction: column;
+}
+.socials-icons-container { 
+  display: flex;
+  flex-direction: row;
+
+}
+.socials-icons { 
+  height: 50px;
 }

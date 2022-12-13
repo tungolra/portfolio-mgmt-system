@@ -3,11 +3,10 @@ import "./Projects.css";
 import * as seed from "../../seed.js";
 
 export default function Projects() {
-
   return (
     // credits and thanks to Christian Schaefer
     <>
-      <div className="projects-container">
+      <div id="projects" className="projects-container">
         <section className="carousel" aria-label="Gallery">
           <ol className="carousel__viewport">
             {seed.projects.map((project, idx) => (
@@ -24,7 +23,7 @@ export default function Projects() {
                     src="../../images/logo192.png"
                     alt="gif here"
                   />
-                  <a href={`#carousel__slide${idx}`} className="carousel__prev">
+                  {/* <a href={`#carousel__slide${idx}`} className="carousel__prev">
                     Go to last slide
                   </a>
                   <a
@@ -32,8 +31,10 @@ export default function Projects() {
                     className="carousel__next"
                   >
                     Go to next slide
+                  </a> */}
+                  <a href={project.site == "" ? "#" : project.site}>
+                    <div className="carousel__link">View Live</div>
                   </a>
-                  <div className="carousel__link">View Live</div>
                 </div>
               </li>
             ))}
