@@ -1,9 +1,10 @@
 .skills-container { 
+    margin: 15vh 0;
     height: auto;
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-    
+    background-color: aliceblue;
 }
 .tech-icons { 
     height: 50px;

@@ -1,6 +1,15 @@
 .home-container { 
     display: flex;
     flex-direction: column;
-    
-    /* height: 100vh; */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
+
+.bg-image {
+    background-image: url('../../images/vscode-snapshot-full.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+

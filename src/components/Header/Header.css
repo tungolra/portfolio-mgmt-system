@@ -1,13 +1,12 @@
 .header-container {
-  height: 30vh;
-  border: 1px solid black;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .title { 
-  border: 1px solid black;
+  border: 1px solid white;
+  color: white;
 }
 .row {
   width: auto;
