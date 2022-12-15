@@ -5,7 +5,7 @@ import gitHubIcon from "../../images/github-logo.png";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer id="footer">
       <div className="contact-details">
         <span>Ralph Tungol</span>
         <span>email: rarrtungol@gmail.com</span>

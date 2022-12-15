@@ -26,13 +26,13 @@ export default function NavBar() {
         handleClick={handleClick}
       />
       <Link className="home" to="/">
-        Home
+        [Home]
       </Link>
       <a className="projects" href="#projects">
-        <div>Projects</div>
+        <div>[Projects]</div>
       </a>
       <a className="skills" href="#skills">
-        <div>Skills</div>
+        <div>[Skills]</div>
       </a>
     </nav>
   );

@@ -1,17 +1,22 @@
 .projects-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   justify-content: center;
-  background-color: #fff;
   margin-top: 15vh;
+  padding: 5vmin;
+  background-color: rgba(0, 0, 0, 0.471);
+  color: white;
 }
-.projects-title { 
-  border: 1px solid black;
+.projects-title {
+  font-weight: bold;
 }
-.projects-container > div {
-  border: 1px solid black;
+/* .projects-container > div {
+} */
+.carousel__link {
+  margin-top: 2vmin;
+  color: #fff;
 }
+
 @keyframes tonext {
   75% {
     left: 0;
@@ -86,6 +91,7 @@ li {
   left: 0; */
   display: flex;
   overflow-x: scroll;
+
   /* counter-reset: item; */
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
@@ -190,10 +196,6 @@ li {
   height: fit-content;
 } */
 
-.carousel__link {
-  height: 30px;
-  border: 1px solid black;
-}
 /* .carousel::before,
 .carousel__prev {
   left: 0rem;
