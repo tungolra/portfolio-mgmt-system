@@ -19,6 +19,7 @@ export default function About() {
         <h3 className="about-title">Building this portfolio</h3>
         <p>
           - mobile first... - pure css - implementing hooks - adding email form
+          - theme: use of vs code and CLI font
         </p>
       </section>
     </div>

@@ -29,7 +29,7 @@ export default function Skills() {
         <h4>Technologies</h4>
         {seeds.technologies.map((skill, idx) => (
           <div className="skill-item-container">
-            <div key={idx} className="skill-item">
+            <div key={idx+100} className="skill-item">
               <div>{skill.skill}</div>
               <img className="tech-icons" src={skill.img} alt={skill.skill} />
             </div>
