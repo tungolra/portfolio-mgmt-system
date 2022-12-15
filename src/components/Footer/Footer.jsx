@@ -2,13 +2,14 @@ import React from "react";
 import "./Footer.css";
 import linkedInIcon from "../../images/LI-In-Bug.png";
 import gitHubIcon from "../../images/github-logo.png";
+import {TfiEmail }from "react-icons/tfi"
 
 export default function Footer() {
   return (
     <footer id="footer">
       <div className="contact-details">
         <span>Ralph Tungol</span>
-        <span>email: rarrtungol@gmail.com</span>
+        <span type="email" action="" ><TfiEmail/> rarrtungol@gmail.com</span>
       </div>
       <div className="socials-icons-container">
         <div>

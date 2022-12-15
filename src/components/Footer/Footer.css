@@ -1,17 +1,20 @@
 footer {
-  border: 1px solid black;
   margin-top: auto;
   background-color: black;
   color: white;
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 2vmin;
 }
 
 .contact-details { 
   display: flex;
   flex-direction: column;
+  text-align: left;
+  margin-left: 2vmin;
+  font-weight: bold;
 }
 .socials-icons-container { 
   display: flex;
@@ -19,5 +22,6 @@ footer {
 
 }
 .socials-icons { 
-  height: 50px;
+  margin: 0 2vmin;
+  height: 45px;
 }
