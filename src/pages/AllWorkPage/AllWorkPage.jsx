@@ -3,6 +3,12 @@ import "./AllWorkPage.css"
 
 export default function AllWorkPage() {
   return (
+    <>
+
     <div className='all-work-page'>AllWorkPage</div>
+    <div className='all-work-page'>AllWorkPage</div>
+    <div className='all-work-page'>AllWorkPage</div>
+    <div className='all-work-page'>AllWorkPage</div>
+    </>
   )
 }

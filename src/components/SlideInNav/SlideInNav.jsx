@@ -1,18 +1,17 @@
 import React from "react";
 import "./SlideInNav.css";
+import { Link } from "react-router-dom";
+import NewEntry from "../../pages/NewEntry/NewEntry";
 
-export default function SlideInNav({
-  modalOpened,
-  handleClick,
-}) {
+export default function SlideInNav({ modalOpened, handleClick, user }) {
   return (
     <>
       {modalOpened ? (
         <div className="overlay">
           <div class="overlay-content">
-            <a href="/" onClick={handleClick}>
+            <Link to="/" onClick={handleClick}>
               Home
-            </a>
+            </Link>
             <a href="#about" onClick={handleClick}>
               About
             </a>
@@ -26,6 +25,7 @@ export default function SlideInNav({
             <a href="#footer" onClick={handleClick}>
               Contact
             </a>
+            {user ? <Link to="/entry" >New Entry</Link> : ""}
           </div>
         </div>
       ) : (

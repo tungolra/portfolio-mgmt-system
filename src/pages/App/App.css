@@ -5,6 +5,7 @@
 }
 
 .App {
+  margin-top: 5vh;
   text-align: center;
   height: 100vh;
   font-family: 'Courier New', Courier, monospace;
