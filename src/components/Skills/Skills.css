@@ -1,4 +1,52 @@
-.skills-container { 
-    height: auto;
-    border: 1px solid black;
+.skills-container {
+  margin: 15vh 0;
+  padding: 5vmin 0;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.471);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  
+}
+.skills-container > h3 {
+  margin-bottom: 3vmin;
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.skills > h4 {
+  margin-bottom: 3vmin;
+}
+.skill-item-container {
+  border: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  margin: 1vmin;
+  justify-content: space-between;
+  padding: 1vmin 3vmin;
+}
+/* .skill-item {
+
+} */
+.skill-item-details {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.skill-count-container {
+    display: flex;
+    flex-direction: column;
+}
+/* .skill-count { 
+
+} */
+.link-to-all-work{ 
+    color: white;
+    font-style: italic;
+
+}
+.tech-icons {
+  height: 50px;
 }

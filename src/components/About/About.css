@@ -1,3 +1,14 @@
 .about-container{
     height: auto;
+    padding: 5vmin;
+    background-color: rgba(0, 0, 0, 0.471);
+    color: white;
+}
+
+section{ 
+    margin: 3vmin 0;
+}
+
+.about-title { 
+    font-weight: bold;
 }
