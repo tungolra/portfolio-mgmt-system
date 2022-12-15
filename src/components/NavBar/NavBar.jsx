@@ -1,43 +1,30 @@
 import React, { useState } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
+import SlideInNav from "../SlideInNav/SlideInNav";
+import ReactCSSTransitionGroup from 'react-transition-group';
 
 export default function NavBar() {
   const [modalOpened, setModalOpened] = useState(false);
-  console.log(modalOpened);
 
+  function handleClick() {
+    setModalOpened((prev) => !prev);
+  }
   return (
     <nav>
       {/* <div className="container nav-container"> */}
-      <div className="hamburger-menu" onClick={() => setModalOpened(true)}>
-        <RxHamburgerMenu />
+      <div
+        className={modalOpened ? "change" : "hamburger-menu"}
+        onClick={handleClick}
+      >
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
       </div>
-      {modalOpened ? (
-        <div className="overlay">
-          <div className="exit-modal" onClick={() => setModalOpened(false)}>
-            x
-          </div>
-          <div class="overlay-content">
-            <a href="/" onClick={() => setModalOpened(false)}>
-              Home
-            </a>
-            <a href="#about" onClick={() => setModalOpened(false)}>
-              About
-            </a>
-            <a href="#projects" onClick={() => setModalOpened(false)}>
-              Projects
-            </a>
-            <a href="#skills" onClick={() => setModalOpened(false)}>
-              Skills
-            </a>
-            {/* <a href="#">Blog</a> */}
-            <a href="#">Contact</a>
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
+      <SlideInNav
+        modalOpened={modalOpened}
+        handleClick={handleClick}
+      />
       <Link className="home" to="/">
         Home
       </Link>

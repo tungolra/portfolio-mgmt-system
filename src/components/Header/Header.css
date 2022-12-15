@@ -3,10 +3,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .title { 
   border: 1px solid white;
   color: white;
+  padding: 3vmin;
 }
 .row {
   width: auto;
