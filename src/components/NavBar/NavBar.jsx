@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import SlideInNav from "../SlideInNav/SlideInNav";
-import ReactCSSTransitionGroup from "react-transition-group";
+import * as userService from "../../utilities/users-service";
+import { RiLogoutBoxRLine } from "react-icons/ri";
 
-export default function NavBar() {
+export default function NavBar({ setUser, user }) {
   const [modalOpened, setModalOpened] = useState(false);
 
   function handleClick() {
     setModalOpened((prev) => !prev);
+  }
+  function handleLogOut() {
+    userService.logOut();
+    setUser(null);
   }
   return (
     <nav>
@@ -21,7 +26,7 @@ export default function NavBar() {
         <div className="bar2"></div>
         <div className="bar3"></div>
       </div>
-      <SlideInNav modalOpened={modalOpened} handleClick={handleClick} />
+      <SlideInNav modalOpened={modalOpened} handleClick={handleClick} user={user} />
       <Link className="home-nav" to="/">
         [Home]
       </Link>
@@ -31,6 +36,7 @@ export default function NavBar() {
       <a className="skills-nav" href="#skills">
         <div>[Skills]</div>
       </a>
+      <Link className="logout" onClick={handleLogOut}>{user ? <RiLogoutBoxRLine /> : ""}</Link>
     </nav>
   );
 }

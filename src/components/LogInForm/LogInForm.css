@@ -1,0 +1,17 @@
+.form-page {
+  display: flex;
+  justify-content: center;
+}
+.form-container {
+  margin-top: 10vmin;
+  display: flex;
+  flex-direction: column;
+  width: 80vmin;
+  justify-content: center;
+}
+.credentials-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3vmin;
+}

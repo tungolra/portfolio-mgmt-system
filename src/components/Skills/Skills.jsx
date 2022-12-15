@@ -38,7 +38,6 @@ export default function Skills() {
               <div className="skill-count-container">
                 <div className="skill-count">Times Used: x</div>
               </div>
-                {/* doesn't work? */}
                 <Link className="link-to-all-work" to="/all-work">
                   See Projects/Labs
                 </Link>
