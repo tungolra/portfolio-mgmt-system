@@ -16,34 +16,39 @@ function App() {
   const [user, setUser] = useState(getUser());
 
   return (
-    <div className="App">
-      <NavBar user={user} setUser={setUser} />
-      {user ? (
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="all-work" element={<AllWorkPage />}></Route>
-          <Route path="blog" element={<Blog />} />
-          <Route path="entry" element={<NewEntry />} />
-          {/* route to create entry */}
-          <Route
-            path="/projects/:project"
-            element={<ProjectDetailPage seed={seed} />}
-          ></Route>
-          <Route path="/*" element={<Navigate to="/" />} />
-        </Routes>
-      ) : (
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="all-work" element={<AllWorkPage />}></Route>
-          <Route path="blog" element={<Blog />} />
-          <Route path="login" element={<LogInForm setUser={setUser}/>}></Route>
-          <Route
-            path="/projects/:project"
-            element={<ProjectDetailPage seed={seed} />}
-          ></Route>
-          <Route path="/*" element={<Navigate to="/" />} />
-        </Routes>
-      )}
+    <div className="app-container">
+      <div className="App">
+        <NavBar user={user} setUser={setUser} />
+        {user ? (
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="all-work" element={<AllWorkPage />}></Route>
+            <Route path="blog" element={<Blog />} />
+            <Route path="entry" element={<NewEntry />} />
+            {/* route to create entry */}
+            <Route
+              path="/projects/:project"
+              element={<ProjectDetailPage seed={seed} />}
+            ></Route>
+            <Route path="/*" element={<Navigate to="/" />} />
+          </Routes>
+        ) : (
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="all-work" element={<AllWorkPage />}></Route>
+            <Route path="blog" element={<Blog />} />
+            <Route
+              path="login"
+              element={<LogInForm setUser={setUser} />}
+            ></Route>
+            <Route
+              path="/projects/:project"
+              element={<ProjectDetailPage seed={seed} />}
+            ></Route>
+            <Route path="/*" element={<Navigate to="/" />} />
+          </Routes>
+        )}
+      </div>
     </div>
   );
 }

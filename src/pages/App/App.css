@@ -4,9 +4,22 @@
   box-sizing: border-box;
 }
 
+
 .App {
   margin-top: 5vh;
   text-align: center;
   height: 100vh;
   font-family: 'Courier New', Courier, monospace;
+}
+
+@media only screen and (min-width: 961px) {
+  .app-container { 
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    background-image: url('https://i.imgur.com/CGT8QgD.gif');
+  }
+  .App{
+      width: 70%;
+  }
 }
