@@ -18,9 +18,7 @@ export default function About() {
       <section>
         <h3 className="about-title">Building this portfolio</h3>
         <p>
-          - mobile first... 
-          - pure css
-          - implementing hooks
+          - mobile first... - pure css - implementing hooks - adding email form
         </p>
       </section>
     </div>

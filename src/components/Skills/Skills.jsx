@@ -4,9 +4,10 @@ import * as seeds from "../../seed.js";
 
 export default function Skills() {
   return (
-    <>
-      <label id="skills"> Skills </label>
-      <section className="skills-container">
+    <div className="skills-container">
+    
+      <h3 id="skills"> Skills </h3>
+      <section className="skills">
         {seeds.skills.map((skill, idx) => (
           <div key={idx} className="skill-item">
             <div>{skill.skill}</div>
@@ -14,6 +15,6 @@ export default function Skills() {
           </div>
         ))}
       </section>
-    </>
+    </div>
   );
 }
