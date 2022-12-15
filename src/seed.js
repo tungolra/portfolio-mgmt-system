@@ -71,24 +71,40 @@ export const projects = [
     site: "https://github.com/tungolra/Book-Collector",
   },
 ];
+
 export const skills = [
-  {type: "", skill: "HTML5", img: "https://i.imgur.com/xMMSqAc.png" },
-  {type: "", skill: "CSS3", img: "https://i.imgur.com/jTNhsgg.png" },
-  {type: "", skill: "Materialize", img: "https://i.imgur.com/kLtV7aP.png" },
-  {type: "", skill: "Material UI", img: "https://i.imgur.com/nQneTU6.png" },
-  {type: "", skill: "Bootstrap", img: "https://i.imgur.com/NsKingN.png" },
-  {type: "", skill: "React", img: "https://i.imgur.com/I9A7c4b.png" },
-  {type: "", skill: "Redux", img: "https://i.imgur.com/B5jiJo7.png" },
-  {type: "", skill: "Node.js", img: "https://i.imgur.com/SqYTp68.png" },
-  {type: "", skill: "Javascript", img: "https://i.imgur.com/ckfbsq5.png" },
-  {type: "", skill: "MongoDB", img: "https://i.imgur.com/a0RoQoD.png" },
-  {type: "", skill: "Mongoose ODM", img: "https://i.imgur.com/BPb25o6.png" },
-  {type: "", skill: "PostgreSQL", img: "https://i.imgur.com/kqTfCNX.png" },
-  {type: "", skill: "Heroku", img: "https://i.imgur.com/TQ5qUGp.png" },
-  {type: "", skill: "Git", img: "https://i.imgur.com/P6KIeEm.png" },
-  {type: "", skill: "AWS S3", img: "https://i.imgur.com/n3fTnNv.png" },
-  {type: "", skill: "Django", img: "https://i.imgur.com/CTDcDh6.png" },
-  {type: "", skill: "Python", img: "https://i.imgur.com/ofIVvdH.png" },
-  {type: "", skill: "Express", img: "https://i.imgur.com/jTNhsgg.png" },
-  {type: "", skill: "Socket.io", img: "https://i.imgur.com/ozEa6Uk.png" },
+  {type: "Languages", subtype: "Markup Language", skill: "HTML5", img: "https://i.imgur.com/xMMSqAc.png" },
+  {type: "Languages", subtype: "Styling Language", skill: "CSS3", img: "https://i.imgur.com/jTNhsgg.png" },
+  {type: "Languages", subtype: "Styling Language", skill: "Materialize", img: "https://i.imgur.com/kLtV7aP.png" },
+  {type: "Languages", subtype: "Styling Language", skill: "Material UI", img: "https://i.imgur.com/nQneTU6.png" },
+  {type: "Languages", subtype: "Styling Language", skill: "Bootstrap", img: "https://i.imgur.com/NsKingN.png" },
+  {type: "Technologies", subtype: "Framework", skill: "React", img: "https://i.imgur.com/I9A7c4b.png" },
+  {type: "Technologies", subtype: "Framework", skill: "Redux", img: "https://i.imgur.com/B5jiJo7.png" },
+  {type: "Technologies", subtype: "Framework", skill: "Node.js", img: "https://i.imgur.com/SqYTp68.png" },
+  {type: "Languages", subtype: "Programming Language", skill: "Javascript", img: "https://i.imgur.com/ckfbsq5.png" },
+  {type: "Languages", subtype: "Programming Language", skill: "SQL", img: "https://i.imgur.com/7ImtZip.png" },
+  {type: "Technologies", subtype: "Database", skill: "MongoDB", img: "https://i.imgur.com/a0RoQoD.png" },
+  {type: "Technologies", subtype: "Library", skill: "Mongoose ODM", img: "https://i.imgur.com/BPb25o6.png" },
+  {type: "Technologies", subtype: "Library", skill: "PostgreSQL", img: "https://i.imgur.com/kqTfCNX.png" },
+  {type: "Technologies", subtype: "Cloud Platform", skill: "Heroku", img: "https://i.imgur.com/TQ5qUGp.png" },
+  {type: "Technologies", subtype: "Version Control Software", skill: "Git", img: "https://i.imgur.com/P6KIeEm.png" },
+  {type: "Technologies", subtype: "Database", skill: "AWS S3", img: "https://i.imgur.com/n3fTnNv.png" },
+  {type: "Technologies", subtype: "Framework", skill: "Django", img: "https://i.imgur.com/CTDcDh6.png" },
+  {type: "Languages", subtype: "Programming Language", skill: "Python", img: "https://i.imgur.com/ofIVvdH.png" },
+  {type: "Technologies", subtype: "Framework", skill: "Express", img: "https://i.imgur.com/jTNhsgg.png" },
+  {type: "Technologies", subtype: "Library", skill: "Socket.io", img: "https://i.imgur.com/ozEa6Uk.png" },
 ];
+
+export const languages = []
+skills.map((skill) => 
+  {if (skill.type === "Languages") {
+    languages.push(skill)
+  }}
+)
+
+export const technologies = []
+skills.map((skill) => 
+  {if (skill.type === "Technologies") {
+    technologies.push(skill)
+  }}
+)

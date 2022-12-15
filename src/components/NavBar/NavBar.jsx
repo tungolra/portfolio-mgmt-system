@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import SlideInNav from "../SlideInNav/SlideInNav";
-import ReactCSSTransitionGroup from 'react-transition-group';
+import ReactCSSTransitionGroup from "react-transition-group";
 
 export default function NavBar() {
   const [modalOpened, setModalOpened] = useState(false);
@@ -21,17 +21,14 @@ export default function NavBar() {
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
-      <SlideInNav
-        modalOpened={modalOpened}
-        handleClick={handleClick}
-      />
-      <Link className="home" to="/">
+      <SlideInNav modalOpened={modalOpened} handleClick={handleClick} />
+      <Link className="home-nav" to="/">
         [Home]
       </Link>
-      <a className="projects" href="#projects">
+      <a className="projects-nav" href="#projects">
         <div>[Projects]</div>
       </a>
-      <a className="skills" href="#skills">
+      <a className="skills-nav" href="#skills">
         <div>[Skills]</div>
       </a>
     </nav>
