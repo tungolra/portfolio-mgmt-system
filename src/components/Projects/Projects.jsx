@@ -4,6 +4,7 @@ import "./Projects.css";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 
 export default function Projects({ seed }) {
+  //find project
   return (
     <>
       <div id="projects" className="projects-container">
@@ -21,7 +22,7 @@ export default function Projects({ seed }) {
                   <div className="carousel__snapper">
                     <img
                       className="img"
-                      src="../../images/logo192.png"
+                      src={project.img === "" ? "../../images/logo192.png" : project.img}
                       alt="gif here"
                     />
                     <div className="carousel__btns">

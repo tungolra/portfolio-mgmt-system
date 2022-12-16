@@ -43,6 +43,10 @@
   width: 100%;
   scroll-snap-align: center;
 }
+.carousel__snapper > img {
+  width: 100%;
+  height: 40vh;
+}
 
 .carousel__link {
   margin-top: 2vmin;
@@ -66,7 +70,8 @@
     align-items: center;
   }
   .carousel__snapper > img {
-    width: 70%;
+    width: 50%;
+    height: 50vh;
   }
   .carousel__btns > a {
     margin: 0 25vmin;
