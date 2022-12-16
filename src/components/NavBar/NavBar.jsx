@@ -15,9 +15,9 @@ export default function NavBar({ setUser, user }) {
     userService.logOut();
     setUser(null);
   }
+  
   return (
     <nav>
-      {/* <div className="container nav-container"> */}
       <div
         className={modalOpened ? "change" : "hamburger-menu"}
         onClick={handleClick}
@@ -27,9 +27,9 @@ export default function NavBar({ setUser, user }) {
         <div className="bar3"></div>
       </div>
       <SlideInNav modalOpened={modalOpened} handleClick={handleClick} user={user} />
-      <Link className="home-nav" to="/">
+      <a className="home-nav" href="/">
         [Home]
-      </Link>
+      </a>
       <a className="projects-nav" href="#projects">
         <div>[Projects]</div>
       </a>
