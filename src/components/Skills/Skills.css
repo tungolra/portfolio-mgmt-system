@@ -50,3 +50,11 @@
 .tech-icons {
   height: 50px;
 }
+/* desktop view */
+@media only screen and (min-width: 961px) {
+  .skills-wrapper { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}

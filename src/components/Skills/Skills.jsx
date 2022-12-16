@@ -9,6 +9,8 @@ export default function Skills() {
       <h3 id="skills"> Project Applications </h3>
       <section className="skills">
         <h4>Languages</h4>
+        <div className="skills-wrapper">
+
         {seeds.languages.map((skill, idx) => (
           <div className="skill-item-container">
             <div key={idx} className="skill-item">
@@ -24,9 +26,12 @@ export default function Skills() {
             </div>
           </div>
         ))}
+        </div>
       </section>
       <section className="skills">
         <h4>Technologies</h4>
+        <div className="skills-wrapper">
+
         {seeds.technologies.map((skill, idx) => (
           <div className="skill-item-container">
             <div key={idx+100} className="skill-item">
@@ -44,6 +49,7 @@ export default function Skills() {
             </div>
           </div>
         ))}
+        </div>
       </section>
     </div>
   );
