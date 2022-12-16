@@ -13,7 +13,7 @@ nav > * {
   color: white;
   list-style-type: none;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .hamburger-menu:hover {
@@ -58,6 +58,9 @@ nav > * {
 .projects-nav {
   margin: 0 3vmin;
 }
+.contact-nav {
+  margin-right: 3vmin;
+}
 .skills-nav {
   margin-right: 3vmin;
 }
@@ -73,5 +76,4 @@ nav > * {
 
 /* desktop view */
 @media only screen and (min-width: 961px) {
-
 }
