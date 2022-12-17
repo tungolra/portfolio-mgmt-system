@@ -12,6 +12,7 @@ import LogInForm from "../../components/LogInForm/LogInForm";
 import NewEntry from "../NewEntry/NewEntry";
 import NewProjectPage from "../NewProjectPage/NewProjectPage";
 import Update from "../Update/Update";
+import ResumePage from "../ResumePage/ResumePage";
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -41,6 +42,7 @@ function App() {
             <Route path="entry" element={<NewEntry />} />
             <Route path="new-project" element={<NewProjectPage />} />
             <Route path="all-work/update/:project" element={<Update />} />
+            <Route path="cv" element={<ResumePage />} />
             <Route
               path="/projects/:project"
               element={<ProjectDetailPage seed={seed} />}
@@ -54,6 +56,7 @@ function App() {
               path="all-work"
               element={<AllWorkPage seed={seed} user={user} />}
             ></Route>
+            <Route path="cv" element={<ResumePage />} />
             <Route path="blog" element={<Blog />} />
             <Route
               path="login"

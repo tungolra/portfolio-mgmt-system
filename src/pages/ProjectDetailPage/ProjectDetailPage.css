@@ -1,3 +1,4 @@
+
 .page-container {
   /* margin-top: 5vh; */
   padding: 5vmin 0;
@@ -24,12 +25,7 @@
     color: white;
     text-decoration: none;
 }
-/* .next-project { 
-    color: white;
-    font-weight: bold;
-    text-align: right;
-    margin-right: 6vmin;
-} */
+
 .project-detail-container { 
     padding: 3vmin;
     background-color: rgba(0, 0, 0, 0.689);

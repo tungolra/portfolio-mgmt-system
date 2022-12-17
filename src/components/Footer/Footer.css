@@ -9,19 +9,23 @@ footer {
   padding: 2vmin;
 }
 
-.contact-details { 
+.contact-details {
   display: flex;
   flex-direction: column;
   text-align: left;
   margin-left: 2vmin;
   font-weight: bold;
 }
-.socials-icons-container { 
+.socials-icons-container {
   display: flex;
   flex-direction: row;
-
 }
-.socials-icons { 
+.socials-icons {
   margin: 0 2vmin;
   height: 45px;
+}
+
+.resume {
+  width: 45px;
+  color: white;
 }

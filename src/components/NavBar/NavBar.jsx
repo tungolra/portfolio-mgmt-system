@@ -37,13 +37,13 @@ export default function NavBar({ setUser, user }) {
       <a className="home-nav" title="Home" href="/">
         <AiOutlineHome />
       </a>
-      <a className="projects-nav" title="Projects" href="#projects">
+      <a className="projects-nav" title="Projects" href="/#projects">
         <AiOutlineAppstore />
       </a>
-      <a className="skills-nav" title="Skills" href="#skills">
+      <a className="skills-nav" title="Skills" href="/#skills">
         <BsLightning />
       </a>
-      <a className="contact-nav" title="Contact" href="#footer">
+      <a className="contact-nav" title="Contact" href="/#footer">
         <BiMessageDetail />
       </a>
       <Link className="logout" onClick={handleLogOut}>
