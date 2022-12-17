@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { signUp } from '../../utilities/users-service'
+import { signUp } from "../../utilities/users-service";
 
 export class SignUpForm extends Component {
   state = {
@@ -10,27 +10,26 @@ export class SignUpForm extends Component {
     error: "",
   };
 
-  handleChange = (e) => { 
+  handleChange = (e) => {
     this.setState({
-        [e.target.name]: e.target.value, 
-        error: '',
-    })
-  }
+      [e.target.name]: e.target.value,
+      error: "",
+    });
+  };
 
   handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-      const formData = {...this.state}
-      delete formData.error
-      delete formData.confirm
+      const formData = { ...this.state };
+      delete formData.error;
+      delete formData.confirm;
 
-      const user = await signUp(formData)
-      this.props.setUser(user)
+      const user = await signUp(formData);
+      this.props.setUser(user);
     } catch (error) {
-      this.setState({error: 'Sign Up Failed - Try Again'})      
+      this.setState({ error: "Sign Up Failed - Try Again" });
     }
-
-  }
+  };
   render() {
     const disable = this.state.password !== this.state.confirm;
     return (
@@ -74,7 +73,7 @@ export class SignUpForm extends Component {
             </button>
           </form>
         </div>
-        <p className="error-message">&nbsp;{this.state.error}</p>
+        <p className="error-message"> {this.state.error}</p>
       </div>
     );
   }

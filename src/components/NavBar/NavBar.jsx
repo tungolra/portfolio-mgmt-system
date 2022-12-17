@@ -40,7 +40,7 @@ export default function NavBar({ setUser, user }) {
       <a className="projects-nav" title="Projects" href="#projects">
         <AiOutlineAppstore />
       </a>
-      <a className="skills-nav" title="Skills" href="#Skills">
+      <a className="skills-nav" title="Skills" href="#skills">
         <BsLightning />
       </a>
       <a className="contact-nav" title="Contact" href="#footer">

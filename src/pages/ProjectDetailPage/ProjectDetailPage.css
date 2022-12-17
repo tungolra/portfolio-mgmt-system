@@ -11,6 +11,25 @@
   justify-content: center;
   background-image: url('https://i.imgur.com/CGT8QgD.gif');
 }
+.project-nav { 
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    font-weight: bold;
+    text-align: right;
+    
+    margin: 0 6vmin;
+}
+.project-nav > * { 
+    color: white;
+    text-decoration: none;
+}
+/* .next-project { 
+    color: white;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 6vmin;
+} */
 .project-detail-container { 
     padding: 3vmin;
     background-color: rgba(0, 0, 0, 0.689);

@@ -6,7 +6,6 @@ import NavBar from "../../components/NavBar/NavBar";
 import * as seed from "../../seed.js";
 import ProjectDetailPage from "../ProjectDetailPage/ProjectDetailPage";
 import AllWorkPage from "../AllWorkPage/AllWorkPage";
-import AuthPage from "../AuthPage/AuthPage";
 import { getUser } from "../../utilities/users-service";
 import { useState } from "react";
 import LogInForm from "../../components/LogInForm/LogInForm";
@@ -17,6 +16,16 @@ import Update from "../Update/Update";
 function App() {
   const [user, setUser] = useState(getUser());
 
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+
   return (
     <div className="app-container">
       <div className="App">
@@ -24,7 +33,10 @@ function App() {
         {user ? (
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="all-work" element={<AllWorkPage seed={seed} user={user}/>}></Route>
+            <Route
+              path="all-work"
+              element={<AllWorkPage seed={seed} user={user} />}
+            ></Route>
             <Route path="blog" element={<Blog />} />
             <Route path="entry" element={<NewEntry />} />
             <Route path="new-project" element={<NewProjectPage />} />
@@ -38,7 +50,10 @@ function App() {
         ) : (
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="all-work" element={<AllWorkPage seed={seed} user={user} />}></Route>
+            <Route
+              path="all-work"
+              element={<AllWorkPage seed={seed} user={user} />}
+            ></Route>
             <Route path="blog" element={<Blog />} />
             <Route
               path="login"

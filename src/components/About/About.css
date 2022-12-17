@@ -17,4 +17,6 @@ section {
 .about > p {
   text-align: left;
   margin-bottom: 2vmin;
+  text-align: justify;
+  text-indent: 2em;
 }

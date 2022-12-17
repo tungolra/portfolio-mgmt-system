@@ -7,9 +7,18 @@ import { RxExternalLink } from "react-icons/rx";
 export default function ProjectDetailPage({ seed }) {
   let { project } = useParams();
   const selectedProject = seed.projects.find((p) => p.name == project);
-
+  const navProject = seed.projects.findIndex((p) => p.name == project);
+  console.log(seed.projects[navProject+1].name)
   return (
     <div className="page-container">
+      <div className="project-nav">
+        <Link  to={`/projects/${seed.projects[navProject - 1]}`}>
+          <span>&lt; Prev Project</span>
+        </Link>
+        <Link  to={`/projects/${seed.projects[navProject + 1]}`}>
+          <span>Next Project &gt;</span>
+        </Link>
+      </div>
       <section className="carousel" aria-label="Gallery">
         <div className="carousel__viewport">
           {selectedProject?.pages?.map((page, idx) => (
@@ -63,7 +72,8 @@ export default function ProjectDetailPage({ seed }) {
           </div>
         ))}
         <Link className="github" to={selectedProject.site}>
-          Github<RxExternalLink/>
+          Github
+          <RxExternalLink />
         </Link>
       </div>
     </div>
