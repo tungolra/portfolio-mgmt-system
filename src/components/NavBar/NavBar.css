@@ -1,8 +1,5 @@
 nav {
   display: flex;
-  position: fixed;
-  top: 0;
-  z-index: 1;
   width: 100%;
   justify-content: space-between;
   border-bottom: 1px solid black;
@@ -16,7 +13,7 @@ nav > * {
   color: white;
   list-style-type: none;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .hamburger-menu:hover {
@@ -24,6 +21,8 @@ nav > * {
 }
 .hamburger-menu {
   margin-left: 3vmin;
+  position: fixed;
+  z-index: 1;
 }
 .bar1,
 .bar2,
@@ -33,6 +32,10 @@ nav > * {
   background-color: rgba(255, 255, 255, 0.428);
   margin: 6px 0;
   transition: 0.4s;
+}
+.change {
+  position: fixed;
+  z-index: 1;
 }
 .change .bar1 {
   transform: translate(0, 11px) rotate(-45deg);
@@ -47,26 +50,30 @@ nav > * {
   cursor: pointer;
 }
 .home-nav {
-  margin-left: 3vmin;
+  margin-left: auto;
 }
 .home-nav:hover {
   background-color: rgba(255, 255, 255, 0.209);
 }
 .projects-nav {
-  margin-left: auto;
-}
-.projects-nav:hover {
-  background-color: rgba(255, 255, 255, 0.209);
-}
-.skills-nav {
   margin: 0 3vmin;
 }
-.skills-nav:hover {
+.contact-nav {
+  margin-right: 3vmin;
+}
+.skills-nav {
+  margin-right: 3vmin;
+}
+
+.projects-nav:hover,
+.skills-nav:hover,
+.logout:hover {
   background-color: rgba(255, 255, 255, 0.209);
 }
 .logout {
   margin-right: 3vmin;
 }
-.logout:hover {
-  background-color: rgba(255, 255, 255, 0.209);
+
+/* desktop view */
+@media only screen and (min-width: 961px) {
 }

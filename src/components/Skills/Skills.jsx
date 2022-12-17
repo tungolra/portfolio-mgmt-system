@@ -9,34 +9,39 @@ export default function Skills() {
       <h3 id="skills"> Project Applications </h3>
       <section className="skills">
         <h4>Languages</h4>
+        <div className="skills-wrapper">
+
         {seeds.languages.map((skill, idx) => (
           <div className="skill-item-container">
             <div key={idx} className="skill-item">
-              <div>{skill.skill}</div>
               <img className="tech-icons" src={skill.img} alt={skill.skill} />
             </div>
             <div className="skill-item-details">
+              <div><strong>{skill.skill}</strong></div>
               <div className="skill-subtype">#{skill.subtype}</div>
               <div className="skill-count-container">
-                <label>Times Used</label>
-                <div className="skill-count">x</div>
+                {/* <label>Times Used</label>
+                <div className="skill-count">x</div> */}
               </div>
             </div>
           </div>
         ))}
+        </div>
       </section>
       <section className="skills">
         <h4>Technologies</h4>
+        <div className="skills-wrapper">
+
         {seeds.technologies.map((skill, idx) => (
           <div className="skill-item-container">
-            <div key={idx+100} className="skill-item">
-              <div>{skill.skill}</div>
+            <div key={idx} className="skill-item">
               <img className="tech-icons" src={skill.img} alt={skill.skill} />
             </div>
             <div className="skill-item-details">
+              <div><strong>{skill.skill}</strong></div>
               <div className="skill-subtype">#{skill.subtype}</div>
               <div className="skill-count-container">
-                <div className="skill-count">Times Used: x</div>
+                {/* <div className="skill-count">Times Used: x</div> */}
               </div>
                 <Link className="link-to-all-work" to="/all-work">
                   See Projects/Labs
@@ -44,6 +49,7 @@ export default function Skills() {
             </div>
           </div>
         ))}
+        </div>
       </section>
     </div>
   );

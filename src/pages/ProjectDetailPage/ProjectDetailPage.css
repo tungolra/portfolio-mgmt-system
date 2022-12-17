@@ -1,3 +1,31 @@
-.page-container{ 
-    margin-top: 5vh;
+.page-container {
+  /* margin-top: 5vh; */
+  padding: 5vmin 0;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.471);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  background-image: url('https://i.imgur.com/CGT8QgD.gif');
+}
+.project-detail-container { 
+    padding: 3vmin;
+    background-color: rgba(0, 0, 0, 0.689);
+}
+.project-name { 
+    margin-bottom: 3vmin;
+}
+.project-summary { 
+    margin-bottom: 1vmin;
+}
+.project-responsibilities { 
+    margin-bottom: 1vmin;
+}
+.github { 
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }

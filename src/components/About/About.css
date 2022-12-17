@@ -1,14 +1,20 @@
-.about-container{
-    height: auto;
-    padding: 5vmin;
-    background-color: rgba(0, 0, 0, 0.471);
-    color: white;
+.about-container {
+  height: auto;
+  padding: 5vmin;
+  background-color: rgba(0, 0, 0, 0.471);
+  color: white;
 }
 
-section{ 
-    margin: 3vmin 0;
+section {
+  margin: 3vmin 0;
 }
 
-.about-title { 
-    font-weight: bold;
+.about-title {
+  font-weight: bold;
+  margin-bottom: 2vmin;
+}
+
+.about > p {
+  text-align: left;
+  margin-bottom: 2vmin;
 }

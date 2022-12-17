@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer id="footer">
       <div className="contact-details">
-        <span>Ralph Tungol</span>
+        <span>Ralph Tu&#241;gol</span>
         <span type="email" action="" ><TfiEmail/> rarrtungol@gmail.com</span>
       </div>
       <div className="socials-icons-container">
