@@ -1,6 +1,4 @@
-
 .page-container {
-  /* margin-top: 5vh; */
   padding: 5vmin 0;
   height: auto;
   background-color: rgba(0, 0, 0, 0.471);
@@ -10,37 +8,36 @@
   overflow: auto;
   display: flex;
   justify-content: center;
-  background-image: url('https://i.imgur.com/CGT8QgD.gif');
+  background-image: url("https://i.imgur.com/CGT8QgD.gif");
 }
-.project-nav { 
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between;
-    font-weight: bold;
-    text-align: right;
-    
-    margin: 0 6vmin;
-}
-.project-nav > * { 
-    color: white;
-    text-decoration: none;
+.project-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+  margin: 0 6vmin;
 }
 
-.project-detail-container { 
-    padding: 3vmin;
-    background-color: rgba(0, 0, 0, 0.689);
+.project-nav > * {
+  color: white;
+  text-decoration: none;
 }
-.project-name { 
-    margin-bottom: 3vmin;
+
+.project-detail-container {
+  padding: 3vmin;
+  background-color: rgba(0, 0, 0, 0.689);
 }
-.project-summary { 
-    margin-bottom: 1vmin;
+.project-name {
+  margin-bottom: 3vmin;
 }
-.project-responsibilities { 
-    margin-bottom: 1vmin;
+.project-summary {
+  margin-bottom: 1vmin;
 }
-.github { 
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+.project-responsibilities {
+  margin-bottom: 1vmin;
+}
+.github {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }

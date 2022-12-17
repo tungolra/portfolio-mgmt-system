@@ -12,17 +12,17 @@ export default function Skills() {
         <div className="skills-wrapper">
 
         {seeds.languages.map((skill, idx) => (
-          <div className="skill-item-container">
-            <div key={idx} className="skill-item">
+          <div key={idx} className="skill-item-container">
+            <div  className="skill-item">
               <img className="tech-icons" src={skill.img} alt={skill.skill} />
             </div>
             <div className="skill-item-details">
               <div><strong>{skill.skill}</strong></div>
               <div className="skill-subtype">#{skill.subtype}</div>
-              <div className="skill-count-container">
-                {/* <label>Times Used</label>
-                <div className="skill-count">x</div> */}
-              </div>
+              {/* <div className="skill-count-container">
+                <label>Times Used</label>
+                <div className="skill-count">x</div>
+              </div> */}
             </div>
           </div>
         ))}
@@ -33,17 +33,17 @@ export default function Skills() {
         <div className="skills-wrapper">
 
         {seeds.technologies.map((skill, idx) => (
-          <div className="skill-item-container">
-            <div key={idx} className="skill-item">
+          <div key={idx} className="skill-item-container">
+            <div className="skill-item">
               <img className="tech-icons" src={skill.img} alt={skill.skill} />
             </div>
             <div className="skill-item-details">
               <div><strong>{skill.skill}</strong></div>
               <div className="skill-subtype">#{skill.subtype}</div>
-              <div className="skill-count-container">
-                {/* <div className="skill-count">Times Used: x</div> */}
+              {/* <div className="skill-count-container">
+                <div className="skill-count">Times Used: x</div>
               </div>
-                {/* <Link className="link-to-all-work" to="/all-work">
+                <Link className="link-to-all-work" to="/all-work">
                   See Projects/Labs
                 </Link> */}
             </div>

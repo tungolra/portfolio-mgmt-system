@@ -71,7 +71,7 @@
     align-items: center;
   }
   .carousel__snapper > img {
-    width: 50%;
+    width: 60%;
     height: 50vh;
   }
   .carousel__btns > a {
