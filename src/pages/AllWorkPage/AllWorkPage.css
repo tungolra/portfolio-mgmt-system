@@ -9,7 +9,8 @@
 }
 .list-container {
   background-color: rgba(0, 0, 0, 0.689);
-  margin-top: 5vmin;
+  padding-top: 5vmin;
+  border: 2px solid white;
 }
 .list-container > h2 {
   background-color: rgba(0, 0, 0, 0.916);
@@ -22,4 +23,11 @@ table {
 }
 th, td { 
     padding: 0 2vmin;
+}
+@media only screen and (min-width: 961px) {
+  .all-work-container { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
 }

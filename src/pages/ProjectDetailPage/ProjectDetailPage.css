@@ -24,3 +24,8 @@
 .project-responsibilities { 
     margin-bottom: 1vmin;
 }
+.github { 
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}

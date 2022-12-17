@@ -7,7 +7,7 @@ export default function AllWorkPage({ seed, user }) {
   return (
     <div className="all-work-container">
       <ProjectsList seed={seed} user={user} />
-      <LabsList seed={seed} user={user}/>
+      {/* <LabsList seed={seed} user={user}/> */}
     </div>
   );
 }

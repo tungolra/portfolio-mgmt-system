@@ -2,6 +2,7 @@ import React from "react";
 import "./ProjectDetailPage.css";
 import { Link, useParams } from "react-router-dom";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
+import { RxExternalLink } from "react-icons/rx";
 
 export default function ProjectDetailPage({ seed }) {
   let { project } = useParams();
@@ -61,7 +62,9 @@ export default function ProjectDetailPage({ seed }) {
             <div>{r.server_side}</div>
           </div>
         ))}
-        <Link to={selectedProject.site}>Github</Link>
+        <Link className="github" to={selectedProject.site}>
+          Github<RxExternalLink/>
+        </Link>
       </div>
     </div>
   );
