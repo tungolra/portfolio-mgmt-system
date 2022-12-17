@@ -1,4 +1,25 @@
-.all-work-page {
-    color: black;
-    background-color: red;
+.all-work-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  background-image: url("https://i.imgur.com/CGT8QgD.gif");
+  height: 100vh;
+
+}
+.list-container {
+  background-color: rgba(0, 0, 0, 0.689);
+  margin-top: 5vmin;
+}
+.list-container > h2 {
+  background-color: rgba(0, 0, 0, 0.916);
+}
+
+table { 
+
+    width: 100%;
+    text-align: left;
+}
+th, td { 
+    padding: 0 2vmin;
 }

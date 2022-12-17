@@ -29,7 +29,7 @@ export const projects = [
           "Used MVC architecture to build the Express backend, along with building socket routes to create real-time communication between the database and React frontend. Utilized token-based authorization to validate user credentials. ",
       },
     ],
-    tech: [],
+    repo: "https://github.com/tungolra/mern-project",
     site: "https://github.com/tungolra/mern-project",
   },
   {
@@ -54,7 +54,7 @@ export const projects = [
           "Following Django’s MVT architecture, I established the routing and CRUD functions to make API calls to the app’s PostgreSQL database and TastyCO’s API. Utilized Django’s session-based authorization to validate user credentials. ",
       },
     ],
-    tech: [],
+    repo: "https://github.com/tungolra/project-3",
     site: "https://github.com/tungolra/project-3",
   },
   {
@@ -74,7 +74,7 @@ export const projects = [
     summary:
       "An automated flashcard system to provide an online study tool that leverages the power of spaced repetition learning. A personal favourite that combines my interest in game-based learning and programming. Responsible for the entire build of front- and back-end and implementation of Google OAuth 2.0 for user authentication.",
     responsibilities: [{ client_side: "" }, { server_side: "" }],
-    tech: [],
+    repo: "https://github.com/tungolra/StudySmart",
     site: "https://github.com/tungolra/StudySmart",
   },
   {
@@ -85,7 +85,7 @@ export const projects = [
     summary:
       "A self-made, starter web stack project that showcases DOM interactions, complex game logic, and pure-CSS styling. Othello, AKA Reversi, is a multiplayer, strategy board game where players aim to have the most pieces on the board before it is filled. My app features a random-bot that single-player users can play against.",
     responsibilities: [{ client_side: "" }, { server_side: "" }],
-    tech: [],
+    repo: "https://tungolra.github.io/Othello/",
     site: "https://tungolra.github.io/Othello/",
   },
   // {
@@ -96,7 +96,6 @@ export const projects = [
   //   summary:
   //     "A personal, mini-project leveraging Django’s framework for fast and secure application builds. Users can enter form data to create a book object to add to their collection of books. Responsible for complete front- and back-end programming that follows best practices of MVT architecture.",
   //   responsibilities: [{ client_side: "" }, { server_side: "" }],
-  //   tech: [],
   //   site: "https://github.com/tungolra/Book-Collector",
   // },
 ];

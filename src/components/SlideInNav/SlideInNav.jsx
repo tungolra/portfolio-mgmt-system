@@ -26,6 +26,7 @@ export default function SlideInNav({ modalOpened, handleClick, user }) {
               Contact
             </a>
             {user ? <Link to="/entry" onClick={handleClick} >New Entry</Link> : ""}
+            {user ? <Link to="/new-project" onClick={handleClick} >Add Project</Link> : ""}
           </div>
         </div>
       ) : (

@@ -11,6 +11,8 @@ import { getUser } from "../../utilities/users-service";
 import { useState } from "react";
 import LogInForm from "../../components/LogInForm/LogInForm";
 import NewEntry from "../NewEntry/NewEntry";
+import NewProjectPage from "../NewProjectPage/NewProjectPage";
+import Update from "../Update/Update";
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -22,10 +24,11 @@ function App() {
         {user ? (
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="all-work" element={<AllWorkPage />}></Route>
+            <Route path="all-work" element={<AllWorkPage seed={seed} user={user}/>}></Route>
             <Route path="blog" element={<Blog />} />
             <Route path="entry" element={<NewEntry />} />
-            {/* route to create entry */}
+            <Route path="new-project" element={<NewProjectPage />} />
+            <Route path="all-work/update/:project" element={<Update />} />
             <Route
               path="/projects/:project"
               element={<ProjectDetailPage seed={seed} />}
@@ -35,7 +38,7 @@ function App() {
         ) : (
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="all-work" element={<AllWorkPage />}></Route>
+            <Route path="all-work" element={<AllWorkPage seed={seed} user={user} />}></Route>
             <Route path="blog" element={<Blog />} />
             <Route
               path="login"

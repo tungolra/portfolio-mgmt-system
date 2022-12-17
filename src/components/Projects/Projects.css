@@ -54,6 +54,7 @@
 }
 
 .carousel__btns {
+  margin-top: 3vmin;
   display: flex;
   justify-content: space-between;
 }

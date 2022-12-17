@@ -3,11 +3,10 @@ const Schema = mongoose.Schema;
 
 const skillSchema = new Schema(
   {
-    title: { type: String, required: true },
-    entry: {
-      type: String,
-      required: true,
-    },
+    type: { type: String, required: true },
+    subtype: { type: String, required: true },
+    skill: { type: String, required: true },
+    img: String,
   },
   {
     timestamps: true,
