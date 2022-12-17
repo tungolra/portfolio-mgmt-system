@@ -34,6 +34,7 @@ nav > * {
   transition: 0.4s;
 }
 .change {
+  margin-left: 3vmin;
   position: fixed;
   z-index: 1;
 }

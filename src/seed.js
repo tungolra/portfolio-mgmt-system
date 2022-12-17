@@ -219,7 +219,7 @@ export const skills = [
     type: "Technologies",
     subtype: "Library",
     skill: "Socket.io",
-    img: "https://i.imgur.com/ozEa6Uk.png",
+    img: "https://i.imgur.com/lofEt98.png",
   },
 ];
 
