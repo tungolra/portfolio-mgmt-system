@@ -3,20 +3,12 @@ export const projects = [
     name: "Chatter[Box]",
     img: "https://i.imgur.com/rnFmcto.gif",
     pages: [
-      "https://i.imgur.com/CJjvLuF.png",
-      "https://i.imgur.com/tQdrehH.png",
+      "https://i.imgur.com/tn2KTog.gif",
       "https://i.imgur.com/aXjkvsn.png",
+      "https://i.imgur.com/Y0UKqRK.png",
       "https://i.imgur.com/GMz55U4.png",
     ],
-    skills: [
-      "MongoDB",
-      "Express",
-      "Node.js",
-      "React",
-      "Socket.io",
-      "AWS S3",
-      "Mongoose",
-    ],
+    skills: [],
     summary:
       "From inception to deployment to Heroku, I built a MERN-stack instant messaging single page application (SPA), leveraging Socket.io to facilitate real-time communication between browsers. As a pseudo-social media application, I integrated AWS S3 for users to upload photos and coded functionality to edit their profile’s details. Chatterbox is featured as an instant messaging template that can be integrated and adapted across B2B, C2C, or B2C platforms.",
     responsibilities: [
@@ -36,12 +28,17 @@ export const projects = [
     name: "Culinarian",
     img: "https://i.imgur.com/Wzykr4U.gif",
     pages: [
-      "https://i.imgur.com/Wzykr4U.gif",
-      "https://i.imgur.com/gvLS8zZ.gif",
       "https://i.imgur.com/bu8ZXid.gif",
+      "https://i.imgur.com/OOrGzJ0.png",
+      "https://i.imgur.com/gmJyfdy.gif",
+      "https://i.imgur.com/eE7p9Ul.gif",
+      "https://i.imgur.com/9PMo94f.png",
+      "https://i.imgur.com/Wzykr4U.gif",
+      "https://i.imgur.com/qgkhZ1C.png",
+      "https://i.imgur.com/oTplFje.gif",
       "https://i.imgur.com/hVQQQzV.png",
     ],
-    skills: ["Django", "Python", "PostgreSQL"],
+    skills: [],
     summary:
       "Using a Django, Python, and PostgreSQL solutions stack, our team of 4 software developers launched a recipe-based website that aims to streamline decision-making in the kitchen and mitigate food waste.  Users have access to a large database of recipes that suggests popular recipes and exact portions of ingredients for their next grocery run!",
     responsibilities: [
@@ -54,8 +51,8 @@ export const projects = [
           "Following Django’s MVT architecture, I established the routing and CRUD functions to make API calls to the app’s PostgreSQL database and TastyCO’s API. Utilized Django’s session-based authorization to validate user credentials. ",
       },
     ],
-    repo: "https://github.com/tungolra/project-3",
-    site: "https://github.com/tungolra/project-3",
+    repo: "https://github.com/tungolra/project-3/tree/development",
+    site: "https://github.com/tungolra/project-3/tree/development",
   },
   {
     name: "StudySmart",
