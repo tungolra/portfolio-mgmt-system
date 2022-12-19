@@ -30,7 +30,7 @@ export const projects = [
       },
     ],
     repo: "https://github.com/tungolra/mern-project",
-    site: "https://github.com/tungolra/mern-project",
+    site: "https://chatterbox-sei-55.herokuapp.com/",
   },
   {
     name: "Culinarian",
@@ -228,7 +228,7 @@ skills.map((skill) => {
   if (skill.type === "Languages") {
     languages.push(skill);
   }
-  return languages
+  return languages;
 });
 
 export const technologies = [];
@@ -236,5 +236,5 @@ skills.map((skill) => {
   if (skill.type === "Technologies") {
     technologies.push(skill);
   }
-  return languages
+  return languages;
 });

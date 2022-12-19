@@ -18,26 +18,26 @@ export default function Projects({ seed }) {
                 className="carousel__slide"
               >
                 <div className="carousel__snapper">
-                  <img className="img" src={project.img} alt="project" />
+                  <img className="img" src={project?.img} alt="project" />
                   <div className="carousel__btns">
                     <a
                       className="prev"
                       href={`#carousel__slide${
-                        idx < 1 ? seed.projects.length : idx
+                        idx < 1 ? seed.projects?.length : idx
                       }`}
                     >
                       <BsArrowLeftCircle />
                     </a>
                     <a
                       href={`#carousel__slide${
-                        idx + 2 > seed.projects.length ? 1 : idx + 2
+                        idx + 2 > seed.projects?.length ? 1 : idx + 2
                       }`}
                     >
                       <BsArrowRightCircle />
                     </a>
                   </div>
-                  <div className="projects-title">{project.name}</div>
-                  <Link to={`/projects/${project.name}`}>
+                  <div className="projects-title">{project?.name}</div>
+                  <Link to={`/projects/${project?.name}`}>
                     <div className="carousel__link">Details</div>
                   </Link>
                 </div>
