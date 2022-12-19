@@ -71,7 +71,7 @@ function App() {
               path="/projects/:project"
               element={<ProjectDetailPage seed={seed} />}
             ></Route>
-            <Route path="/*" element={<Navigate to="/" />} />
+            <Route path="/*" element={<Navigate to="/home" />} />
           </Routes>
         )}
       </div>
