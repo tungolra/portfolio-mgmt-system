@@ -81,10 +81,10 @@ export default function ProjectDetailPage({ seed }) {
             <div>{r?.server_side}</div>
           </div>
         ))}
-        <Link className="github" to={selectedProject?.site}>
+        <a className="github" href={selectedProject?.site}>
           Github
           <RxExternalLink />
-        </Link>
+        </a>
       </div>
     </div>
   );
