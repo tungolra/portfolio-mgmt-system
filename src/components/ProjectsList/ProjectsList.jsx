@@ -28,7 +28,7 @@ export default function ProjectsList({ seed, user }) {
                 </td>
                 <td>Offline</td>
                 {/* link to update page */}
-                {user ? <td><Link to={`update/${project.name}`}> Update</Link></td> : ""}
+                {user ? <td><Link to={`update/${project?.name}`}> Update</Link></td> : ""}
               </tr>
             </>
           ))}

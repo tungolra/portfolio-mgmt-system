@@ -13,11 +13,12 @@ import NewEntry from "../NewEntry/NewEntry";
 import NewProjectPage from "../NewProjectPage/NewProjectPage";
 import Update from "../Update/Update";
 import ResumePage from "../ResumePage/ResumePage";
+import SignUpForm from "../../components/SignUpForm/SignUpForm"
 
 function App() {
   const [user, setUser] = useState(getUser());
 
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  document.querySelectorAll('a[href^="/#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
 
@@ -33,7 +34,7 @@ function App() {
         <NavBar user={user} setUser={setUser} />
         {user ? (
           <Routes>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/home" element={<Home />}></Route>
             <Route
               path="all-work"
               element={<AllWorkPage seed={seed} user={user} />}
@@ -63,10 +64,14 @@ function App() {
               element={<LogInForm setUser={setUser} />}
             ></Route>
             <Route
+              path="signup"
+              element={<SignUpForm setUser={setUser} />}
+            ></Route>
+            <Route
               path="/projects/:project"
               element={<ProjectDetailPage seed={seed} />}
             ></Route>
-            <Route path="/*" element={<Navigate to="/" />} />
+            <Route path="/*" element={<Navigate to="/home" />} />
           </Routes>
         )}
       </div>

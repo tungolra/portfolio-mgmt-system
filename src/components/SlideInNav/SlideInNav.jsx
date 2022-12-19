@@ -9,7 +9,7 @@ export default function SlideInNav({ modalOpened, handleClick, user }) {
       {modalOpened ? (
         <div className="overlay">
           <div className="overlay-content">
-            <Link to="/" onClick={handleClick}>
+            <Link to="/home" onClick={handleClick}>
               Home
             </Link>
             <a href="/#about" onClick={handleClick}>
