@@ -13,11 +13,12 @@ import NewEntry from "../NewEntry/NewEntry";
 import NewProjectPage from "../NewProjectPage/NewProjectPage";
 import Update from "../Update/Update";
 import ResumePage from "../ResumePage/ResumePage";
+import SignUpForm from "../../components/SignUpForm/SignUpForm"
 
 function App() {
   const [user, setUser] = useState(getUser());
 
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  document.querySelectorAll('a[href^="/#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
 
@@ -61,6 +62,10 @@ function App() {
             <Route
               path="login"
               element={<LogInForm setUser={setUser} />}
+            ></Route>
+            <Route
+              path="signup"
+              element={<SignUpForm setUser={setUser} />}
             ></Route>
             <Route
               path="/projects/:project"
