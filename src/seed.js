@@ -228,6 +228,7 @@ skills.map((skill) => {
   if (skill.type === "Languages") {
     languages.push(skill);
   }
+  return languages
 });
 
 export const technologies = [];
@@ -235,4 +236,5 @@ skills.map((skill) => {
   if (skill.type === "Technologies") {
     technologies.push(skill);
   }
+  return languages
 });
