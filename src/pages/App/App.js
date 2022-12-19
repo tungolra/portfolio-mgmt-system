@@ -33,7 +33,7 @@ function App() {
         <NavBar user={user} setUser={setUser} />
         {user ? (
           <Routes>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/home" element={<Home />}></Route>
             <Route
               path="all-work"
               element={<AllWorkPage seed={seed} user={user} />}

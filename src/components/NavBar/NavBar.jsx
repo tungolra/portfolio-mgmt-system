@@ -34,7 +34,7 @@ export default function NavBar({ setUser, user }) {
         handleClick={handleClick}
         user={user}
       />
-      <a className="home-nav" title="Home" href="/">
+      <a className="home-nav" title="Home" href="/home">
         <AiOutlineHome />
       </a>
       <a className="projects-nav" title="Projects" href="/#projects">
