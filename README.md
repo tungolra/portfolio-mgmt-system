@@ -8,6 +8,9 @@ I've created an admin portal using token-based authentication where I can add ne
 
 While this is a React app, I've used React elements only when necessary. The reason for this is to showcase my use of CSS and HTML - basic skills necessary for any developer. I've avoided the use of styling frameworks for this reason. Using a mobile-first approach, I created a responsive website for both desktop and mobile.
 
+### Home Page 
+<img src="https://i.imgur.com/fV6RAhx.gif">
+
 ### Projects Component
 
 The Projects component showcases a carousel to view a quick snapshot or gif of the core feature of each project. There are navigation buttons to view the next project.
