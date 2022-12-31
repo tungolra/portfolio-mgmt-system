@@ -23,8 +23,10 @@ app.use(express.static(path.join(__dirname, "build")));
 // Be sure to mount before routes
 app.use(require('./config/checkToken'));
 
-// Put API routes here, before the "catch all" route
+// Put API routes here
 app.use('/api/users', require('./routes/api/users'))
+app.use('/api/skills', require('./routes/api/skills'))
+app.use('/api/projects', require('./routes/api/projects'))
 
 app.listen(port, function () {
   console.log(`Express app running on port ${port}`);

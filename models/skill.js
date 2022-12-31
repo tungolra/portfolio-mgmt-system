@@ -7,6 +7,7 @@ const skillSchema = new Schema(
     subtype: { type: String, required: true },
     skill: { type: String, required: true },
     img: String,
+    projectIds: [Schema.Types.ObjectId],
   },
   {
     timestamps: true,
