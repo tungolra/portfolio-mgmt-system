@@ -25,7 +25,8 @@ app.use(require('./config/checkToken'));
 
 // Put API routes here
 app.use('/api/users', require('./routes/api/users'))
-// app.use('/api/skills', require('./routes/api/skills'))
+app.use('/api/skills', require('./routes/api/skills'))
+app.use('/api/projects', require('./routes/api/projects'))
 
 app.listen(port, function () {
   console.log(`Express app running on port ${port}`);

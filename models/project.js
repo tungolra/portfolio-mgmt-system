@@ -1,16 +1,16 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-export const projectSchema = new Schema(
+const projectSchema = new Schema(
   {
     name: { type: String, required: true },
     img: String,
     pages: Array,
-    skills: Array,
     summary: String,
-    responsibilities: { type: Array }, // client-side, server-side, other
+    responsibilities: Array,
     repo: String,
     site: String,
+    skillIds: [Schema.Types.ObjectId],
   },
   {
     timestamps: true,
