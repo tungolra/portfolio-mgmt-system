@@ -8,7 +8,7 @@ import * as seed from "../../seed.js";
 
 import "./Home.css";
 
-export default function Home() {
+export default function Home({user}) {
   return (
     <>
       <div className="bg-image">
@@ -16,7 +16,7 @@ export default function Home() {
           <Header />
           <About />
           <Projects seed={seed}/>
-          <Skills seed={seed} />
+          <Skills user={user} seed={seed} />
           <Footer />
         </div>
       </div>

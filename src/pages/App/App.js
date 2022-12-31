@@ -13,7 +13,7 @@ import NewEntry from "../NewEntry/NewEntry";
 import NewProjectPage from "../NewProjectPage/NewProjectPage";
 import Update from "../Update/Update";
 import ResumePage from "../ResumePage/ResumePage";
-import SignUpForm from "../../components/SignUpForm/SignUpForm"
+import SignUpForm from "../../components/SignUpForm/SignUpForm";
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -34,7 +34,7 @@ function App() {
         <NavBar user={user} setUser={setUser} />
         {user ? (
           <Routes>
-            <Route path="/home" element={<Home />}></Route>
+            <Route path="/home" element={<Home user={user} />}></Route>
             <Route
               path="all-work"
               element={<AllWorkPage seed={seed} user={user} />}
