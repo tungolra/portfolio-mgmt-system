@@ -1,7 +1,6 @@
 import "./ProjectsList.css";
 import { Link } from "react-router-dom";
 
-import React from "react";
 
 export default function ProjectsList({ seed, user }) {
   return (
