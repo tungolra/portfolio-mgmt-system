@@ -1,4 +1,3 @@
-const { findOne } = require("../../models/skill");
 const Skill = require("../../models/skill");
 
 // create new skill
@@ -11,28 +10,26 @@ async function createSkill(req, res) {
   }
 }
 
-// get one skill // why no work?
+// get one skill 
 async function getOneSkill(req, res) {
-  const skillId  = req.params.id;
+  const { id } = req.params;
   try {
-    const skill = await Skill.findOne({_id: skillId});
-    res.status(200).json(skill)
+    const skill = await Skill.findOne({ _id: id });
+    res.status(200).json(skill);
   } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
   }
 }
 
 // get all skills
 async function getSkills(req, res) {
   try {
-    const skills = await Skill.find({})
-    res.status(200).json(skills)
+    const skills = await Skill.find({});
+    res.status(200).json(skills);
   } catch (error) {
-    res.status(500).json(error)
+    res.status(500).json(error);
   }
 }
-
-
 
 // update skill
 async function updateSkill(req, res) {}
@@ -50,7 +47,7 @@ module.exports = {
   create: createSkill,
   show: getOneSkill,
   index: getSkills,
- 
+
   update: updateSkill,
   delete: deleteSkill,
   new: addSkill,
