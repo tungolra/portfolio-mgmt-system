@@ -1,4 +1,5 @@
 const Skill = require("../../models/skill");
+const Project = require("../../models/project")
 
 // create new skill
 async function createSkill(req, res) {
@@ -54,15 +55,19 @@ async function deleteSkill(req, res) {
   }
 }
 
-//add skill to project
+//add skill to project // not working 
 async function addSkill(req, res) {
   const { skillId, projectId } = req.params;
   try {
-    const skill = await Skill.findOne({_id: skillId})
-    const project = skill.projectIds.find(id === projectId)
-
+    const findSkill = await Skill.findOne({_id: skillId})
+    const {_id, type, subtype, skill, img} = findSkill
+    const skillData = {_id, type, subtype, skill, img}
+    const project = await Project.findOne({_id: projectId})
+    project.skillIds.push(skillData)
+    findSkill.projectIds.push(projectId)
+    res.status(200).json(project.skillIds)
   } catch (error) {
-    
+    res.status(500).json(error.message)
   }
 }
 
