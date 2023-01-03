@@ -26,7 +26,7 @@ export default function Projects({ seed }) {
         <h3>Projects</h3>
         <section className="carousel" aria-label="Gallery">
           <div className="carousel__viewport">
-            {projects.map((project, idx) => (
+            {seed.projects.map((project, idx) => (
               <div
                 key={idx}
                 id={`carousel__slide${idx + 1}`}
