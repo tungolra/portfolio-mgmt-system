@@ -18,15 +18,16 @@ import SignUpForm from "../../components/SignUpForm/SignUpForm";
 function App() {
   const [user, setUser] = useState(getUser());
 
-  document.querySelectorAll('a[href^="/#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
+  window.onload = function () {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
       });
     });
-  });
+  };
 
   return (
     <div className="app-container">
@@ -34,7 +35,7 @@ function App() {
         <NavBar user={user} setUser={setUser} />
         {user ? (
           <Routes>
-            <Route path="/home" element={<Home user={user} />}></Route>
+            <Route path="/" element={<Home user={user} />}></Route>
             <Route
               path="all-work"
               element={<AllWorkPage seed={seed} user={user} />}
@@ -71,7 +72,7 @@ function App() {
               path="/projects/:project"
               element={<ProjectDetailPage seed={seed} />}
             ></Route>
-            <Route path="/*" element={<Navigate to="/home" />} />
+            <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         )}
       </div>

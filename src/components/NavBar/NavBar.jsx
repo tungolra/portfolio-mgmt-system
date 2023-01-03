@@ -15,20 +15,20 @@ function SlideInNav({ modalOpened, handleClick, user }) {
       {modalOpened ? (
         <div className="overlay">
           <div className="overlay-content">
-            <Link to="/home" onClick={handleClick}>
+            <Link to="/" onClick={handleClick}>
               Home
             </Link>
-            <a href="/#about" onClick={handleClick}>
+            <a href="#about" onClick={handleClick}>
               About
             </a>
-            <a href="/#projects" onClick={handleClick}>
+            <a href="#projects" onClick={handleClick}>
               Projects
             </a>
-            <a href="/#skills" onClick={handleClick}>
+            <a href="#skills" onClick={handleClick}>
               Skills
             </a>
             {/* <a href="#">Blog</a> */}
-            <a href="/#footer" onClick={handleClick}>
+            <a href="#footer" onClick={handleClick}>
               Contact
             </a>
             {user ? <Link to="/entry" onClick={handleClick} >New Entry</Link> : ""}
@@ -69,16 +69,16 @@ export default function NavBar({ setUser, user }) {
         handleClick={handleClick}
         user={user}
       />
-      <a className="home-nav" title="Home" href="/home">
+      <Link to="/" className="home-nav" title="Home">
         <AiOutlineHome />
-      </a>
-      <a className="projects-nav" title="Projects" href="/#projects">
+      </Link>
+      <a className="projects-nav" title="Projects" href="#projects">
         <AiOutlineAppstore />
       </a>
-      <a className="skills-nav" title="Skills" href="/#skills">
+      <a className="skills-nav" title="Skills" href="#skills">
         <BsLightning />
       </a>
-      <a className="contact-nav" title="Contact" href="/#footer">
+      <a className="contact-nav" title="Contact" href="#footer">
         <BiMessageDetail />
       </a>
       <Link className="logout" onClick={handleLogOut}>

@@ -42,9 +42,9 @@ function Footer() {
     <footer id="footer">
       <div className="contact-details">
         <span>Ralph Tu&#241;gol</span>
-        <span type="email" action="">
+        <a className="mailto" href="mailto: rarttungol@gmail.com" >
           <TfiEmail /> rarrtungol@gmail.com
-        </span>
+        </a>
       </div>
       <div className="socials-icons-container">
         <div>
