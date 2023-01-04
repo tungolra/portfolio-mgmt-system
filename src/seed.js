@@ -210,7 +210,7 @@ export const projects = [
     skills: ["Express", "Node.js", "Mongoose", "JavaScript", "OAuth 2.0"],
     summary:
       "An automated flashcard system to provide an online study tool that leverages the power of spaced repetition learning. A personal favourite that combines my interest in game-based learning and programming. Responsible for the entire build of front- and back-end and implementation of Google OAuth 2.0 for user authentication.",
-    responsibilities: [{ client_side: "" }, { server_side: "" }],
+    responsibilities: [{ client_side: "Responsible for the entire build of front- and back-end and implementation of Google OAuth 2.0 for user authentication.  " }, { server_side: "" }],
     repo: "https://github.com/tungolra/StudySmart",
     site: "https://github.com/tungolra/StudySmart",
   },
@@ -221,7 +221,7 @@ export const projects = [
     skills: ["JavaScript", "HTML", "CSS"],
     summary:
       "A self-made, starter web stack project that showcases DOM interactions, complex game logic, and pure-CSS styling. Othello, AKA Reversi, is a multiplayer, strategy board game where players aim to have the most pieces on the board before it is filled. My app features a random-bot that single-player users can play against.",
-    responsibilities: [{ client_side: "" }, { server_side: "" }],
+    responsibilities: [{ client_side: "Responsible for complete front- and back-end programming that follows best practices of MVT architecture." }, { server_side: "" }],
     repo: "https://tungolra.github.io/Othello/",
     site: "https://tungolra.github.io/Othello/",
   },
