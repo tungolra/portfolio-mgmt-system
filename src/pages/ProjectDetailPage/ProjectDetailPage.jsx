@@ -17,7 +17,7 @@ export default function ProjectDetailPage({ seed }) {
 
     
     <div className="page-container">
-      {/* <div className="project-nav">
+      <div className="project-nav">
         {navProject === 0 ? (
           ""
         ) : (
@@ -32,7 +32,7 @@ export default function ProjectDetailPage({ seed }) {
             <span>Next Project &gt;</span>
           </Link>
         )}
-      </div> */}
+      </div>
       <section className="carousel" aria-label="Gallery">
         <div className="carousel__viewport">
           {selectedProject?.pages?.map((page, idx) => (
