@@ -4,32 +4,22 @@
   box-sizing: border-box;
 }
 
+
 .App {
-  /* margin-top: 5vh; */
   text-align: center;
   height: 100vh;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 @media only screen and (min-width: 961px) {
-  .app-container {
+  .app-container { 
     overflow: auto;
     display: flex;
     justify-content: center;
-    background-size: cover;
-    /* background-image: url("https://i.imgur.com/CGT8QgD.gif"); */
+    /* background-size: cover; */
+    /* background-image: url('https://i.imgur.com/CGT8QgD.gif'); */
   }
-  .App {
-    width: 70%;
-  }
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  /* body {
-    background: #000;
-  } */
-  canvas {
-    display: block;
+  .App{
+      width: 70%;
   }
 }
