@@ -5,20 +5,20 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 export default function Projects({ seed }) {
-  const [projects, setProjects] = useState([]);
+  // const [projects, setProjects] = useState([]);
 
-  useEffect(() => {
-    const getProjects = async () => {
-      try {
-        let payload = await axios.get(`api/projects/`)
-        if (!payload.status === 200) throw new Error ("No response received")
-        setProjects(payload.data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getProjects()
-  }, [])
+  // useEffect(() => {
+  //   const getProjects = async () => {
+  //     try {
+  //       let payload = await axios.get(`api/projects/`)
+  //       if (!payload.status === 200) throw new Error ("No response received")
+  //       setProjects(payload.data)
+  //     } catch (error) {
+  //       console.log(error)
+  //     }
+  //   }
+  //   getProjects()
+  // }, [])
 
   return (
     <>
@@ -26,15 +26,13 @@ export default function Projects({ seed }) {
         <h3>Projects</h3>
         <section className="carousel" aria-label="Gallery">
           <div className="carousel__viewport">
-            {projects.map((project, idx) => (
+            {seed.projects.map((project, idx) => (
               <div
                 key={idx}
                 id={`carousel__slide${idx + 1}`}
                 tabindex="0"
                 className="carousel__slide"
               >
-                <div className="carousel__snapper">
-                  <img className="img" src={project?.img} alt="project" />
                   <div className="carousel__btns">
                     <a
                       className="prev"
@@ -52,6 +50,8 @@ export default function Projects({ seed }) {
                       <BsArrowRightCircle />
                     </a>
                   </div>
+                <div className="carousel__snapper">
+                  <img className="img" src={project?.img} alt="project" />
                   <div className="projects-title">{project?.name}</div>
                   <Link to={`/projects/${project?.name}`}>
                     <div className="carousel__link">Details</div>
