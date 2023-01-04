@@ -7,13 +7,14 @@ import * as seed from "../../seed.js";
 import ProjectDetailPage from "../ProjectDetailPage/ProjectDetailPage";
 import AllWorkPage from "../AllWorkPage/AllWorkPage";
 import { getUser } from "../../utilities/users-service";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import LogInForm from "../../components/LogInForm/LogInForm";
 import NewEntry from "../NewEntry/NewEntry";
 import NewProjectPage from "../NewProjectPage/NewProjectPage";
 import Update from "../Update/Update";
 import ResumePage from "../ResumePage/ResumePage";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
+import MatrixBackground from "../../components/MatrixBackground/MatrixBackground";
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -31,6 +32,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <MatrixBackground />
       <div className="App">
         <NavBar user={user} setUser={setUser} />
         {user ? (

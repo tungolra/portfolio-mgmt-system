@@ -17,7 +17,7 @@ export default function ProjectDetailPage({ seed }) {
 
     
     <div className="page-container">
-      {/* <div className="project-nav">
+      <div className="project-nav">
         {navProject === 0 ? (
           ""
         ) : (
@@ -32,7 +32,7 @@ export default function ProjectDetailPage({ seed }) {
             <span>Next Project &gt;</span>
           </Link>
         )}
-      </div> */}
+      </div>
       <section className="carousel" aria-label="Gallery">
         <div className="carousel__viewport">
           {selectedProject?.pages?.map((page, idx) => (
@@ -43,12 +43,6 @@ export default function ProjectDetailPage({ seed }) {
                 tabindex="0"
                 className="carousel__slide"
               >
-                <div className="carousel__snapper">
-                  <img
-                    className="img"
-                    src={!page ? "https://i.imgur.com/I9A7c4b.png" : page}
-                    alt="project"
-                  />
                   <div className="carousel__btns">
                     <a
                       className="prev"
@@ -66,6 +60,12 @@ export default function ProjectDetailPage({ seed }) {
                       <BsArrowRightCircle />
                     </a>
                   </div>
+                <div className="carousel__snapper">
+                  <img
+                    className="img"
+                    src={!page ? "https://i.imgur.com/I9A7c4b.png" : page}
+                    alt="project"
+                  />
                   <div className="projects-title">{project?.name}</div>
                 </div>
               </div>

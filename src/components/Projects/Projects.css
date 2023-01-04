@@ -63,6 +63,9 @@
   color: white;
   font-size: 30px;
 }
+.img { 
+  background-size: cover;
+}
 
 /* desktop view */
 @media only screen and (min-width: 961px) {
@@ -72,7 +75,7 @@
   }
   .carousel__snapper > img {
     width: 60%;
-    height: 50vh;
+    height: auto;
   }
   .carousel__btns > a {
     margin: 0 25vmin;
