@@ -1,11 +1,13 @@
 .home-container {
   display: flex;
+
   flex-direction: column;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
 
 .bg-image {
+  /* background-color: black; */
   background-image: url("../../images/vscode-snapshot-full.png");
   background-position: center;
   background-size: cover;
@@ -22,8 +24,10 @@
 }
 .title {
   border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.689);
   color: white;
   padding: 3vmin;
+
 }
 .row {
   width: auto;
@@ -38,6 +42,7 @@
 /* about */
 .about-container {
   height: auto;
+  margin-top: 15vh;
   padding: 5vmin;
   background-color: rgba(0, 0, 0, 0.689);
   color: white;
@@ -55,7 +60,7 @@ section {
 .about > p {
   text-align: left;
   margin-bottom: 2vmin;
-  text-align: justify;
+  /* text-align: justify; */
   text-indent: 2em;
 }
 
@@ -79,7 +84,7 @@ footer {
   font-weight: bold;
 }
 
-.mailto { 
+.mailto {
   color: white;
   text-decoration: none;
 }
@@ -97,4 +102,20 @@ footer {
 .resume {
   width: 45px;
   color: white;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+}
+
+@media only screen and (min-width: 961px) {
+  .home-container {
+    align-items: center;
+  }
+  .about-container{ 
+    display: flex;
+    justify-content: center;
+  }
+  .about {
+    width: 70%;
+  }
 }

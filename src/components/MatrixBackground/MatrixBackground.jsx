@@ -52,7 +52,7 @@ export default function MatrixBackground({ timeout = 50 }) {
         background: "#000000",
         overflow: "hidden",
         position: "fixed",
-        height: "100%",
+        height: "50vh",
         width: "100%",
         zIndex: -1,
         left: "0",

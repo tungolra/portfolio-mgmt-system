@@ -10,13 +10,15 @@ import { CgFileDocument } from "react-icons/cg";
 import AboutBlurbI from "./AboutBlurbI";
 import AboutBlurbII from "./AboutBlurbII";
 import * as seed from "../../seed.js";
+import MatrixBackground from "../../components/MatrixBackground/MatrixBackground";
 
 import "./Home.css";
-
+import Me from "./Me";
 
 function Header() {
   return (
     <div className="header-container">
+      <MatrixBackground />
       <div className="row title">
         <h3>Ralph Tu&#241;gol</h3>
         <h4>Full-Stack Software Developer</h4>
@@ -29,31 +31,33 @@ function About() {
   return (
     <div className="about-container">
       <section className="about">
-        <h3 className="about-title">Building this portfolio</h3>
-        <AboutBlurbII />
+        <h3 className="about-title">About Me</h3>
+        <Me />
       </section>
     </div>
   );
 }
-
 
 function Footer() {
   return (
     <footer id="footer">
       <div className="contact-details">
         <span>Ralph Tu&#241;gol</span>
-        <a className="mailto" href="mailto: rarttungol@gmail.com" >
+        <a className="mailto" href="mailto:rarttungol@gmail.com">
           <TfiEmail /> rarrtungol@gmail.com
         </a>
       </div>
       <div className="socials-icons-container">
         <div>
-          <Link to="/cv">
-            <CgFileDocument title="Ralph Tungol Resume 2022" className="socials-icons resume" />
+          <Link to="/cv" target="_blank">
+            <CgFileDocument
+              title="Ralph Tungol Resume 2022"
+              className="socials-icons resume"
+            />
           </Link>
         </div>
         <div>
-          <a href="https://github.com/tungolra">
+          <a href="https://github.com/tungolra" target="_blank">
             <img
               className="socials-icons"
               src={gitHubIcon}
@@ -63,12 +67,14 @@ function Footer() {
           </a>
         </div>
         <div>
-          <a href="https://www.linkedin.com/in/ralph-tungol/">
+          <a href="https://www.linkedin.com/in/ralph-tungol/" target="_blank">
+          
             <img
               className="socials-icons"
               src={linkedInIcon}
               alt="linkedin-icon"
               title="LinkedIn"
+              
             />
           </a>
         </div>
@@ -77,15 +83,14 @@ function Footer() {
   );
 }
 
-
-export default function Home({user}) {
+export default function Home({ user }) {
   return (
     <>
       <div className="bg-image">
         <div className="home-container">
           <Header />
           <About />
-          <Projects seed={seed}/>
+          <Projects seed={seed} />
           <Skills user={user} seed={seed} />
           <Footer />
         </div>

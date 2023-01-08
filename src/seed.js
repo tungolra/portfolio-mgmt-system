@@ -165,6 +165,27 @@ export const projects = [
     site: "https://chatterbox-sei-55.herokuapp.com/",
   },
   {
+    name: "My Portfolio",
+    img: "https://i.imgur.com/rnFmcto.gif",
+    pages: [
+    ],
+    skills: [],
+    summary:
+      "This project was completed in 5 days. It is a basic website that highlights my current projects, technologies used, and contact information. To organize various components and to set up the website to integrate RESTful APIs, React's component-based, state-driven framework was a good use-case for powering my site. I've created an admin portal using token-based authentication where I can add new projects and create blog entries as I continue to build my portfolio and track my progress as a developer. While this is a React app, I've used React elements only when necessary. The reason for this is to showcase my use of CSS and HTML - basic skills necessary for any developer. I've avoided the use of styling frameworks for this reason. Using a mobile-first approach, I created a responsive website for both desktop and mobile.",
+    responsibilities: [
+      {
+        client_side:
+          "",
+      },
+      {
+        server_side:
+          "",
+      },
+    ],
+    repo: "https://github.com/tungolra/portfolio-mgmt-system/tree/deployment",
+    site: "https://ralphtungol.herokuapp.com/",
+  },
+  {
     name: "Culinarian",
     img: "https://i.imgur.com/Wzykr4U.gif",
     pages: [

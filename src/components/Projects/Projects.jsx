@@ -1,24 +1,9 @@
 import { Link } from "react-router-dom";
 import "./Projects.css";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export default function Projects({ seed }) {
-  // const [projects, setProjects] = useState([]);
-
-  // useEffect(() => {
-  //   const getProjects = async () => {
-  //     try {
-  //       let payload = await axios.get(`api/projects/`)
-  //       if (!payload.status === 200) throw new Error ("No response received")
-  //       setProjects(payload.data)
-  //     } catch (error) {
-  //       console.log(error)
-  //     }
-  //   }
-  //   getProjects()
-  // }, [])
 
   return (
     <>

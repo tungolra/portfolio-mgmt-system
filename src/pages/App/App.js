@@ -7,11 +7,9 @@ import * as seed from "../../seed.js";
 import ProjectDetailPage from "../ProjectDetailPage/ProjectDetailPage";
 import AllWorkPage from "../AllWorkPage/AllWorkPage";
 import { getUser } from "../../utilities/users-service";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import LogInForm from "../../components/LogInForm/LogInForm";
 import NewEntry from "../NewEntry/NewEntry";
-import NewProjectPage from "../NewProjectPage/NewProjectPage";
-import Update from "../Update/Update";
 import ResumePage from "../ResumePage/ResumePage";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import MatrixBackground from "../../components/MatrixBackground/MatrixBackground";
@@ -32,7 +30,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <MatrixBackground />
+      {/* <MatrixBackground /> */}
       <div className="App">
         <NavBar user={user} setUser={setUser} />
         {user ? (
@@ -44,8 +42,6 @@ function App() {
             ></Route>
             <Route path="blog" element={<Blog />} />
             <Route path="entry" element={<NewEntry />} />
-            <Route path="new-project" element={<NewProjectPage />} />
-            <Route path="all-work/update/:project" element={<Update />} />
             <Route path="cv" element={<ResumePage />} />
             <Route
               path="/projects/:project"

@@ -69,12 +69,18 @@
 
 /* desktop view */
 @media only screen and (min-width: 961px) {
+  .carousel { 
+    align-items: center ;
+  }
+  .carousel__btns{
+    justify-content: center;
+  }
   .carousel__snapper {
     display: flex;
     align-items: center;
   }
   .carousel__snapper > img {
-    width: 60%;
+    width: 60vmin;
     height: auto;
   }
   .carousel__btns > a {
@@ -83,12 +89,18 @@
 }
 /* tablet view */
 @media only screen  and (min-width: 401px) and (max-width: 960px) {
+  .carousel { 
+    align-items: center ;
+  }
+  .carousel__btns{
+    justify-content: center;
+  }
   .carousel__snapper {
     display: flex;
     align-items: center;
   }
   .carousel__snapper > img {
-    width: 60%;
+    width: 60vmin;
     height: auto;
   }
   .carousel__btns > a {
