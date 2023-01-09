@@ -1,18 +1,12 @@
 .home-container {
   display: flex;
-
   flex-direction: column;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
 
 .bg-image {
-  /* background-color: black; */
-  background-image: url("../../images/vscode-snapshot-full.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: linear-gradient(0.25turn, #000000, #ffffff, #000000);
 }
 
 /* header */
@@ -27,7 +21,7 @@
   background-color: rgba(0, 0, 0, 0.689);
   color: white;
   padding: 3vmin;
-
+  font-size: 4vmin;
 }
 .row {
   width: auto;
@@ -42,9 +36,9 @@
 /* about */
 .about-container {
   height: auto;
-  margin-top: 15vh;
+  /* margin-top: 15vh; */
   padding: 5vmin;
-  background-color: rgba(0, 0, 0, 0.689);
+  background-color: rgba(0, 0, 0, 0.388);
   color: white;
 }
 
@@ -53,15 +47,40 @@ section {
 }
 
 .about-title {
-  font-weight: bold;
+  font-size: 8vmin;
   margin-bottom: 2vmin;
+  color: #99ff99;
 }
 
-.about > p {
-  text-align: left;
+/* Me */
+.me > p,
+.see-more > p {
+  font-weight: bold;
   margin-bottom: 2vmin;
-  /* text-align: justify; */
   text-indent: 2em;
+  text-align: left;
+}
+.see-less {
+  color: #99ff99;
+  display: none;
+}
+.see-more {
+  display: block;
+}
+.toggle-hide {
+  color: #99ff99;
+  font-style: italic;
+}
+.toggle-hide:hover {
+  cursor: pointer;
+}
+.me-breakdown > li {
+  margin-left: 4em;
+}
+
+.me > p > a {
+  text-decoration: none;
+  color: #99ff99;
 }
 
 /* footer */
@@ -111,11 +130,45 @@ footer {
   .home-container {
     align-items: center;
   }
-  .about-container{ 
+  .about-container {
     display: flex;
     justify-content: center;
   }
   .about {
     width: 70%;
+  }
+  .about-title {
+    text-align: left;
+  }
+  .me > p {
+    font-size: 18px;
+  }
+  .see-more {
+    font-size: 18px;
+  }
+  .socials-icons-container {
+    display: unset;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.098);
+  }
+
+  .socials-icons-container > div {
+    margin: 3vmin 0;
+  }
+  .socials-icons-container > .socials-icons {
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  footer {
+    justify-content: center;
+  }
+  .contact-details {
+    text-align: center;
   }
 }

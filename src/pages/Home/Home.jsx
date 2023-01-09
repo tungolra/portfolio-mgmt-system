@@ -6,6 +6,7 @@ import linkedInIcon from "../../images/LI-In-Bug.png";
 import gitHubIcon from "../../images/github-logo.png";
 import { Link } from "react-router-dom";
 import { TfiEmail } from "react-icons/tfi";
+import { CiMail } from "react-icons/ci"
 import { CgFileDocument } from "react-icons/cg";
 import AboutBlurbI from "./AboutBlurbI";
 import AboutBlurbII from "./AboutBlurbII";
@@ -31,7 +32,7 @@ function About() {
   return (
     <div className="about-container">
       <section className="about">
-        <h3 className="about-title">About Me</h3>
+        <h3 className="about-title">Welcome.</h3>
         <Me />
       </section>
     </div>
@@ -42,12 +43,17 @@ function Footer() {
   return (
     <footer id="footer">
       <div className="contact-details">
-        <span>Ralph Tu&#241;gol</span>
+        <span >Ralph Tu&#241;gol</span>
         <a className="mailto" href="mailto:rarttungol@gmail.com">
           <TfiEmail /> rarrtungol@gmail.com
         </a>
       </div>
       <div className="socials-icons-container">
+        <div >
+          <a className="mailto" href="mailto:rarttungol@gmail.com">
+            <CiMail className="socials-icons" size="45px"/>
+          </a>
+        </div>
         <div>
           <Link to="/cv" target="_blank">
             <CgFileDocument
@@ -68,13 +74,11 @@ function Footer() {
         </div>
         <div>
           <a href="https://www.linkedin.com/in/ralph-tungol/" target="_blank">
-          
             <img
               className="socials-icons"
               src={linkedInIcon}
               alt="linkedin-icon"
               title="LinkedIn"
-              
             />
           </a>
         </div>
@@ -92,9 +96,9 @@ export default function Home({ user }) {
           <About />
           <Projects seed={seed} />
           <Skills user={user} seed={seed} />
-          <Footer />
         </div>
       </div>
+      <Footer />
     </>
   );
 }

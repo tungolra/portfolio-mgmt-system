@@ -43,3 +43,16 @@
   color: white;
   font-weight: bold;
 }
+/* desktop view */
+@media only screen and (min-width: 961px) {
+.project-detail-container { 
+  display: flex;
+  width: 100%;
+  align-items: center ;
+  justify-content: center;
+}
+.project-details { 
+  width: 70%;
+}
+
+}

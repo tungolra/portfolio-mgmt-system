@@ -14,16 +14,13 @@ function AddSkillModal(props) {
   const theme = useMantineTheme();
 
   function handleChange(e) {
-    setNewSkill({...newSkill, [e.target.name]: e.target.value})
+    setNewSkill({ ...newSkill, [e.target.name]: e.target.value });
   }
   function handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
     try {
-      
-    } catch (error) {
-      
-    }
-    props.setModalOpened(false)
+    } catch (error) {}
+    props.setModalOpened(false);
   }
 
   return (
@@ -59,60 +56,62 @@ export default function Skills({ user }) {
         modalOpened={modalOpened}
         setModalOpened={setModalOpened}
       />
-      <section className="skills">
-        <h4>Languages</h4>
-        <div className="skills-wrapper">
-          {seeds.languages.map((skill, idx) => (
-            <div key={idx} className="skill-item-container">
-              <div className="skill-item">
-                <img
-                  className="tech-icons"
-                  src={skill?.img}
-                  alt={skill.skill}
-                />
-              </div>
-              <div className="skill-item-details">
-                <div>
-                  <strong>{skill?.skill}</strong>
+      <div className="skill-sections">
+        <section className="skills">
+          <h4>Languages</h4>
+          <div className="skills-wrapper">
+            {seeds.languages.map((skill, idx) => (
+              <div key={idx} className="skill-item-container">
+                <div className="skill-item">
+                  <img
+                    className="tech-icons"
+                    src={skill?.img}
+                    alt={skill.skill}
+                  />
                 </div>
-                <div className="skill-subtype">#{skill?.subtype}</div>
-                {/* <div className="skill-count-container">
+                <div className="skill-item-details">
+                  <div>
+                    <strong>{skill?.skill}</strong>
+                  </div>
+                  <div className="skill-subtype">#{skill?.subtype}</div>
+                  {/* <div className="skill-count-container">
                 <label>Times Used</label>
                 <div className="skill-count">x</div>
               </div> */}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section className="skills">
-        <h4>Technologies</h4>
-        <div className="skills-wrapper">
-          {seeds.technologies.map((skill, idx) => (
-            <div key={idx} className="skill-item-container">
-              <div className="skill-item">
-                <img
-                  className="tech-icons"
-                  src={skill?.img}
-                  alt={skill.skill}
-                />
-              </div>
-              <div className="skill-item-details">
-                <div>
-                  <strong>{skill?.skill}</strong>
                 </div>
-                <div className="skill-subtype">#{skill?.subtype}</div>
-                {/* <div className="skill-count-container">
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="skills">
+          <h4>Technologies</h4>
+          <div className="skills-wrapper">
+            {seeds.technologies.map((skill, idx) => (
+              <div key={idx} className="skill-item-container">
+                <div className="skill-item">
+                  <img
+                    className="tech-icons"
+                    src={skill?.img}
+                    alt={skill.skill}
+                  />
+                </div>
+                <div className="skill-item-details">
+                  <div>
+                    <strong>{skill?.skill}</strong>
+                  </div>
+                  <div className="skill-subtype">#{skill?.subtype}</div>
+                  {/* <div className="skill-count-container">
                 <div className="skill-count">Times Used: x</div>
               </div>
                 <Link className="link-to-all-work" to="/all-work">
                   See Projects/Labs
                 </Link> */}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

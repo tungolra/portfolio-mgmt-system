@@ -11,7 +11,6 @@ export default function ProjectDetailPage({ seed }) {
   const navProject = seed.projects?.findIndex((p) => p.name === project);
   const nextProject = seed.projects[navProject + 1]?.name;
   const prevProject = seed.projects[navProject - 1]?.name;
-
   return (
     <div className="bg-image">
 
@@ -25,6 +24,7 @@ export default function ProjectDetailPage({ seed }) {
             <span>&lt; Prev Project</span>
           </Link>
         )}
+        
         {navProject === seed.projects.length - 1 ? (
           ""
         ) : (
@@ -52,6 +52,7 @@ export default function ProjectDetailPage({ seed }) {
                     >
                       <BsArrowLeftCircle />
                     </a>
+                    <h3>{project}</h3>
                     <a
                       href={`#carousel__slide${
                         idx + 2 > selectedProject?.pages.length ? 1 : idx + 2
@@ -74,7 +75,9 @@ export default function ProjectDetailPage({ seed }) {
         </div>
       </section>
       <div className="project-detail-container">
-        <h3 className="project-name">{selectedProject?.name}</h3>
+        {/* <h3 className="project-name">{selectedProject?.name}</h3> */}
+        <div className="project-details">
+
         <h4> Summary</h4>
         <div className="project-summary">{selectedProject?.summary}</div>
         <h4> Responsibilities</h4>
@@ -88,6 +91,7 @@ export default function ProjectDetailPage({ seed }) {
           Github
           <RxExternalLink />
         </a>
+        </div>
       </div>
     </div>
     </div>

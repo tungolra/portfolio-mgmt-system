@@ -22,7 +22,7 @@ nav > * {
 .hamburger-menu {
   margin-left: 3vmin;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 }
 .bar1,
 .bar2,
@@ -36,7 +36,7 @@ nav > * {
 .change {
   margin-left: 3vmin;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 }
 .change .bar1 {
   transform: translate(0, 11px) rotate(-45deg);
@@ -81,7 +81,7 @@ nav > * {
 
 /* slide-in nav */
 .overlay {
-  margin-top: 5vh;
+  /* margin-top: 5vh; */
   height: 100%;
   width: 50vmin;
   position: fixed;
