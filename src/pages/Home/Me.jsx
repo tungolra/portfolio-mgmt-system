@@ -28,16 +28,15 @@ export default function Me() {
         <em>Software Engineering Immersive</em> bootcamp. I learned to use
         various technologies for both the front- and back-end, completed
         numerous projects, and spent over 480 hours of learning and absorbing
-        new material. (PS: check out the{" "}
-        <a href="#"> current projects I'm working on!</a>)
+        new material. 
       </p>
       <p
-        className={display ? "see-less" : "see-more  toggle-hide"}
+        className={display ? "read-less" : "read-more  toggle-hide"}
         onClick={() => setDisplay(true)}
       >
-        ...see more
+        ...read more
       </p>
-      <div className={!display ? "see-less" : "see-more"}>
+      <div className={!display ? "read-less" : "read-more"}>
         <p>
           The road to becoming a developer has so far been like the rest of my
           life: varied, widespread, and somewhat out of order. Here's a quick
@@ -75,7 +74,7 @@ export default function Me() {
           className={!display ? "see-less" : "see-more toggle-hide"}
           onClick={() => setDisplay(false)}
         >
-          ...see less
+          ...read less
         </p>
       </div>
       <p>- Ralph</p>

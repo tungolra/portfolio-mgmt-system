@@ -6,7 +6,6 @@ import { RiLogoutBoxRLine } from "react-icons/ri";
 import { BiMessageDetail } from "react-icons/bi";
 import { AiOutlineAppstore, AiOutlineHome } from "react-icons/ai";
 import { BsLightning } from "react-icons/bs";
-
 import NewEntry from "../../pages/NewEntry/NewEntry";
 
 function SlideInNav({ modalOpened, handleClick, user }) {

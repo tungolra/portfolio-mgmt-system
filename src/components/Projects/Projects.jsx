@@ -2,14 +2,21 @@ import { Link } from "react-router-dom";
 import "./Projects.css";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import React from "react";
+import * as seed from "../../seed.js"
 
-export default function Projects({ seed }) {
+function CurrentProjects(){ 
+  return (
+    <div></div>
+  )
+}
+export default function Projects() {
+
   return (
     <>
       <div id="projects" className="projects-container">
         <section className="carousel" aria-label="Gallery">
           <div className="carousel__viewport">
-            {seed.projects.map((project, idx) => (
+            {seed.projects?.map((project, idx) => (
               <div
                 key={idx}
                 id={`carousel__slide${idx + 1}`}
@@ -40,7 +47,7 @@ export default function Projects({ seed }) {
                     <label>Project Summary</label>
                     {project?.summary}
                     </div>
-                    <img className="img" src={project?.img} alt="project" />
+                    <img className="main-img" src={project?.img} alt="project" />
                   </div>
                 </div>
                 <div className="projects-title">{project?.name}</div>

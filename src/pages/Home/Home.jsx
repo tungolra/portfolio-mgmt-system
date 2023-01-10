@@ -88,6 +88,7 @@ function Footer() {
 }
 
 export default function Home({ user }) {
+
   return (
     <>
       <div className="bg-image">

@@ -155,7 +155,6 @@ const skills = [
 //   }
 // })();
 
-
 const projects = [
   {
     name: "Chatter[Box]",
@@ -167,14 +166,38 @@ const projects = [
       "https://i.imgur.com/GMz55U4.png",
     ],
     summary:
-      "From inception to deployment to Heroku, I built a MERN-stack instant messaging single page application (SPA), leveraging Socket.io to facilitate real-time communication between browsers. As a pseudo-social media application, I integrated AWS S3 for users to upload photos and coded functionality to edit their profile’s details. Chatterbox is featured as an instant messaging template that can be integrated and adapted across B2B, C2C, or B2C platforms.",
+      "An instant messaging single-page application that features real-time communication between users. Developed using MongoDB, ExpressJS, ReactJS, and NodeJS (MERN) by our team of 4 developers. Taking a mobile-first approach, we utilized HTML, JSX, CSS, and Material UI to create a modern and user-friendly UI/UX.", 
     responsibilities: [
-      "Leveraged AJAX calls to retrieve data from MongoDB and built a modern UI/UX platform where users can start conversations and communicate with other users in real-time. Styled webpage using CSS, in-line JSX, and React Material UI.",
-      "Used MVC architecture to build the Express backend, along with building socket routes to create real-time communication between the database and React frontend. Utilized token-based authorization to validate user credentials. ",
+      "As project lead, I organized team tasks using a Notion board, established and managed CI/CD pipeline using Github.", 
+      "Connected websockets using Socket.io and established routing and CRUD function to make API calls to MongoDB.",
+      "Decided on schema design and data entity relationships for Mongoose models.",
+      "Utilized JSON Web Token (JWT) authorization to validate user credentials.",
+      "Handled client-side scripting using React hooks and API calls to populate browser views.",
+      "Deployed site to Heroku.",
     ],
     repo: "https://github.com/tungolra/mern-project",
     site: "https://chatterbox-sei-55.herokuapp.com/",
     skillIds: [],
+  },
+  {
+    name: "My Portfolio Website",
+    img: "",
+    pages: [],
+    skills: [],
+    summary:
+      "A portfolio website that highlights my featured projects, technologies used, and contact information. For personal-use, users can create new Projects and Skills, or add Skill to Projects. This was an independent project developed using MongoDB, ExpressJS, ReactJS/Redux, and NodeJS. Taking a mobile-first approach, I used pure CSS to create a user-friendly and unique UI/UX.",
+    responsibilities: [
+      "Organized project tasks using Notion and version control using GitHub to establish CI/CD pipeline.", 
+      "Established routing and CRUD functions to make API calls to MongoDB.",
+      "Decided on schema design and data entity relationships for Mongoose models.", 
+      "Optimized application performance using React Redux for management of state, server data, and user authentication.",
+      "Utilized JSON Web Token (JWT) authorization to validate user credentials.", 
+      "Handled client-side scripting using React hooks and Redux to populate browser views.", 
+      "Styled webpage using pure CSS.",
+      "Completed integration testing."
+    ],
+    repo: "https://github.com/tungolra/portfolio-mgmt-system/tree/deployment",
+    site: "https://ralphtungol.herokuapp.com/",
   },
   {
     name: "Culinarian",
@@ -191,13 +214,18 @@ const projects = [
       "https://i.imgur.com/hVQQQzV.png",
     ],
     summary:
-      "Using a Django, Python, and PostgreSQL solutions stack, our team of 4 software developers launched a recipe-based website that aims to streamline decision-making in the kitchen and mitigate food waste.  Users have access to a large database of recipes that suggests popular recipes and exact portions of ingredients for their next grocery run!",
+      "A recipe website that streamlines decision-making in the kitchen and mitigates food waste. Users can access recipe suggestions from a large database, create meal plans, and generate grocery lists from their collections. Developed with Django, Python, and PostgreSQL by our team of four developers and a 2-person team of UX Designers who built our wireframe. Taking a mobile-first approach, we utilized HTML, CSS, and the Materialize styling framework to create an intuitive UI/UX.",
     responsibilities: [
-      "Taking a mobile-first approach, we utilized HTML, CSS, and Materialize’s styling framework to create an intuitive UI/UX webpage design. Users can collect recipes, create meal plans, and generate grocery lists from their collections.",
-      "Following Django’s MVT architecture, I established the routing and CRUD functions to make API calls to the app’s PostgreSQL database and TastyCO’s API. Utilized Django’s session-based authorization to validate user credentials.",
+      "Established routing and CRUD functions to make API calls to the PostgreSQL database and TastyCO API following Django’s MVT architecture.",
+      "Decided on schema design and data entity relationships for Django models.",
+      "Utilized Django’s session-based authorization to validate user credentials.",
+      "Populated views on web browser using Django template language and contributed to UI design using CSS and Materialize.",
+      "Completed code reviews and facilitated Agile workflows through daily check-ins and team task management.",
+      "Completed integration testing and co-managed CI/CD pipeline.",
+      
     ],
     repo: "https://github.com/tungolra/project-3/tree/development",
-    site: "https://github.com/tungolra/project-3/tree/development",
+    site: "[offline]",
     skillIds: [],
   },
   {
@@ -214,10 +242,17 @@ const projects = [
       "https://i.imgur.com/C0WK9S1.png",
     ],
     summary:
-      "An automated flashcard system to provide an online study tool that leverages the power of spaced repetition learning. A personal favourite that combines my interest in game-based learning and programming. Responsible for the entire build of front- and back-end and implementation of Google OAuth 2.0 for user authentication.",
-    responsibilities: [],
+      "An automated flashcard system to provide an online study tool that leverages the power of spaced repetition learning. A personal favourite that combines my interest in game-based learning and programming. Users can create collections of flashcards that automates the intervals for which a card is to be reviewed. Individually developed using MongoDB, ExpressJS, and NodeJS. Taking a mobile-first approach, I utilized HTML and CSS to create a simple and intuitive UI/UX.",
+    responsibilities: [
+      "Established routing and CRUD functions to make API calls to MongoDB.",
+      "Utilized Google OAuth 2.0 to validate user credentials.", 
+      "Handled client-side scripting to manipulate DOM using Vanilla JavaScript and make API calls to server.", 
+      "Styled webpage using HTML and CSS.",
+      "Configured database and server.",
+      "Deployed site to Heroku"
+    ],
     repo: "https://github.com/tungolra/StudySmart",
-    site: "https://github.com/tungolra/StudySmart",
+    site: "[offline]",
     skillIds: [],
   },
   {
@@ -225,10 +260,14 @@ const projects = [
     img: "https://i.imgur.com/FEbqK0L.gif",
     pages: ["https://i.imgur.com/FEbqK0L.gif"],
     summary:
-      "A self-made, starter web stack project that showcases DOM interactions, complex game logic, and pure-CSS styling. Othello, AKA Reversi, is a multiplayer, strategy board game where players aim to have the most pieces on the board before it is filled. My app features a random-bot that single-player users can play against.",
-    responsibilities: [],
-    repo: "https://tungolra.github.io/Othello/",
-    site: "https://tungolra.github.io/Othello/",
+      "Othello, AKA Reversi, is a multiplayer, strategy board game where players aim to have the most pieces on the board before it is filled. My app features a random-bot that single-player users can play against. Developed using Vanilla JavaScript, this independent project showcases DOM manipulation, functional programming, modularization, and complex game logic. Utilized HTML and pure CSS to style a modern-classic UI/UX.",
+    responsibilities: [
+      "Established client-side scripting for all event listeners, event handlers, dynamically creating HTML elements, and functional game logic.", 
+      "Styled webpage using HTML and pure CSS to create a responsive webpage.",
+      "Deployed site to GitHub pages"
+    ],
+    repo: "https://github.com/tungolra/Othello-js-app",
+    site: "https://tungolra.github.io/Othello-js-app/",
     skillIds: [],
   },
   // {

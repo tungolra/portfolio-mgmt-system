@@ -36,7 +36,6 @@
 /* about */
 .about-container {
   height: auto;
-  /* margin-top: 15vh; */
   padding: 5vmin;
   background-color: rgba(0, 0, 0, 0.388);
   color: white;
@@ -54,22 +53,23 @@ section {
 
 /* Me */
 .me > p,
-.see-more > p {
+.read-more > p {
   font-weight: bold;
   margin-bottom: 2vmin;
   text-indent: 2em;
   text-align: left;
+  transition: 0.4s;
 }
-.see-less {
+.read-less {
   color: #99ff99;
   display: none;
 }
-.see-more {
+.read-more {
   display: block;
 }
 .toggle-hide {
   color: #99ff99;
-  font-style: italic;
+  font-style: italic;  
 }
 .toggle-hide:hover {
   cursor: pointer;
@@ -143,7 +143,7 @@ footer {
   .me > p {
     font-size: 18px;
   }
-  .see-more {
+  .read-more {
     font-size: 18px;
   }
   .socials-icons-container {

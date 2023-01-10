@@ -29,22 +29,37 @@
   padding: 3vmin;
   background-color: rgba(0, 0, 0, 0.689);
 }
+.project-details > h4 { 
+  font-size: 24px; 
+  color: #99ff99;
+}
 .project-name {
   margin-bottom: 3vmin;
 }
 .project-summary {
   margin-bottom: 1vmin;
+  text-align: left;
+  text-indent: 2rem;
 }
 .project-responsibilities {
   margin-bottom: 1vmin;
+  text-align: left;
 }
-.github {
+.project-links {
   text-decoration: none;
-  color: white;
+  margin: 0 2vmin;
+  color: #99ff99;
   font-weight: bold;
 }
 /* desktop view */
 @media only screen and (min-width: 961px) {
+  .carousel__snapper{ 
+    height: auto;
+  }
+  .carousel__snapper > .img { 
+    width: 70vmin; 
+    height: auto;
+  }
 .project-detail-container { 
   display: flex;
   width: 100%;
