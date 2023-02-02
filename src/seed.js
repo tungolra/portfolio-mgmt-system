@@ -309,30 +309,35 @@ export const projects = [
   // },
 ];
 
-export const education = [ 
+export const education = [
   {
     school: "University of Toronto",
     subj: "Anthropology",
     date: "Apr 2023",
+    img: "https://i.imgur.com/gr5FNay.png",
   },
   {
     school: "SkillUp by Simplilearn",
     subj: "Getting started with DevOps",
     date: "Dec 2022",
+    img: "https://i.imgur.com/WMHr9HP.jpg",
   },
   {
     school: "General Assembly",
     subj: "Software Engineering Immersive",
     date: "Dec 2022",
+    img: "https://i.imgur.com/BGc1dXK.png",
   },
   {
     school: "Investment Funds Institute of Canada",
     subj: "Canadian Investment Funds Operations",
     date: "Mar 2014",
+    img: "https://i.imgur.com/gAHjwfc.png",
   },
   {
     school: "Sheridan College",
     subj: "Exercise Science",
     date: "Apr 2013",
+    img: "https://i.imgur.com/V0hxU8s.png",
   },
-]
+];

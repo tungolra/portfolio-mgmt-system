@@ -3,6 +3,7 @@
   flex-direction: column;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  
 }
 
 .bg-image {
@@ -36,15 +37,25 @@
 /* about */
 .about-container {
   height: auto;
+  width: 100%;
   padding: 5vmin;
   background-color: rgba(0, 0, 0, 0.388);
   color: white;
 }
-.about-card {
+
+.about-details {
   display: flex;
   flex-direction: column;
 }
-.about-card > img {
+.about-details > h4, .about-details > img { 
+  text-align: center;
+}
+.about-card {
+  display: flex;
+  flex-direction: column;
+ 
+}
+.profile-pic {
   aspect-ratio: 1/1;
   object-fit: contain;
   height: 50vmin;
@@ -61,9 +72,6 @@ section {
 }
 
 /* Me */
-.me-container {
-  /* border: 1px solid red; */
-}
 
 .section-container {
   display: flex;
@@ -72,6 +80,8 @@ section {
 }
 .container-display > * {
   padding: 3vmin;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.388);
 }
 
 .section-select {
@@ -85,9 +95,12 @@ section {
   padding: 1vmin;
 }
 
-.my-education > * {
-  /* display: flex;
-  flex-direction: row; */
+.edu-img { 
+  aspect-ratio: 1/1;
+  width: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+  background-color: #ffffff;
 }
 .edu-details {
   display: grid;
@@ -95,14 +108,29 @@ section {
 }
 
 .my-education > .edu-details {
-  /* display: flex;
-  flex-direction: column; */
   margin-bottom: 1vmin;
 }
 
 .my-skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+.skill-details { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.skill-details > p { 
+  padding-right: 3vmin
+}
+.skill-details > img { 
+  margin-right: 1vmin;
+  aspect-ratio: 1/1;
+  width: 25px;
+  border-radius: 100%;
+  object-fit: cover;
+  background-color: #ffffff;
+  border: 2px solid #99ff99;
 }
 
 .about-me > p,
@@ -187,6 +215,14 @@ footer {
     display: flex;
     justify-content: center;
   }
+  .about-wrapper { 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .about-details {
+    width: 70%;
+  }
   .about-card {
     display: flex;
     flex-direction: row;
@@ -196,6 +232,9 @@ footer {
   }
   .about-title {
     text-align: left;
+  }
+  .me-container {
+    width: 70vmin;
   }
   .me > p {
     font-size: 18px;

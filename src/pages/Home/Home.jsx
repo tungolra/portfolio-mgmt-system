@@ -32,14 +32,21 @@ function Header() {
 function About() {
   return (
     <div className="about-container">
-      <h4 className="about-title">Welcome!</h4>
-      <section className="about">
-        <div className="about-card">
-          <img src={profilePicture} alt="profile-picture" />
-
-          <Me />
+      <div className="about-wrapper">
+        <div className="about-details">
+          <h4 className="about-title">Welcome!</h4>
+          <img
+            className="profile-pic"
+            src={profilePicture}
+            alt="profile-picture"
+          />
         </div>
-      </section>
+        <section className="about">
+          <div className="about-card">
+            <Me />
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

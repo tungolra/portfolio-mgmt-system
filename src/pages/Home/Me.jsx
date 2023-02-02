@@ -27,13 +27,19 @@ export default function Me() {
         <div className="skill-type">
           <h4>Languages</h4>
           {seed.languages.map((s) => (
-            <p>{s.skill}</p>
+            <div className="skill-details">
+              <img src={s.img} alt="X" />
+              <p>{s.skill}</p>
+            </div>
           ))}
         </div>
         <div className="skill-type">
           <h4>Technologies</h4>
           {seed.technologies.map((s) => (
-            <p>{s.skill}</p>
+            <div className="skill-details">
+              <img src={s.img} alt="X" />
+              <p>{s.skill}</p>
+            </div>
           ))}
         </div>
       </div>
@@ -45,7 +51,7 @@ export default function Me() {
         {seed.education.map((e) => (
           <div className="edu-details">
             <div>
-              <img src="" alt="X" />
+              <img className="edu-img" src={e.img} alt="X" />
             </div>
             <div>
               <h4>{e.school}</h4>
