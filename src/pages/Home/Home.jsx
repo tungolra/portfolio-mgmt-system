@@ -15,6 +15,7 @@ import MatrixBackground from "../../components/MatrixBackground/MatrixBackground
 
 import "./Home.css";
 import Me from "./Me";
+import ProjectsCollage from "../../components/Projects/ProjectsCollage";
 
 function Header() {
   return (
@@ -95,7 +96,8 @@ export default function Home({ user }) {
         <div className="home-container">
           <Header />
           <About />
-          <Projects seed={seed} />
+          {/* <Projects seed={seed} /> */}
+          <ProjectsCollage/>
           <Skills user={user} seed={seed} />
         </div>
       </div>

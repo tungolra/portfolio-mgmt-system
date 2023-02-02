@@ -134,8 +134,30 @@ skills.map((skill) => {
   if (skill.type === "Technologies") {
     technologies.push(skill);
   }
-  return languages;
+  return technologies;
 });
+
+export const frameworks = [];
+skills.map((skill) => {
+  if (skill.subtype === "Framework") {
+    frameworks.push(skill);
+  }
+  return frameworks;
+});
+
+export const programmingLanguages = [];
+skills.map((skill) => {
+  if (skill.subtype === "Programming Language") {
+    programmingLanguages.push(skill);
+  }
+  return programmingLanguages;
+});
+
+// export let skillObjects = {skill: []}
+// skills.map((skillObj) => {
+//   const { skill } = skillObj;
+//   skillObjects.skill.push({ [skill]: skillObj });
+// });
 
 export const projects = [
   {
@@ -148,9 +170,9 @@ export const projects = [
       "https://i.imgur.com/GMz55U4.png",
     ],
     summary:
-      "An instant messaging single-page application that features real-time communication between users. Developed using MongoDB, ExpressJS, ReactJS, and NodeJS (MERN) by our team of 4 developers. Taking a mobile-first approach, we utilized HTML, JSX, CSS, and Material UI to create a modern and user-friendly UI/UX.", 
+      "An instant messaging single-page application that features real-time communication between users. Developed using MongoDB, ExpressJS, ReactJS, and NodeJS (MERN) by our team of 4 developers. Taking a mobile-first approach, we utilized HTML, JSX, CSS, and Material UI to create a modern and user-friendly UI/UX.",
     responsibilities: [
-      "As project lead, I organized team tasks using a Notion board, established and managed CI/CD pipeline using Github.", 
+      "As project lead, I organized team tasks using a Notion board, established and managed CI/CD pipeline using Github.",
       "Connected websockets using Socket.io and established routing and CRUD function to make API calls to MongoDB.",
       "Decided on schema design and data entity relationships for Mongoose models.",
       "Utilized JSON Web Token (JWT) authorization to validate user credentials.",
@@ -159,24 +181,48 @@ export const projects = [
     ],
     repo: "https://github.com/tungolra/mern-project",
     site: "https://chatterbox-sei-55.herokuapp.com/",
-    skillIds: [],
+    skills: [
+      "HTML5",
+      "CSS3",
+      "Material UI",
+      "Socket.io",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node.js",
+      "Javascript",
+      "AWS S3",
+    ],
   },
   {
     name: "My Portfolio Website",
     img: "https://i.imgur.com/23EDrah.gif",
-    pages: ["https://i.imgur.com/5cktbR5.png", "https://i.imgur.com/Pj11u7Y.png", "https://i.imgur.com/aRNLMQQ.png" ],
-    skills: [],
+    pages: [
+      "https://i.imgur.com/5cktbR5.png",
+      "https://i.imgur.com/Pj11u7Y.png",
+      "https://i.imgur.com/aRNLMQQ.png",
+    ],
+    skills: [
+      "HTML5",
+      "CSS3",
+      "MongoDB",
+      "Express",
+      "React",
+      "Redux",
+      "Node.js",
+      "Javascript",
+    ],
     summary:
       "A portfolio website that highlights my featured projects, technologies used, and contact information. For personal-use, users can create new Projects and Skills, or add Skill to Projects. This was an independent project developed using MongoDB, ExpressJS, ReactJS/Redux, and NodeJS. Taking a mobile-first approach, I used pure CSS to create a user-friendly and unique UI/UX.",
     responsibilities: [
-      "Organized project tasks using Notion and version control using GitHub to establish CI/CD pipeline.", 
+      "Organized project tasks using Notion and version control using GitHub to establish CI/CD pipeline.",
       "Established routing and CRUD functions to make API calls to MongoDB.",
-      "Decided on schema design and data entity relationships for Mongoose models.", 
+      "Decided on schema design and data entity relationships for Mongoose models.",
       "Optimized application performance using React Redux for management of state, server data, and user authentication.",
-      "Utilized JSON Web Token (JWT) authorization to validate user credentials.", 
-      "Handled client-side scripting using React hooks and Redux to populate browser views.", 
+      "Utilized JSON Web Token (JWT) authorization to validate user credentials.",
+      "Handled client-side scripting using React hooks and Redux to populate browser views.",
       "Styled webpage using pure CSS.",
-      "Completed integration testing."
+      "Completed integration testing.",
     ],
     repo: "https://github.com/tungolra/portfolio-mgmt-system/tree/deployment",
     site: "https://ralphtungol.herokuapp.com/",
@@ -204,11 +250,10 @@ export const projects = [
       "Populated views on web browser using Django template language and contributed to UI design using CSS and Materialize.",
       "Completed code reviews and facilitated Agile workflows through daily check-ins and team task management.",
       "Completed integration testing and co-managed CI/CD pipeline.",
-      
     ],
     repo: "https://github.com/tungolra/project-3/tree/development",
     site: "[offline]",
-    skillIds: [],
+    skills: ["Django", "PostgreSQL", "Python", "HTML5", "Materialize", "CSS3"],
   },
   {
     name: "StudySmart",
@@ -227,15 +272,15 @@ export const projects = [
       "An automated flashcard system to provide an online study tool that leverages the power of spaced repetition learning. A personal favourite that combines my interest in game-based learning and programming. Users can create collections of flashcards that automates the intervals for which a card is to be reviewed. Individually developed using MongoDB, ExpressJS, and NodeJS. Taking a mobile-first approach, I utilized HTML and CSS to create a simple and intuitive UI/UX.",
     responsibilities: [
       "Established routing and CRUD functions to make API calls to MongoDB.",
-      "Utilized Google OAuth 2.0 to validate user credentials.", 
-      "Handled client-side scripting to manipulate DOM using Vanilla JavaScript and make API calls to server.", 
+      "Utilized Google OAuth 2.0 to validate user credentials.",
+      "Handled client-side scripting to manipulate DOM using Vanilla JavaScript and make API calls to server.",
       "Styled webpage using HTML and CSS.",
       "Configured database and server.",
-      "Deployed site to Heroku"
+      "Deployed site to Heroku",
     ],
     repo: "https://github.com/tungolra/StudySmart",
     site: "[offline]",
-    skillIds: [],
+    skills: ["MongoDB, Javascript", "Express", "HTML5", "CSS3"],
   },
   {
     name: "Othello",
@@ -244,13 +289,13 @@ export const projects = [
     summary:
       "Othello, AKA Reversi, is a multiplayer, strategy board game where players aim to have the most pieces on the board before it is filled. My app features a random-bot that single-player users can play against. Developed using Vanilla JavaScript, this independent project showcases DOM manipulation, functional programming, modularization, and complex game logic. Utilized HTML and pure CSS to style a modern-classic UI/UX.",
     responsibilities: [
-      "Established client-side scripting for all event listeners, event handlers, dynamically creating HTML elements, and functional game logic.", 
+      "Established client-side scripting for all event listeners, event handlers, dynamically creating HTML elements, and functional game logic.",
       "Styled webpage using HTML and pure CSS to create a responsive webpage.",
-      "Deployed site to GitHub pages"
+      "Deployed site to GitHub pages",
     ],
     repo: "https://github.com/tungolra/Othello-js-app",
     site: "https://tungolra.github.io/Othello-js-app/",
-    skillIds: [],
+    skills: ["Javascript", "CSS3", "HTML5"],
   },
   // {
   //   name: "Book Collector",
