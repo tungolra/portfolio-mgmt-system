@@ -34,10 +34,6 @@
   flex-direction: column;
   text-align: right;
 }
-/* .skill-count-container {
-  display: flex;
-  flex-direction: column;
-} */
 
 .link-to-all-work {
   color: white;
@@ -53,7 +49,6 @@
     align-items: center;
   }
   .skills > h4 {
-    /* padding: 3vmin; */
     font-size: 25px;
   }
   .skill-sections {
@@ -74,10 +69,7 @@
     width: 100%;
     align-items: center;
   }
-  .skills {
-    /* justify-content: center; */
-    /* width: 70%; */
-  }
+
   .skill-sections {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -88,8 +80,5 @@
     width: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-  .skill-item-container {
-    
   }
 }
