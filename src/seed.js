@@ -308,3 +308,31 @@ export const projects = [
   //   site: "https://github.com/tungolra/Book-Collector",
   // },
 ];
+
+export const education = [ 
+  {
+    school: "University of Toronto",
+    subj: "Anthropology",
+    date: "Apr 2023",
+  },
+  {
+    school: "SkillUp by Simplilearn",
+    subj: "Getting started with DevOps",
+    date: "Dec 2022",
+  },
+  {
+    school: "General Assembly",
+    subj: "Software Engineering Immersive",
+    date: "Dec 2022",
+  },
+  {
+    school: "Investment Funds Institute of Canada",
+    subj: "Canadian Investment Funds Operations",
+    date: "Mar 2014",
+  },
+  {
+    school: "Sheridan College",
+    subj: "Exercise Science",
+    date: "Apr 2013",
+  },
+]
