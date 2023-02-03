@@ -6,10 +6,15 @@ import "./ProjectsCollage.css";
 import { projectCard } from "../../library/projectCard";
 
 export default function ProjectsCollage() {
-  const [projectFilter, setProjectFilter] = useState(allProjects());
+  const [projectFilter, setProjectFilter] = useState(featuredProjects());
 
   function allProjects() {
     return seed.projects.map((p) =>
+      projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
+    )
+  }
+  function featuredProjects() {
+    return seed.featured.map((p) =>
       projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
     )
   }
@@ -68,7 +73,7 @@ export default function ProjectsCollage() {
           <div className="category-container">
             <button
               className="filter-button"
-              onClick={() => setProjectFilter(allProjects)}
+              onClick={() => setProjectFilter(featuredProjects)}
             >
               Featured
             </button>
