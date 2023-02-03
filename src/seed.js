@@ -1,3 +1,7 @@
+let tool = "https://i.imgur.com/LFuPbmG.png";
+let lab = "https://i.imgur.com/VP2HfTC.png";
+let stock = "https://i.imgur.com/5gKzj9A.png";
+
 export const skills = [
   {
     type: "Languages",
@@ -12,19 +16,19 @@ export const skills = [
     img: "https://i.imgur.com/jTNhsgg.png",
   },
   {
-    type: "Languages",
-    subtype: "Styling Language",
+    type: "Technologies",
+    subtype: "Styling Framework",
     skill: "Materialize",
     img: "https://i.imgur.com/kLtV7aP.png",
   },
   {
-    type: "Languages",
-    subtype: "Styling Language",
+    type: "Technologies",
+    subtype: "Styling Framework",
     skill: "Material UI",
     img: "https://i.imgur.com/nQneTU6.png",
   },
   {
-    type: "Languages",
+    type: "Technologies",
     subtype: "Styling Language",
     skill: "Bootstrap",
     img: "https://i.imgur.com/NsKingN.png",
@@ -73,7 +77,7 @@ export const skills = [
   },
   {
     type: "Technologies",
-    subtype: "Library",
+    subtype: "Database",
     skill: "PostgreSQL",
     img: "https://i.imgur.com/kqTfCNX.png",
   },
@@ -161,6 +165,36 @@ skills.map((skill) => {
 
 export const projects = [
   {
+    name: "Wealthy-Mi",
+    img: "https://i.imgur.com/SWCYvDG.gif",
+    pages: ["https://i.imgur.com/SWCYvDG.gif"],
+    summary:
+      "Wealthy Mi is a personal finance application created as development exercise for using a modern MERN-stack (MongoDB, ExpressJS, React, NodeJS) and implementing Agile workflow practices. Users can manage their assets and expenses, create financial goals, and forecast when they can achieve them through their dashboard with our data visualization tools.",
+    responsibilities: [
+      "Server and database configuration using Mongoose and MongoDB.",
+      "Build out RESTful APIs and associated CRUD functions using NodeJS.",
+      "Set up Redux store and slicers to make client-side API calls to retrieve user data.",
+      "Utilized JSON Web Token (JWT) authorization to validate user credentials.",
+      "Contribute to frontend development of UI/UX features using Bootstrap, CSS/SCSS for a responsive, modern web page.",
+      "Collaborated to create sensible Agile workflows, weekly SCRUMs, and architect a CI/CD pipeline managed using Git/GitHub.",
+    ],
+    repo: "https://github.com/tungolra/mern-project",
+    site: "https://chatterbox-sei-55.herokuapp.com/",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "SCSS",
+      "Bootstrap",
+      "MongoDB",
+      "Express",
+      "React",
+      "Redux",
+      "Node.js",
+      "Javascript",
+    ],
+    type: "project",
+  },
+  {
     name: "Chatter[Box]",
     img: "https://i.imgur.com/rnFmcto.gif",
     pages: [
@@ -193,6 +227,7 @@ export const projects = [
       "Javascript",
       "AWS S3",
     ],
+    type: "project",
   },
   {
     name: "My Portfolio Website",
@@ -201,16 +236,6 @@ export const projects = [
       "https://i.imgur.com/5cktbR5.png",
       "https://i.imgur.com/Pj11u7Y.png",
       "https://i.imgur.com/aRNLMQQ.png",
-    ],
-    skills: [
-      "HTML5",
-      "CSS3",
-      "MongoDB",
-      "Express",
-      "React",
-      "Redux",
-      "Node.js",
-      "Javascript",
     ],
     summary:
       "A portfolio website that highlights my featured projects, technologies used, and contact information. For personal-use, users can create new Projects and Skills, or add Skill to Projects. This was an independent project developed using MongoDB, ExpressJS, ReactJS/Redux, and NodeJS. Taking a mobile-first approach, I used pure CSS to create a user-friendly and unique UI/UX.",
@@ -226,6 +251,17 @@ export const projects = [
     ],
     repo: "https://github.com/tungolra/portfolio-mgmt-system/tree/deployment",
     site: "https://ralphtungol.herokuapp.com/",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "MongoDB",
+      "Express",
+      "React",
+      "Redux",
+      "Node.js",
+      "Javascript",
+    ],
+    type: "project",
   },
   {
     name: "Culinarian",
@@ -254,6 +290,7 @@ export const projects = [
     repo: "https://github.com/tungolra/project-3/tree/development",
     site: "[offline]",
     skills: ["Django", "PostgreSQL", "Python", "HTML5", "Materialize", "CSS3"],
+    type: "project",
   },
   {
     name: "StudySmart",
@@ -281,6 +318,7 @@ export const projects = [
     repo: "https://github.com/tungolra/StudySmart",
     site: "[offline]",
     skills: ["MongoDB, Javascript", "Express", "HTML5", "CSS3"],
+    type: "project",
   },
   {
     name: "Othello",
@@ -296,18 +334,67 @@ export const projects = [
     repo: "https://github.com/tungolra/Othello-js-app",
     site: "https://tungolra.github.io/Othello-js-app/",
     skills: ["Javascript", "CSS3", "HTML5"],
+    type: "project",
+  },
+  {
+    name: "Book Collector",
+    img: stock,
+    pages: [],
+    summary:
+      "A personal, mini-project leveraging Django’s framework for fast and secure application builds. Users can enter form data to create a book object to add to their collection of books. Responsible for complete front- and back-end programming that follows best practices of MVT architecture.",
+    responsibilities: [],
+    repo: "https://github.com/tungolra/Book-Collector",
+    site: "[offline]",
+    skills: ["Django", "Python", "PostgreSQL"],
+    type: "tooling",
   },
   // {
-  //   name: "Book Collector",
+  //   name: "",
   //   img: "",
   //   pages: [],
+  //   summary: "",
+  //   responsibilities: [],
+  //   repo: "",
+  //   site: "",
   //   skills: ["Django", "Python", "PostgreSQL"],
-  //   summary:
-  //     "A personal, mini-project leveraging Django’s framework for fast and secure application builds. Users can enter form data to create a book object to add to their collection of books. Responsible for complete front- and back-end programming that follows best practices of MVT architecture.",
-  //   responsibilities: [{ client_side: "" }, { server_side: "" }],
-  //   site: "https://github.com/tungolra/Book-Collector",
+  //   type: "lab",
+  // },
+  // {
+  //   name: "",
+  //   img: "",
+  //   pages: [],
+  //   summary: "",
+  //   responsibilities: [],
+  //   repo: "",
+  //   site: "",
+  //   skills: ["Django", "Python", "PostgreSQL"],
+  //   type: "tooling",
   // },
 ];
+
+export const featured = [];
+projects.map((project) => {
+  if (project.type === "project") {
+    featured.push(project);
+  }
+  return featured;
+});
+
+export const tooling = [];
+projects.map((project) => {
+  if (project.type === "tooling") {
+    tooling.push(project);
+  }
+  return tooling;
+});
+
+export const labs = [];
+projects.map((project) => {
+  if (project.type === "lab") {
+    labs.push(project);
+  }
+  return labs;
+});
 
 export const education = [
   {

@@ -4,7 +4,15 @@ import * as seed from "../../seed.js";
 
 export default function Me() {
   const [containerDisplay, setContainerDisplay] = useState(aboutMe());
+  
   const sections = ["About Me", "My Tech Stack", "My Education"];
+
+  function chooseDisplay(str) {
+    if (str === sections[0]) return aboutMe;
+    if (str === sections[1]) return mySkills;
+    if (str === sections[2]) return myEducation;
+  }
+
   function aboutMe() {
     return (
       <div className="about-me">
@@ -65,11 +73,7 @@ export default function Me() {
     );
   }
 
-  function chooseDisplay(str) {
-    if (str === sections[0]) return aboutMe;
-    if (str === sections[1]) return mySkills;
-    if (str === sections[2]) return myEducation;
-  }
+
   const section = () => {
     return (
       <>

@@ -3,17 +3,30 @@ import { Link } from "react-router-dom";
 import { RxExternalLink } from "react-icons/rx";
 import * as seed from "../../seed";
 import "./ProjectsCollage.css";
+import { projectCard } from "../../library/projectCard";
 
 export default function ProjectsCollage() {
   const [projectFilter, setProjectFilter] = useState(allProjects());
-  
+
   function allProjects() {
     return seed.projects.map((p) =>
-      card(p.name, p.img, p.repo, p.site, p.summary)
-    );
+      projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
+    )
   }
 
-  function filterProjects(str) {
+  function filterProjectsByType (str, obj) { 
+    const filterResults = []
+    obj.forEach(p => { 
+      if (p.type === str) { 
+        filterResults.push(p)
+      }
+    })
+    return filterResults.map((p) =>
+    projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
+  );
+  }
+
+  function filterProjectsBySkill(str) {
     const filterResults = [];
 
     seed.projects.forEach((project) => {
@@ -23,44 +36,12 @@ export default function ProjectsCollage() {
     });
 
     return filterResults.map((p) =>
-      card(p.name, p.img, p.repo, p.site, p.summary)
-    );
-  }
-
-  function card(name, img, repo, site, summary) {
-    return (
-      <div className="flip-card">
-        <div className="flip-card-inner">
-          <div className="card-front">
-            <img src={img} alt="project-image" />
-          </div>
-          <div className="card-back">
-            <h4>{name}</h4>
-            <p>{summary}</p>
-            <div className="card-links">
-              <a className="project-links" target="_blank" href={repo}>
-                Repo
-                <RxExternalLink />
-              </a>
-              {site === "[offline]" ? (
-                <span className="project-links"> Site: &lt;Offline&gt;</span>
-              ) : (
-                <a className="project-links" target="_blank" href={site}>
-                  Site
-                  <RxExternalLink />
-                </a>
-              )}
-              <Link className="carousel__link" to={`/projects/${name}`}>
-                <div className="carousel__link">Details</div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+      projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
     );
   }
 
   const categoryContainer = (h4, arr) => {
+
     return (
       <div className="category-container">
         <h4>{h4}</h4>
@@ -68,7 +49,7 @@ export default function ProjectsCollage() {
           {arr.map((s) => (
             <button
               className="filter-button"
-              onClick={() => setProjectFilter(filterProjects(s.skill))}
+              onClick={() => setProjectFilter(filterProjectsBySkill(s.skill))}
             >
               {s.skill}
             </button>
@@ -89,7 +70,25 @@ export default function ProjectsCollage() {
               className="filter-button"
               onClick={() => setProjectFilter(allProjects)}
             >
+              Featured
+            </button>
+            <button
+              className="filter-button"
+              onClick={() => setProjectFilter(allProjects)}
+            >
               All
+            </button>
+            <button
+              className="filter-button"
+              onClick={() => setProjectFilter(filterProjectsByType("tooling", seed.projects))}
+            >
+              Tooling
+            </button>
+            <button
+              className="filter-button"
+              onClick={() => setProjectFilter(filterProjectsByType("lab", seed.projects))}
+            >
+              Lab Work
             </button>
           </div>
           {categoryContainer("By Language", seed.programmingLanguages)}
