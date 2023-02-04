@@ -18,6 +18,7 @@
 }
 .skills > h4 {
   margin-bottom: 3vmin;
+  color: #99ff99;
 }
 .skill-item-container {
   border: 1px solid white;
@@ -44,6 +45,7 @@
 }
 /* desktop view */
 @media only screen and (min-width: 961px) {
+
   .skills-container {
     width: 100%;
     align-items: center;

@@ -3,6 +3,8 @@ import "./ProjectDetailPage.css";
 import { Link, useParams } from "react-router-dom";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import { RxExternalLink } from "react-icons/rx";
+import { skillCards } from "../../library/skillCard";
+
 
 export default function ProjectDetailPage({ seed }) {
   let { project } = useParams();
@@ -11,6 +13,19 @@ export default function ProjectDetailPage({ seed }) {
   const navProject = seed.projects?.findIndex((p) => p?.name === project);
   const nextProject = seed.projects[navProject + 1]?.name;
   const prevProject = seed.projects[navProject - 1]?.name;
+
+  function techUsed(obj) {
+    let skills = [];
+    obj.skills.map((s) => {
+      seed.skills.map((skill) => {
+        if (s === skill.skill) {
+          skills.push(skill);
+        }
+      });
+    });
+    return <>{skillCards("Technologies Used", skills)}</>;
+  }
+
   return (
     <div className="bg-image">
       <div className="page-container">
@@ -77,20 +92,29 @@ export default function ProjectDetailPage({ seed }) {
           <div className="project-details">
             <h4> Summary</h4>
             <div className="project-summary">{selectedProject?.summary}</div>
+            {techUsed(selectedProject)}
             <h4> Responsibilities</h4>
             {selectedProject?.responsibilities.map((r, idx) => (
               <div key={idx} className="project-responsibilities">
                 <div>- {r}</div>
               </div>
             ))}
-            <a className="project-links" target="_blank" href={selectedProject?.repo}>
+            <a
+              className="project-links"
+              target="_blank"
+              href={selectedProject?.repo}
+            >
               Repo
               <RxExternalLink />
             </a>
             {selectedProject?.site === "[offline]" ? (
               <span className="project-links"> Site: &lt;Offline&gt;</span>
             ) : (
-              <a className="project-links" target="_blank" href={selectedProject?.site}>
+              <a
+                className="project-links"
+                target="_blank"
+                href={selectedProject?.site}
+              >
                 Site
                 <RxExternalLink />
               </a>

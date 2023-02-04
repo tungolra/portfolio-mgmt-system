@@ -66,7 +66,7 @@ export default function ProjectsCollage() {
 
   return (
     <div id="projects" className="projects-container">
-      <h4>Projects</h4>
+      <h4>What I've Worked On</h4>
       <div className="collage-container">
         <div className="filter-container">
           <h4>Filter By:</h4>

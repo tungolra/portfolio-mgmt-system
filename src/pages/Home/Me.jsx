@@ -4,12 +4,12 @@ import * as seed from "../../seed.js";
 
 export default function Me() {
   const [containerDisplay, setContainerDisplay] = useState(aboutMe());
-  
-  const sections = ["About Me", "My Tech Stack", "My Education"];
+
+  const sections = ["About Me", "About This Portfolio", "My Education"];
 
   function chooseDisplay(str) {
     if (str === sections[0]) return aboutMe;
-    if (str === sections[1]) return mySkills;
+    if (str === sections[1]) return aboutThisPortfolio;
     if (str === sections[2]) return myEducation;
   }
 
@@ -29,30 +29,53 @@ export default function Me() {
       </div>
     );
   }
-  function mySkills() {
+
+  function aboutThisPortfolio() {
     return (
-      <div className="my-skills">
-        <div className="skill-type">
-          <h4>Languages</h4>
-          {seed.languages.map((s) => (
-            <div className="skill-details">
-              <img src={s.img} alt="X" />
-              <p>{s.skill}</p>
-            </div>
-          ))}
-        </div>
-        <div className="skill-type">
-          <h4>Technologies</h4>
-          {seed.technologies.map((s) => (
-            <div className="skill-details">
-              <img src={s.img} alt="X" />
-              <p>{s.skill}</p>
-            </div>
-          ))}
-        </div>
+      <div className="about-me">
+        <p>
+          This is a React app that demonstrates the use of custom components,
+          React hooks, and Redux. Rather than using native components or styling
+          frameworks, I've made it a point to use pure CSS, vanilla JS, and HTML
+          to showcase foundational skills.
+        </p>
+        <p>
+          This application is under development to add the following features:
+          <ul>
+            <li>
+              CRUD functions to add new Projects and Skills as I continue
+              learning new languages and technologies.
+            </li>
+            <li>Blog Page to document my learning process.</li>
+          </ul>
+        </p>
       </div>
     );
   }
+  // function mySkills() {
+  //   return (
+  //     <div className="my-skills">
+  //       <div className="skill-type">
+  //         <h4>Languages</h4>
+  //         {seed.languages.map((s) => (
+  //           <div className="skill-details">
+  //             <img src={s.img} alt="X" />
+  //             <p>{s.skill}</p>
+  //           </div>
+  //         ))}
+  //       </div>
+  //       <div className="skill-type">
+  //         <h4>Technologies</h4>
+  //         {seed.technologies.map((s) => (
+  //           <div className="skill-details">
+  //             <img src={s.img} alt="X" />
+  //             <p>{s.skill}</p>
+  //           </div>
+  //         ))}
+  //       </div>
+  //     </div>
+  //   );
+  // }
   function myEducation() {
     return (
       <div className="my-education">
@@ -72,7 +95,6 @@ export default function Me() {
       </div>
     );
   }
-
 
   const section = () => {
     return (

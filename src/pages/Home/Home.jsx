@@ -107,8 +107,8 @@ export default function Home({ user }) {
           <Header />
           <About />
           {/* <Projects seed={seed} /> */}
-          <ProjectsCollage />
           <Skills user={user} seed={seed} />
+          <ProjectsCollage />
         </div>
       </div>
       <Footer />

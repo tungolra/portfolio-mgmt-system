@@ -52,7 +52,7 @@ export default function Skills({ user }) {
 
   return (
     <div className="skills-container">
-      <h3 id="skills"> Project Applications </h3>
+      <h3 id="skills">My Tech Stack</h3>
       {!user ? null : <button> + Add Skill </button>}
       <AddSkillModal
         modalOpened={modalOpened}
