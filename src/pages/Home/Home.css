@@ -141,7 +141,8 @@ section {
   text-align: left;
   transition: 0.4s;
 }
-.read-less {
+
+/* .read-less {
   color: #99ff99;
   display: none;
 }
@@ -157,7 +158,7 @@ section {
 }
 .me-breakdown > li {
   margin-left: 4em;
-}
+} */
 
 .about-me > p > a {
   text-decoration: none;

@@ -1,65 +1,68 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { RxExternalLink } from "react-icons/rx";
 import * as seed from "../../seed";
 import "./ProjectsCollage.css";
-import { projectCard } from "../../library/projectCard";
+import {
+  allProjects,
+  featuredProjects,
+  filterProjectsByType,
+  filterProjectsBySkill,
+} from "../../utilities/helpers";
 
 export default function ProjectsCollage() {
   const [projectFilter, setProjectFilter] = useState(featuredProjects());
 
-  function allProjects() {
-    return seed.projects.map((p) =>
-      projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
-    )
-  }
-  function featuredProjects() {
-    return seed.featured.map((p) =>
-      projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
-    )
-  }
-
-  function filterProjectsByType (str, obj) { 
-    const filterResults = []
-    obj.forEach(p => { 
-      if (p.type === str) { 
-        filterResults.push(p)
-      }
-    })
-    return filterResults.map((p) =>
-    projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
-  );
-  }
-
-  function filterProjectsBySkill(str) {
-    const filterResults = [];
-
-    seed.projects.forEach((project) => {
-      project.skills.find((p) => {
-        if (p === str) filterResults.push(project);
-      });
-    });
-
-    return filterResults.map((p) =>
-      projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
-    );
-  }
-
-  const categoryContainer = (h4, arr) => {
+  const categoryButtonsByType = () => {
+    const categories = [
+      { category: "Featured", filter: featuredProjects },
+      { category: "All", filter: allProjects },
+      {
+        category: "Tooling",
+        filter: filterProjectsByType("tooling", seed.projects),
+      },
+      {
+        category: "Lab Work",
+        filter: filterProjectsByType("lab", seed.projects),
+      },
+    ];
 
     return (
       <div className="category-container">
-        <h4>{h4}</h4>
-        <div className="options-container">
-          {arr.map((s) => (
-            <button
-              className="filter-button"
-              onClick={() => setProjectFilter(filterProjectsBySkill(s.skill))}
-            >
-              {s.skill}
-            </button>
-          ))}
-        </div>
+        {categories.map((c) => (
+          <button
+            className="filter-button"
+            onClick={() => setProjectFilter(c.filter)}
+          >
+            {c.category}
+          </button>
+        ))}
+      </div>
+    );
+  };
+  const categoryButtonsBySkill = () => {
+    const categories = [
+      { category: "By Language", data: seed.programmingLanguages },
+      { category: "By Framework", data: seed.frameworks },
+    ];
+
+    return (
+      <div className="category-container">
+        {categories.map((c) => (
+          <>
+            <h4>{c.category}</h4>
+            <div className="options-container">
+              {c.data.map((s) => (
+                <button
+                  className="filter-button"
+                  onClick={() =>
+                    setProjectFilter(filterProjectsBySkill(s.skill))
+                  }
+                >
+                  {s.skill}
+                </button>
+              ))}
+            </div>
+          </>
+        ))}
       </div>
     );
   };
@@ -70,36 +73,10 @@ export default function ProjectsCollage() {
       <div className="collage-container">
         <div className="filter-container">
           <h4>Filter By:</h4>
-          <div className="category-container">
-            <button
-              className="filter-button"
-              onClick={() => setProjectFilter(featuredProjects)}
-            >
-              Featured
-            </button>
-            <button
-              className="filter-button"
-              onClick={() => setProjectFilter(allProjects)}
-            >
-              All
-            </button>
-            <button
-              className="filter-button"
-              onClick={() => setProjectFilter(filterProjectsByType("tooling", seed.projects))}
-            >
-              Tooling
-            </button>
-            <button
-              className="filter-button"
-              onClick={() => setProjectFilter(filterProjectsByType("lab", seed.projects))}
-            >
-              Lab Work
-            </button>
-          </div>
-          {categoryContainer("By Language", seed.programmingLanguages)}
-          {categoryContainer("By Framework", seed.frameworks)}
+          {categoryButtonsByType()}
+          {categoryButtonsBySkill()}
+          <div className="card-container">{projectFilter}</div>
         </div>
-        <div className="card-container">{projectFilter}</div>
       </div>
     </div>
   );
