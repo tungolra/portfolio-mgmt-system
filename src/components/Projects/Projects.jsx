@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Projects.css";
+// import "./Projects.css";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import React from "react";
 import * as seed from "../../seed.js"

@@ -1,4 +1,4 @@
-.projects-container {
+.projects-page {
   padding: 5vmin 0;
   width: 100%;
   height: auto;
@@ -7,38 +7,44 @@
   display: flex;
   flex-direction: column;
 }
-.projects-container > h4 { 
-    color: #99ff99;
-    font-size: 30px;
-    
+.projects-page > h4 {
+  color: #99ff99;
+  font-size: 30px;
 }
 
-.filter-container{ 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.filter-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-.category-container { 
-    flex-direction: column;
-    margin-bottom: 1vmin;
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  margin: 4vmin 2vmin;
+}
+
+.category-container {
+  flex-direction: column;
+  margin-bottom: 1vmin;
 }
 
 .category-container > label {
-    margin-right: 3vmin;
-
+  margin-right: 3vmin;
 }
 
-.options-container { 
-    flex-direction: row;
+.options-container {
+  flex-direction: row;
+  
 }
 .filter-button {
-    margin-right: 1vmin;
-    padding: 3px;
-    background-color: rgba(0, 0, 0, 0.388);
-    color:  #99ff99;
-    font-family: inherit;
-    font-weight: bold;
+  margin-right: 1vmin;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.388);
+  color: #99ff99;
+  font-family: inherit;
+  font-weight: bold;
 }
 
 .card-container {

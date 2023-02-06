@@ -9,12 +9,15 @@ import {
 } from "../../utilities/helpers";
 
 export default function ProjectsCollage() {
-  const [projectFilter, setProjectFilter] = useState(featuredProjects());
+  const [projectFilter, setProjectFilter] = useState({
+    filter: featuredProjects(),
+    header: "Featured",
+  });
 
   const categoryButtonsByType = () => {
     const categories = [
-      { category: "Featured", filter: featuredProjects },
-      { category: "All", filter: allProjects },
+      { category: "Featured", filter: featuredProjects() },
+      { category: "All", filter: allProjects() },
       {
         category: "Tooling",
         filter: filterProjectsByType("tooling", seed.projects),
@@ -27,14 +30,19 @@ export default function ProjectsCollage() {
 
     return (
       <div className="category-container">
+        <h4>By Category</h4>
+          <div className="options-container">
         {categories.map((c) => (
-          <button
-            className="filter-button"
-            onClick={() => setProjectFilter(c.filter)}
-          >
-            {c.category}
-          </button>
+            <button
+              className="filter-button"
+              onClick={() =>
+                setProjectFilter({ filter: c.filter, header: c.category })
+              }
+            >
+              {c.category}
+            </button>
         ))}
+          </div>
       </div>
     );
   };
@@ -45,37 +53,43 @@ export default function ProjectsCollage() {
     ];
 
     return (
-      <div className="category-container">
+      <>
         {categories.map((c) => (
-          <>
+          <div className="category-container">
             <h4>{c.category}</h4>
-            <div className="options-container">
-              {c.data.map((s) => (
+              <div className="options-container">
+            {c.data.map((s) => (
                 <button
                   className="filter-button"
                   onClick={() =>
-                    setProjectFilter(filterProjectsBySkill(s.skill))
+                    setProjectFilter({
+                      filter: filterProjectsBySkill(s.skill, c.category),
+                      header: s.skill,
+                    })
                   }
                 >
                   {s.skill}
                 </button>
-              ))}
-            </div>
-          </>
+            ))}
+              </div>
+          </div>
         ))}
-      </div>
+      </>
     );
   };
 
   return (
-    <div id="projects" className="projects-container">
+    <div id="projects" className="projects-page">
       <h4>What I've Worked On</h4>
-      <div className="collage-container">
-        <div className="filter-container">
-          <h4>Filter By:</h4>
-          {categoryButtonsByType()}
-          {categoryButtonsBySkill()}
-          <div className="card-container">{projectFilter}</div>
+      {/* <h5>Filter By:</h5> */}
+      <div className="filter-container">
+        {categoryButtonsByType()}
+        {categoryButtonsBySkill()}
+      </div>
+      <div className="projects-container">
+        <div className="collage-container">
+          <h5>Viewing: {projectFilter.header}</h5>
+          <div className="card-container">{projectFilter.filter}</div>
         </div>
       </div>
     </div>
