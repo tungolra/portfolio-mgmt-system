@@ -317,7 +317,7 @@ export const projects = [
     ],
     repo: "https://github.com/tungolra/StudySmart",
     site: "[offline]",
-    skills: ["MongoDB, Javascript", "Express", "HTML5", "CSS3"],
+    skills: ["MongoDB", "Javascript", "Express", "HTML5", "CSS3"],
     type: "project",
   },
   {
@@ -346,7 +346,7 @@ export const projects = [
     repo: "https://github.com/tungolra/Book-Collector",
     site: "[offline]",
     skills: ["Django", "Python", "PostgreSQL"],
-    type: "project",
+    type: "lab",
   },
   {
     name: "Finding Carmen Sandiego - SQL",
@@ -423,7 +423,7 @@ export const projects = [
     repo: "https://github.com/tungolra/js-tictactoe-example",
     site: "https://tungolra.github.io/js-tictactoe-example/",
     skills: ["Javascript", "CSS3", "HTML5"],
-    type: "project",
+    type: "lab",
   },
   {
     name: "Express To-Do List",

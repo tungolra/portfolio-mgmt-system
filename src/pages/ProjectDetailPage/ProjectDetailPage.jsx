@@ -4,15 +4,16 @@ import { Link, useParams } from "react-router-dom";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import { RxExternalLink } from "react-icons/rx";
 import { skillCards } from "../../library/skillCard";
+import { featured } from "../../seed";
 
 
 export default function ProjectDetailPage({ seed }) {
   let { project } = useParams();
 
-  const selectedProject = seed.projects?.find((p) => p?.name === project);
-  const navProject = seed.projects?.findIndex((p) => p?.name === project);
-  const nextProject = seed.projects[navProject + 1]?.name;
-  const prevProject = seed.projects[navProject - 1]?.name;
+  const selectedProject = featured.find((p) => p?.name === project);
+  const navProject = featured.findIndex((p) => p?.name === project);
+  const nextProject = featured[navProject + 1]?.name;
+  const prevProject = featured[navProject - 1]?.name;
 
   function techUsed(obj) {
     let skills = [];
@@ -38,7 +39,7 @@ export default function ProjectDetailPage({ seed }) {
             </Link>
           )}
 
-          {navProject === seed.projects.length - 1 ? (
+          {navProject === featured.length - 1 ? (
             ""
           ) : (
             <Link to={`/projects/${nextProject}`}>

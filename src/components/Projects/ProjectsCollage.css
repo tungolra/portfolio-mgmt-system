@@ -109,6 +109,7 @@
 }
 .card-back > p {
   margin: 1vmin;
+  font-size: 0.8em;
 }
 
 .card-links {
