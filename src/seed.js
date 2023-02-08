@@ -317,7 +317,7 @@ export const projects = [
     ],
     repo: "https://github.com/tungolra/StudySmart",
     site: "[offline]",
-    skills: ["MongoDB", "Javascript", "Express", "HTML5", "CSS3"],
+    skills: ["MongoDB", "Javascript", "Express", "HTML5", "CSS3", "Node.js"],
     type: "project",
   },
   {
@@ -434,7 +434,7 @@ export const projects = [
     responsibilities: [],
     repo: "https://github.com/tungolra/express-todos-example",
     site: "[offline]",
-    skills: ["Javascript", "CSS3", "HTML5", "Express"],
+    skills: ["Javascript", "CSS3", "HTML5", "Express", "Node.js"],
     type: "lab",
   },
   {
@@ -446,7 +446,7 @@ export const projects = [
     responsibilities: [],
     repo: "https://github.com/tungolra/express-todos-example",
     site: "[offline]",
-    skills: ["Javascript", "CSS3", "HTML5", "Express"],
+    skills: ["Javascript", "CSS3", "HTML5", "Express", "Node.js"],
     type: "lab",
   },
   {
@@ -458,7 +458,15 @@ export const projects = [
     responsibilities: [],
     repo: "https://github.com/tungolra/express-mongoose-movies-example",
     site: "[offline]",
-    skills: ["Javascript", "CSS3", "HTML5", "Express", "MongoDB", "Mongoose"],
+    skills: [
+      "Javascript",
+      "CSS3",
+      "HTML5",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "Node.js",
+    ],
     type: "lab",
   },
   {
@@ -470,7 +478,15 @@ export const projects = [
     responsibilities: [],
     repo: "https://github.com/tungolra/express-mongoose-flights-example",
     site: "[offline]",
-    skills: ["Javascript", "CSS3", "HTML5", "Express", "MongoDB", "Mongoose"],
+    skills: [
+      "Javascript",
+      "CSS3",
+      "HTML5",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "Node.js",
+    ],
     type: "lab",
   },
   {

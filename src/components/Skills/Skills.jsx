@@ -4,6 +4,41 @@ import "./Skills.css";
 import * as seed from "../../seed.js";
 import { Modal, useMantineTheme } from "@mantine/core";
 import { skillCards } from "../../library/skillCard";
+import {
+  mapChildValues,
+  mapChildKeys,
+  generateColors,
+} from "../../utilities/helpers";
+import {
+  Chart as ChartJS,
+  RadialLinearScale,
+  ArcElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { PolarArea } from "react-chartjs-2";
+
+function PolarAreaChart(...objects) {
+  ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
+
+  const data = {
+    labels: mapChildKeys(...objects),
+    datasets: [
+      {
+        label: "# of Times Used",
+        data: mapChildValues(...objects),
+        backgroundColor: generateColors(mapChildKeys(...objects)),
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  return (
+    <div>
+      <PolarArea data={data} />
+    </div>
+  );
+}
 
 function AddSkillModal(props) {
   const [newSkill, setNewSkill] = useState({
@@ -61,6 +96,25 @@ export default function Skills({ user }) {
       <div className="skill-sections">
         {skillCards("Languages", seed.languages)}
         {skillCards("Technologies", seed.technologies)}
+        <div className="chart-container">
+          <div className="polar-area-chart">
+            <h3>Programming Languages & Libraries </h3>
+            {PolarAreaChart(
+              seed.countBySubtype.ProgrammingLanguage,
+              seed.countBySubtype.MarkupLanguage,
+              seed.countBySubtype.StylingFramework,
+              seed.countBySubtype.StylingLanguage
+            )}
+          </div>
+          <div className="polar-area-chart">
+            <h3>Frameworks and Databases </h3>
+            {PolarAreaChart(
+              seed.countBySubtype.Framework,
+              seed.countBySubtype.Library,
+              seed.countBySubtype.Database
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

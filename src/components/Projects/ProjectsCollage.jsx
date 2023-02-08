@@ -15,7 +15,7 @@ export default function ProjectsCollage() {
     header: "Featured",
   });
 
-  console.log(seed.countBySubtype.MarkupLanguage.HTML5)
+  console.log(seed.countBySubtype)
 
   const categoryButtonsByType = () => {
     const categories = [
