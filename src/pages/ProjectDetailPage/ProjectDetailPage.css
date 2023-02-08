@@ -95,7 +95,11 @@
   color: #99ff99;
   font-size: 30px;
 }
-
+.carousel__link {
+  text-decoration: none;
+  font-style: italic;
+  color: #99ff99;
+}
 /* desktop view */
 @media only screen and (min-width: 961px) {
   .projects-summary {

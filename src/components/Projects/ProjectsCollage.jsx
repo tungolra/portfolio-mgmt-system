@@ -8,11 +8,14 @@ import {
   filterProjectsBySkill,
 } from "../../utilities/helpers";
 
+
 export default function ProjectsCollage() {
   const [projectFilter, setProjectFilter] = useState({
     filter: featuredProjects(),
     header: "Featured",
   });
+
+  console.log(seed.countBySubtype.MarkupLanguage.HTML5)
 
   const categoryButtonsByType = () => {
     const categories = [

@@ -40,6 +40,8 @@
 }
 .tech-icons {
   height: 50px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
 }
 /* desktop view */
 @media only screen and (min-width: 961px) {

@@ -4,6 +4,7 @@ import { RxExternalLink } from "react-icons/rx";
 export function projectCard(name, img, repo, site, summary, pages) {
     return (
       <div className="flip-card">
+            <h4>{name}</h4>
         <div className="flip-card-inner">
           <div className="card-front">
             <img src={img} alt="project-image" />

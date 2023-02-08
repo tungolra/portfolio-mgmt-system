@@ -16,6 +16,12 @@ export const skills = [
     img: "https://i.imgur.com/jTNhsgg.png",
   },
   {
+    type: "Languages",
+    subtype: "Styling Language",
+    skill: "SCSS",
+    img: "https://i.imgur.com/jkKieiK.png",
+  },
+  {
     type: "Technologies",
     subtype: "Styling Framework",
     skill: "Materialize",
@@ -72,7 +78,7 @@ export const skills = [
   {
     type: "Technologies",
     subtype: "Library",
-    skill: "Mongoose ODM",
+    skill: "Mongoose",
     img: "https://i.imgur.com/BPb25o6.png",
   },
   {
@@ -121,7 +127,7 @@ export const skills = [
     type: "Technologies",
     subtype: "Library",
     skill: "Socket.io",
-    img: "https://i.imgur.com/lofEt98.png",
+    img: "https://i.imgur.com/oCCYHpS.png",
   },
 ];
 
@@ -156,12 +162,6 @@ skills.map((skill) => {
   }
   return programmingLanguages;
 });
-
-// export let skillObjects = {skill: []}
-// skills.map((skillObj) => {
-//   const { skill } = skillObj;
-//   skillObjects.skill.push({ [skill]: skillObj });
-// });
 
 export const projects = [
   {
@@ -553,6 +553,30 @@ projects.map((project) => {
     labs.push(project);
   }
   return labs;
+});
+
+export const countBySubtype = {};
+projects.forEach((project) => {
+  project.skills.forEach((skill) => {
+    let subtype;
+
+    for (let i = 0; i < skills.length; i++) {
+      if (skills[i].skill === skill) {
+        subtype = skills[i].subtype.replace(/\s+/g, "");
+        break;
+      }
+    }
+
+    if (!countBySubtype[subtype]) {
+      countBySubtype[subtype] = {};
+    }
+
+    if (!countBySubtype[subtype][skill]) {
+      countBySubtype[subtype][skill] = 1;
+    } else {
+      countBySubtype[subtype][skill]++;
+    }
+  });
 });
 
 export const education = [
