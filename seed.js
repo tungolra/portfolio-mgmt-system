@@ -528,18 +528,17 @@ const projects = [
   },
 ];
 
-const insertUser = () => { 
-  const addProjects = projects.forEach(p => { 
-    p.push({user:"63e43a48314611c11c698cd2"})
-  })
-  return addProjects
-}
+// const insertUser = () => { 
+//   return projects.map((obj) => {
+//     return { ...obj, user: "63e43a48314611c11c698cd2" };
+//   });
+// }
 
-(async function () {
-  try {
-    await Project.create(insertUser());
-    console.log("projects inserted");
-  } catch (error) {
-    console.log(error.message);
-  }
-})();
+// (async function () {
+//   try {
+//     await Project.create(insertUser());
+//     console.log("projects inserted");
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// })();

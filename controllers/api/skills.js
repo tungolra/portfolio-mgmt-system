@@ -1,13 +1,20 @@
 const Skill = require("../../models/skill");
-const Project = require("../../models/project")
+const Project = require("../../models/project");
 
 // create new skill
 async function createSkill(req, res) {
   try {
-    const skill = await Skill.create(req.body);
-    res.status(200).json(skill);
+    const newSkill = new Skill({
+      type: req.body.type,
+      subtype: req.body.subtype,
+      skill: req.body.skill,
+      img: req.body.img,
+      user: req.params.id,
+    });
+    const savedSkill = await newSkill.save();
+    res.status(201).json(savedSkill);
   } catch (error) {
-    res.status(500).json(error.message);
+    res.status(400).json({ message: error.message });
   }
 }
 
@@ -55,19 +62,19 @@ async function deleteSkill(req, res) {
   }
 }
 
-//add skill to project // not working 
+//add skill to project // not working
 async function addSkill(req, res) {
   const { skillId, projectId } = req.params;
   try {
-    const findSkill = await Skill.findOne({_id: skillId})
-    const {_id, type, subtype, skill, img} = findSkill
-    const skillData = {_id, type, subtype, skill, img}
-    const project = await Project.findOne({_id: projectId})
-    project.skillIds.push(skillData)
-    findSkill.projectIds.push(projectId)
-    res.status(200).json(project.skillIds)
+    const findSkill = await Skill.findOne({ _id: skillId });
+    const { _id, type, subtype, skill, img } = findSkill;
+    const skillData = { _id, type, subtype, skill, img };
+    const project = await Project.findOne({ _id: projectId });
+    project.skillIds.push(skillData);
+    findSkill.projectIds.push(projectId);
+    res.status(200).json(project.skillIds);
   } catch (error) {
-    res.status(500).json(error.message)
+    res.status(500).json(error.message);
   }
 }
 
