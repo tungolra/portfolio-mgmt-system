@@ -15,8 +15,6 @@ export default function ProjectsCollage() {
     header: "Featured",
   });
 
-  console.log(seed.countBySubtype)
-
   const categoryButtonsByType = () => {
     const categories = [
       { category: "Featured", filter: featuredProjects() },
