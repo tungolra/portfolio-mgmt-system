@@ -137,7 +137,7 @@ const skills = [
 
 // (async function () {
 //   try {
-//     await Skill.create(skills);
+//     await Skill.create(insertUser(skills));
 //     console.log("skills inserted");
 //   } catch (error) {
 //     console.log(error.message);
@@ -528,15 +528,15 @@ const projects = [
   },
 ];
 
-// const insertUser = () => { 
-//   return projects.map((obj) => {
-//     return { ...obj, user: "63e43a48314611c11c698cd2" };
-//   });
-// }
+function insertUser (data) { 
+  return data.map((obj) => {
+    return { ...obj, user: "63e51e297b31f5da5ed03fae" };
+  });
+}
 
 // (async function () {
 //   try {
-//     await Project.create(insertUser());
+//     await Project.create(insertUser(projects));
 //     console.log("projects inserted");
 //   } catch (error) {
 //     console.log(error.message);

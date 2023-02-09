@@ -19,25 +19,25 @@ async function createSkill(req, res) {
 }
 
 // get one skill
-async function getOneSkill(req, res) {
-  const { id } = req.params;
-  try {
-    const skill = await Skill.findOne({ _id: id });
-    res.status(200).json(skill);
-  } catch (error) {
-    res.status(500).json(error.message);
-  }
-}
+// async function getOneSkill(req, res) {
+//   const { id } = req.params;
+//   try {
+//     const skill = await Skill.findOne({ _id: id });
+//     res.status(200).json(skill);
+//   } catch (error) {
+//     res.status(500).json(error.message);
+//   }
+// }
 
 // get all skills
 async function getSkills(req, res) {
   try {
-    const skills = await Skill.find({});
+    const skills = await Skill.find({ user: req.params.id });
     res.status(200).json(skills);
   } catch (error) {
-    res.status(500).json(error.message);
+    res.status(500).json({ message: error.message });
   }
-}
+};
 
 // update skill
 async function updateSkill(req, res) {
@@ -83,7 +83,7 @@ async function removeSkill(req, res) {}
 
 module.exports = {
   create: createSkill,
-  show: getOneSkill,
+  // show: getOneSkill,
   index: getSkills,
   update: updateSkill,
   delete: deleteSkill,

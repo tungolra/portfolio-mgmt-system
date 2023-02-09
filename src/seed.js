@@ -131,38 +131,6 @@ export const skills = [
   },
 ];
 
-export const languages = [];
-skills.map((skill) => {
-  if (skill.type === "Languages") {
-    languages.push(skill);
-  }
-  return languages;
-});
-
-export const technologies = [];
-skills.map((skill) => {
-  if (skill.type === "Technologies") {
-    technologies.push(skill);
-  }
-  return technologies;
-});
-
-export const frameworks = [];
-skills.map((skill) => {
-  if (skill.subtype === "Framework") {
-    frameworks.push(skill);
-  }
-  return frameworks;
-});
-
-export const programmingLanguages = [];
-skills.map((skill) => {
-  if (skill.subtype === "Programming Language") {
-    programmingLanguages.push(skill);
-  }
-  return programmingLanguages;
-});
-
 export const projects = [
   {
     name: "Wealthy-Mi",
@@ -546,54 +514,6 @@ export const projects = [
     type: "lab",
   },
 ];
-
-export const featured = [];
-projects.map((project) => {
-  if (project.type === "project") {
-    featured.push(project);
-  }
-  return featured;
-});
-
-export const tooling = [];
-projects.map((project) => {
-  if (project.type === "tooling") {
-    tooling.push(project);
-  }
-  return tooling;
-});
-
-export const labs = [];
-projects.map((project) => {
-  if (project.type === "lab") {
-    labs.push(project);
-  }
-  return labs;
-});
-
-export const countBySubtype = {};
-projects.forEach((project) => {
-  project.skills.forEach((skill) => {
-    let subtype;
-
-    for (let i = 0; i < skills.length; i++) {
-      if (skills[i].skill === skill) {
-        subtype = skills[i].subtype.replace(/\s+/g, "");
-        break;
-      }
-    }
-
-    if (!countBySubtype[subtype]) {
-      countBySubtype[subtype] = {};
-    }
-
-    if (!countBySubtype[subtype][skill]) {
-      countBySubtype[subtype][skill] = 1;
-    } else {
-      countBySubtype[subtype][skill]++;
-    }
-  });
-});
 
 export const education = [
   {

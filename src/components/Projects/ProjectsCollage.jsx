@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import * as seed from "../../seed";
+import { projects } from "../../seed";
+import { programmingLanguages, frameworks } from "../../utilities/helpers";
 import "./ProjectsCollage.css";
 import {
   allProjects,
@@ -21,11 +23,11 @@ export default function ProjectsCollage() {
       { category: "All", filter: allProjects() },
       {
         category: "Tooling",
-        filter: filterProjectsByType("tooling", seed.projects),
+        filter: filterProjectsByType("tooling", projects),
       },
       {
         category: "Lab Work",
-        filter: filterProjectsByType("lab", seed.projects),
+        filter: filterProjectsByType("lab", projects),
       },
     ];
 
@@ -49,8 +51,8 @@ export default function ProjectsCollage() {
   };
   const categoryButtonsBySkill = () => {
     const categories = [
-      { category: "By Language", data: seed.programmingLanguages },
-      { category: "By Framework", data: seed.frameworks },
+      { category: "By Language", data: programmingLanguages },
+      { category: "By Framework", data: frameworks },
     ];
 
     return (

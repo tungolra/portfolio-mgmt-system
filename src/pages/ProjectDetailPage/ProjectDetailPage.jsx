@@ -3,10 +3,9 @@ import "./ProjectDetailPage.css";
 import { Link, useParams } from "react-router-dom";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import { RxExternalLink } from "react-icons/rx";
-import { featured } from "../../seed";
-import { techUsed } from "../../utilities/helpers";
+import { techUsed, featured } from "../../utilities/helpers";
 
-export default function ProjectDetailPage({ seed }) {
+export default function ProjectDetailPage() {
   let { project } = useParams();
 
   const selectedProject = featured.find((p) => p?.name === project);

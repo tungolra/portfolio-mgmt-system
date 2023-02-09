@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "./Skills.css";
-import * as seed from "../../seed.js";
+import { languages, technologies } from "../../utilities/helpers";
 import { Modal, useMantineTheme } from "@mantine/core";
 import { skillCards } from "../../library/skillCard";
 import {
   mapChildValues,
   mapChildKeys,
   generateColors,
+  countBySubtype
 } from "../../utilities/helpers";
 import {
   Chart as ChartJS,
@@ -17,6 +17,7 @@ import {
   Legend,
 } from "chart.js";
 import { PolarArea } from "react-chartjs-2";
+
 
 function PolarAreaChart(...objects) {
   ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
@@ -94,24 +95,24 @@ export default function Skills({ user }) {
         setModalOpened={setModalOpened}
       />
       <div className="skill-sections">
-        {skillCards("Languages", seed.languages)}
-        {skillCards("Technologies", seed.technologies)}
+        {skillCards("Languages", languages)}
+        {skillCards("Technologies", technologies)}
         <div className="chart-container">
           <div className="polar-area-chart">
             <h3>Programming Languages & Libraries </h3>
             {PolarAreaChart(
-              seed.countBySubtype.ProgrammingLanguage,
-              seed.countBySubtype.MarkupLanguage,
-              seed.countBySubtype.StylingFramework,
-              seed.countBySubtype.StylingLanguage
+              countBySubtype.ProgrammingLanguage,
+              countBySubtype.MarkupLanguage,
+              countBySubtype.StylingFramework,
+              countBySubtype.StylingLanguage
             )}
           </div>
           <div className="polar-area-chart">
             <h3>Frameworks and Databases </h3>
             {PolarAreaChart(
-              seed.countBySubtype.Framework,
-              seed.countBySubtype.Library,
-              seed.countBySubtype.Database
+              countBySubtype.Framework,
+              countBySubtype.Library,
+              countBySubtype.Database
             )}
           </div>
         </div>
