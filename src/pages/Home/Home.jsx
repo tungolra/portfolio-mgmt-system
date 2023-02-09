@@ -106,7 +106,7 @@ export default function Home({ user }) {
           <Header />
           <About />
           <Skills user={user} />
-          <ProjectsCollage />
+          <ProjectsCollage user={user}/>
         </div>
       </div>
       <Footer />

@@ -17,6 +17,7 @@ import NewSkillForm from "../../components/Skills/NewSkillForm";
 
 function App() {
   const [user, setUser] = useState(getUser());
+  
 
   window.onload = function () {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

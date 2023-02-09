@@ -21,7 +21,6 @@ console.log(formData)
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("submitted")
     try {
         const res = await axios.post(`/api/projects/${user._id}`, formData);
         console.log(res);

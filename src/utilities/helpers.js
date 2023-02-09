@@ -1,36 +1,31 @@
-import * as seed from "../seed";
 import { projects, skills } from "../seed";
 import { projectCard } from "../library/projectCard";
 import { skillCards } from "../library/skillCard";
-import axios from 'axios';
+import { getUser } from "./users-service";
+import axios from "axios";
 
-// GET PROJECTS AND SKILLS..? 
+// GET PROJECTS AND SKILLS..?
+const user = getUser();
 
-// const getSkills = async (userId) => {
-//   try {
-//     const response = await axios.get(`/api/skills/${userId}`);
-//     return response.data;
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
+export function getSkills(userId) {
+  const response = axios.get(`/api/skills/${userId}`);
+  return response.data;
+}
+// getSkills(user._id)
 
-// export const skills = getSkills(id)
+// export let myProjects;
 
-// const getProjects = async (userId) => {
+const getProjects = async (userId) => {
+  try {
+    const response = await axios.get(`/api/projects/${userId}`);
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-//   try {
-//     const response = await axios.get(`/api/projects/${userId}`);
-//     return response.data;
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
-
-// export const projects = getProjects()
-
-
-// FILTER PROJECTS 
+// FILTER PROJECTS
 
 export const featured = [];
 projects.map((project) => {
@@ -73,12 +68,14 @@ export function filterProjects(obj, type, skill) {
   );
 }
 
-export const allProjects = () => filterProjects(seed.projects);
+export const allProjects = () => filterProjects(projects);
 export const featuredProjects = () => filterProjects(featured);
-export const filterProjectsByType = (str) => filterProjects(seed.projects, str);
-export const filterProjectsBySkill = (str) => filterProjects(seed.projects, undefined, str);
+export const filterProjectsByType = (str) => filterProjects(projects, str);
+export const filterProjectsBySkill = (str) =>
+  filterProjects(projects, undefined, str);
 
 // FILTER SKILLS
+
 export const filterSkills = (skills, type, subtype) => {
   const filteredSkills = [];
   skills.map((skill) => {
@@ -89,12 +86,14 @@ export const filterSkills = (skills, type, subtype) => {
   return filteredSkills;
 };
 
-export const languages = filterSkills(skills, "Languages");
-export const technologies = filterSkills(skills, "Technologies");
-export const frameworks = filterSkills(skills, "Technologies", "Framework");
-export const programmingLanguages = filterSkills(skills, "Languages", "Programming Language");
-
-
+export const getSkillByLanguage = (skills) => filterSkills(skills, "Languages");
+export const getSkillByTechnology = (skills) => filterSkills(skills, "Technologies");
+export const frameworks = (skills) => filterSkills(skills, "Technologies", "Framework");
+export const programmingLanguages = (skills) => filterSkills(
+  skills,
+  "Languages",
+  "Programming Language"
+);
 
 // Chart.js start
 
@@ -155,15 +154,14 @@ projects.forEach((project) => {
 
 // Project Detail Page
 
-
 export function techUsed(obj) {
-  let skills = [];
+  let projectSkills = [];
   obj.skills.map((s) => {
-    seed.skills.map((skill) => {
+    skills.map((skill) => {
       if (s === skill.skill) {
-        skills.push(skill);
+        projectSkills.push(skill);
       }
     });
   });
-  return <>{skillCards("Technologies Used", skills)}</>;
+  return <>{skillCards("Technologies Used", projectSkills)}</>;
 }
