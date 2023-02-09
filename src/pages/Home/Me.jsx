@@ -52,30 +52,7 @@ export default function Me() {
       </div>
     );
   }
-  // function mySkills() {
-  //   return (
-  //     <div className="my-skills">
-  //       <div className="skill-type">
-  //         <h4>Languages</h4>
-  //         {seed.languages.map((s) => (
-  //           <div className="skill-details">
-  //             <img src={s.img} alt="X" />
-  //             <p>{s.skill}</p>
-  //           </div>
-  //         ))}
-  //       </div>
-  //       <div className="skill-type">
-  //         <h4>Technologies</h4>
-  //         {seed.technologies.map((s) => (
-  //           <div className="skill-details">
-  //             <img src={s.img} alt="X" />
-  //             <p>{s.skill}</p>
-  //           </div>
-  //         ))}
-  //       </div>
-  //     </div>
-  //   );
-  // }
+
   function myEducation() {
     return (
       <div className="my-education">

@@ -1,5 +1,6 @@
 import * as seed from "../seed";
 import { projectCard } from "../library/projectCard";
+import { skillCards } from "../library/skillCard";
 
 export function allProjects() {
   return seed.projects.map((p) =>
@@ -66,4 +67,16 @@ export function generateColors(arr) {
     colors.push(color);
   }
   return colors;
+}
+
+export function techUsed(obj) {
+  let skills = [];
+  obj.skills.map((s) => {
+    seed.skills.map((skill) => {
+      if (s === skill.skill) {
+        skills.push(skill);
+      }
+    });
+  });
+  return <>{skillCards("Technologies Used", skills)}</>;
 }

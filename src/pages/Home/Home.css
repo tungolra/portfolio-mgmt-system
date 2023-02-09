@@ -141,21 +141,6 @@ section {
   transition: 0.4s;
 }
 
-/* .read-less {
-  color: #99ff99;
-  display: none;
-}
-.read-more {
-  display: block;
-}
-.toggle-hide {
-  color: #99ff99;
-  font-style: italic;
-}
-.toggle-hide:hover {
-  cursor: pointer;
-}
-*/
 .about-me > p > ul {
   margin-left: 2em;
 } 

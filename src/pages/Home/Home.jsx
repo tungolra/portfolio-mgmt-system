@@ -1,5 +1,4 @@
 import React from "react";
-import Projects from "../../components/Projects/Projects";
 import Skills from "../../components/Skills/Skills";
 import linkedInIcon from "../../images/LI-In-Bug.png";
 import gitHubIcon from "../../images/github-logo.png";
@@ -106,8 +105,7 @@ export default function Home({ user }) {
         <div className="home-container">
           <Header />
           <About />
-          {/* <Projects seed={seed} /> */}
-          <Skills user={user} seed={seed} />
+          <Skills user={user} />
           <ProjectsCollage />
         </div>
       </div>

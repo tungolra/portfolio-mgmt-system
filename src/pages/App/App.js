@@ -12,7 +12,6 @@ import LogInForm from "../../components/LogInForm/LogInForm";
 import NewEntry from "../NewEntry/NewEntry";
 import ResumePage from "../ResumePage/ResumePage";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
-import MatrixBackground from "../../components/MatrixBackground/MatrixBackground";
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -30,7 +29,6 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* <MatrixBackground /> */}
       <div className="App">
         <NavBar user={user} setUser={setUser} />
         {user ? (

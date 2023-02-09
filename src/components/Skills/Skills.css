@@ -43,10 +43,7 @@
   aspect-ratio: 1/1;
   object-fit: contain;
 }
-.chart-container {
-}
-.polar-area-chart {
-}
+
 .polar-area-chart > div {
   filter: invert(100%);
 }
