@@ -5,6 +5,7 @@ const user = require("../../models/user");
 const ensureLoggedIn = require("../../config/ensureLoggedIn");
 
 router.post("/", usersCtrl.create);
+// router.get("/", usersCtrl.getUser);
 router.post("/login", usersCtrl.login);
 router.get("/check-token", ensureLoggedIn, usersCtrl.checkToken);
 

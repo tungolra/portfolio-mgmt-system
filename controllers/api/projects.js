@@ -1,15 +1,33 @@
 const Project = require("../../models/project");
-const { update } = require("./skills");
 
 // create new project
 async function createProject(req, res) {
   try {
-    const project = await Project.create(req.body);
-    res.status(200).json(project);
+    const project = new Project({
+      name: req.body.name,
+      img: req.body.img,
+      pages: req.body.pages,
+      summary: req.body.summary,
+      responsibilities: req.body.responsibilities,
+      repo: req.body.repo,
+      site: req.body.site,
+      skills: req.body.skills,
+      type: req.body.type,
+      user: req.params.id
+    });
+
+    project.save((err, project) => {
+      if (err) {
+        throw new Error("Unable to save project to database.");
+      }
+      res.json(project);
+    });
   } catch (error) {
-    res.status(500).json(error);
+    return res.status(400).json({
+      error: error.message
+    });
   }
-}
+};
 
 // get one project
 async function getOneProject(req, res) {

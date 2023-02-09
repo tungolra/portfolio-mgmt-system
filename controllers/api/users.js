@@ -2,7 +2,6 @@ const User = require("../../models/user");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
-//disable signup; authorization for personal-use only.
 async function create(req, res) {
   try {
     const user = await User.create(req.body);

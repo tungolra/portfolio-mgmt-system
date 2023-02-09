@@ -12,6 +12,7 @@ import LogInForm from "../../components/LogInForm/LogInForm";
 import NewEntry from "../NewEntry/NewEntry";
 import ResumePage from "../ResumePage/ResumePage";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
+import NewProjectForm from "../../components/Projects/NewProjectForm.jsx"
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -41,6 +42,7 @@ function App() {
             <Route path="blog" element={<Blog />} />
             <Route path="entry" element={<NewEntry />} />
             <Route path="cv" element={<ResumePage />} />
+            <Route path="new-project" element={<NewProjectForm user={user}/>} />
             <Route
               path="/projects/:project"
               element={<ProjectDetailPage seed={seed} />}
