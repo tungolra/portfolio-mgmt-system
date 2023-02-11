@@ -1,7 +1,3 @@
-import {
-  // projects, 
-  // skills 
-} from "../seed"
 import { projectCard } from "../library/projectCard";
 import { skillCards } from "../library/skillCard";
 var projects = JSON.parse(localStorage.getItem('projects'));
@@ -10,7 +6,7 @@ var skills = JSON.parse(localStorage.getItem('skills'));
 // FILTER PROJECTS
 
 export const featured = [];
-projects.map((project) => {
+projects?.map((project) => {
   if (project.type === "project") {
     featured.push(project);
   }
@@ -18,7 +14,7 @@ projects.map((project) => {
 });
 
 export const tooling = [];
-projects.map((project) => {
+projects?.map((project) => {
   if (project.type === "tooling") {
     tooling.push(project);
   }
@@ -26,7 +22,7 @@ projects.map((project) => {
 });
 
 export const labs = [];
-projects.map((project) => {
+projects?.map((project) => {
   if (project.type === "lab") {
     labs.push(project);
   }
@@ -60,7 +56,7 @@ export const filterProjectsBySkill = (str) =>
 
 export const filterSkills = (skills, type, subtype) => {
   const filteredSkills = [];
-  skills.map((skill) => {
+  skills?.map((skill) => {
     if (skill.type === type && (!subtype || skill.subtype === subtype)) {
       filteredSkills.push(skill);
     }
@@ -110,7 +106,7 @@ export function generateColors(arr) {
 }
 
 export const countBySubtype = {};
-projects.forEach((project) => {
+projects?.forEach((project) => {
   project.skills.forEach((skill) => {
     let subtype;
 

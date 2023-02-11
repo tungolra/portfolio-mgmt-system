@@ -8,37 +8,12 @@ import {
   programmingLanguages,
   frameworks,
 } from "../../utilities/helpers";
-import axios from "axios";
 
 export default function ProjectsCollage() {
   const [projectFilter, setProjectFilter] = useState({
     filter: featuredProjects(),
     header: "Featured",
   });
-
-  useEffect(() => {
-    const fetchProjectData = async () => {
-      try {
-        const response = await axios.get(`/api/projects`);
-        localStorage.setItem("projects", JSON.stringify(response.data));
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchProjectData();
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`/api/skills`);
-        localStorage.setItem("skills", JSON.stringify(response.data));
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchData();
-  }, []);
 
   const categoryButtonsByType = () => {
     const categories = [

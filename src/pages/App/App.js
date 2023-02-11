@@ -7,17 +7,41 @@ import * as seed from "../../seed.js";
 import ProjectDetailPage from "../ProjectDetailPage/ProjectDetailPage";
 import AllWorkPage from "../AllWorkPage/AllWorkPage";
 import { getUser } from "../../utilities/users-service";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LogInForm from "../../components/LogInForm/LogInForm";
 import NewEntry from "../NewEntry/NewEntry";
 import ResumePage from "../ResumePage/ResumePage";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
-import NewProjectForm from "../../components/Projects/NewProjectForm.jsx"
+import NewProjectForm from "../../components/Projects/NewProjectForm.jsx";
 import NewSkillForm from "../../components/Skills/NewSkillForm";
+import axios from "axios";
 
 function App() {
   const [user, setUser] = useState(getUser());
   
+  useEffect(() => {
+    const fetchProjectData = async () => {
+      try {
+        const response = await axios.get(`/api/projects`);
+        localStorage.setItem("projects", JSON.stringify(response.data));
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchProjectData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`/api/skills`);
+        localStorage.setItem("skills", JSON.stringify(response.data));
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
 
   window.onload = function () {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -44,8 +68,11 @@ function App() {
             <Route path="blog" element={<Blog />} />
             <Route path="entry" element={<NewEntry />} />
             <Route path="cv" element={<ResumePage />} />
-            <Route path="new-project" element={<NewProjectForm user={user}/>} />
-            <Route path="new-skill" element={<NewSkillForm user={user}/>} />
+            <Route
+              path="new-project"
+              element={<NewProjectForm user={user} />}
+            />
+            <Route path="new-skill" element={<NewSkillForm user={user} />} />
             <Route
               path="/projects/:project"
               element={<ProjectDetailPage seed={seed} />}
