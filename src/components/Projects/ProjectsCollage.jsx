@@ -1,43 +1,44 @@
 import React, { useState, useEffect } from "react";
-import * as seed from "../../seed";
-// import { projects } from "../../seed";
-import { programmingLanguages, frameworks } from "../../utilities/helpers";
 import "./ProjectsCollage.css";
 import {
   allProjects,
   featuredProjects,
   filterProjectsByType,
   filterProjectsBySkill,
+  programmingLanguages,
+  frameworks,
 } from "../../utilities/helpers";
 import axios from "axios";
-export let skills;
-export let projects;
 
-export default function ProjectsCollage({ user }) {
+export default function ProjectsCollage() {
   const [projectFilter, setProjectFilter] = useState({
     filter: featuredProjects(),
     header: "Featured",
   });
 
-  const fetchProjectData = async () => {
-    try {
-      const response = await axios.get(`/api/projects`);
-      projects = response.data;
-    } catch (error) {
-      console.error(error);
-    }
-  };
-  fetchProjectData();
+  useEffect(() => {
+    const fetchProjectData = async () => {
+      try {
+        const response = await axios.get(`/api/projects`);
+        localStorage.setItem("projects", JSON.stringify(response.data));
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchProjectData();
+  }, []);
 
-  const fetchSkillData = async () => {
-    try {
-      const response = await axios.get(`/api/skills`);
-      skills = response.data;
-    } catch (error) {
-      console.error(error);
-    }
-  };
-  fetchSkillData();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`/api/skills`);
+        localStorage.setItem("skills", JSON.stringify(response.data));
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
 
   const categoryButtonsByType = () => {
     const categories = [
@@ -73,8 +74,8 @@ export default function ProjectsCollage({ user }) {
   };
   const categoryButtonsBySkill = () => {
     const categories = [
-      { category: "By Language", data: programmingLanguages(skills) },
-      { category: "By Framework", data: frameworks(skills) },
+      { category: "By Language", data: programmingLanguages() },
+      { category: "By Framework", data: frameworks() },
     ];
 
     return (

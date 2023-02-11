@@ -1,7 +1,11 @@
+import {
+  // projects, 
+  // skills 
+} from "../seed"
 import { projectCard } from "../library/projectCard";
 import { skillCards } from "../library/skillCard";
-import { skills } from "../components/Projects/ProjectsCollage";
-import { projects } from "../components/Projects/ProjectsCollage";
+var projects = JSON.parse(localStorage.getItem('projects'));
+var skills = JSON.parse(localStorage.getItem('skills'));
 
 // FILTER PROJECTS
 
@@ -67,9 +71,9 @@ export const filterSkills = (skills, type, subtype) => {
 export const getSkillByLanguage = (skills) => filterSkills(skills, "Languages");
 export const getSkillByTechnology = (skills) =>
   filterSkills(skills, "Technologies");
-export const frameworks = (skills) =>
+export const frameworks = () =>
   filterSkills(skills, "Technologies", "Framework");
-export const programmingLanguages = (skills) =>
+export const programmingLanguages = () =>
   filterSkills(skills, "Languages", "Programming Language");
 
 // Chart.js start

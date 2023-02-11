@@ -30,15 +30,15 @@ async function createProject(req, res) {
 };
 
 // get one project
-async function getOneProject(req, res) {
-  const { id } = req.params;
-  try {
-    const project = await Project.findOne({ _id: id });
-    res.status(200).json(project);
-  } catch (error) {
-    res.status(500).json(error);
-  }
-}
+// async function getOneProject(req, res) {
+//   const { id } = req.params;
+//   try {
+//     const project = await Project.findOne({ _id: id });
+//     res.status(200).json(project);
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// }
 
 // get all projects
 async function getProjects(req, res) {
@@ -88,7 +88,7 @@ async function deleteProject(req, res) {
 
 module.exports = {
   create: createProject,
-  show: getOneProject,
+  // show: getOneProject,
   index: getProjects,
   all: getProjectSkills,
   update: updateProject,
