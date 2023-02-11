@@ -48,7 +48,7 @@ export default function Skills({ user }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/api/skills/${user._id}`);
+        const response = await axios.get(`/api/skills`);
         setSkills(response.data);
       } catch (error) {
         console.error(error);

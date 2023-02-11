@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as seed from "../../seed";
-import { projects } from "../../seed";
+// import { projects } from "../../seed";
 import { programmingLanguages, frameworks } from "../../utilities/helpers";
 import "./ProjectsCollage.css";
 import {
@@ -10,25 +10,34 @@ import {
   filterProjectsBySkill,
 } from "../../utilities/helpers";
 import axios from "axios";
+export let skills;
+export let projects;
 
 export default function ProjectsCollage({ user }) {
   const [projectFilter, setProjectFilter] = useState({
     filter: featuredProjects(),
     header: "Featured",
   });
-  const [skills, setSkills] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`/api/skills/${user._id}`);
-        setSkills(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchData();
-  }, []);
+  const fetchProjectData = async () => {
+    try {
+      const response = await axios.get(`/api/projects`);
+      projects = response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  fetchProjectData();
+
+  const fetchSkillData = async () => {
+    try {
+      const response = await axios.get(`/api/skills`);
+      skills = response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  fetchSkillData();
 
   const categoryButtonsByType = () => {
     const categories = [

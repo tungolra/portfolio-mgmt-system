@@ -1,29 +1,7 @@
-import { projects, skills } from "../seed";
 import { projectCard } from "../library/projectCard";
 import { skillCards } from "../library/skillCard";
-import { getUser } from "./users-service";
-import axios from "axios";
-
-// GET PROJECTS AND SKILLS..?
-const user = getUser();
-
-export function getSkills(userId) {
-  const response = axios.get(`/api/skills/${userId}`);
-  return response.data;
-}
-// getSkills(user._id)
-
-// export let myProjects;
-
-const getProjects = async (userId) => {
-  try {
-    const response = await axios.get(`/api/projects/${userId}`);
-    console.log(response.data);
-    return response.data;
-  } catch (error) {
-    console.error(error);
-  }
-};
+import { skills } from "../components/Projects/ProjectsCollage";
+import { projects } from "../components/Projects/ProjectsCollage";
 
 // FILTER PROJECTS
 
@@ -87,13 +65,12 @@ export const filterSkills = (skills, type, subtype) => {
 };
 
 export const getSkillByLanguage = (skills) => filterSkills(skills, "Languages");
-export const getSkillByTechnology = (skills) => filterSkills(skills, "Technologies");
-export const frameworks = (skills) => filterSkills(skills, "Technologies", "Framework");
-export const programmingLanguages = (skills) => filterSkills(
-  skills,
-  "Languages",
-  "Programming Language"
-);
+export const getSkillByTechnology = (skills) =>
+  filterSkills(skills, "Technologies");
+export const frameworks = (skills) =>
+  filterSkills(skills, "Technologies", "Framework");
+export const programmingLanguages = (skills) =>
+  filterSkills(skills, "Languages", "Programming Language");
 
 // Chart.js start
 
@@ -106,6 +83,7 @@ export function mapChildKeys(...objects) {
   }
   return childKeys;
 }
+
 export function mapChildValues(...objects) {
   let values = [];
   objects.forEach((obj) => {
