@@ -11,6 +11,12 @@ export const skills = [
   },
   {
     type: "Languages",
+    subtype: "Programming Language",
+    skill: "Java",
+    img: "https://i.imgur.com/YJjKbt4.png",
+  },
+  {
+    type: "Languages",
     subtype: "Styling Language",
     skill: "CSS3",
     img: "https://i.imgur.com/jTNhsgg.png",
@@ -38,6 +44,18 @@ export const skills = [
     subtype: "Styling Language",
     skill: "Bootstrap",
     img: "https://i.imgur.com/NsKingN.png",
+  },
+  {
+    type: "Technologies",
+    subtype: "Framework",
+    skill: "SpringBoot",
+    img: "https://i.imgur.com/fozEzEY.png",
+  },
+  {
+    type: "Technologies",
+    subtype: "Framework",
+    skill: "jQuery",
+    img: "https://i.imgur.com/dltSXkL.png",
   },
   {
     type: "Technologies",
@@ -413,6 +431,41 @@ export const projects = [
     site: "[offline]",
     skills: ["CSS3", "HTML5"],
     type: "tooling",
+  },
+  {
+    name: "Spring Boot OAuth2",
+    img: tool,
+    pages: [],
+    summary:
+      "Starter code for integrating social logins using GitHub and Google OAuth2.0 as authentication providers. jQuery is used on the front end, Bootstrap for minimal styling.",
+    responsibilities: [],
+    repo: "https://github.com/tungolra/springboot-social-auth",
+    site: "[offline]",
+    skills: ["Java", "SpringBoot", "Maven", "Bootstrap", "jQuery", "HTML5"],
+    type: "tooling",
+  },
+  {
+    name: "Spring Boot Native Authentication",
+    img: tool,
+    pages: [],
+    summary:
+      "Starter code for integrating Spring Security to secure a web application.",
+    responsibilities: [],
+    repo: "https://github.com/tungolra/springboot-auth-tooling",
+    site: "[offline]",
+    skills: ["Java", "SpringBoot", "Maven", "HTML5"],
+    type: "tooling",
+  },
+  {
+    name: "Getting Started With Spring Boot",
+    img: stock,
+    pages: [],
+    summary: "First Java Springboot application creating full CRUD functionality using PostgreSQL database and held in Docker. ",
+    responsibilities: [],
+    repo: "https://github.com/tungolra/spring-boot-example",
+    site: "[offline]",
+    skills: ["Java", "PostgreSQL", "SpringBoot"],
+    type: "lab",
   },
   {
     name: "JS Tic-Tac-Toe",
