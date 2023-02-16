@@ -183,6 +183,37 @@ skills.map((skill) => {
 
 export const projects = [
   {
+    name: "Movie Matters",
+    img: "https://i.imgur.com/RjWIyoh.png",
+    pages: [
+      "https://i.imgur.com/RjWIyoh.png",
+      "https://i.imgur.com/JSc7139.png",
+      "https://i.imgur.com/BqtcDx6.png",
+    ],
+    summary:
+      "Movie Matters is a movie review web application where users can view the latest movies and watch their trailers. Users can input reviews for each movie.",
+    responsibilities: [
+      "Frontend Development with React",
+      "Backend Development with Spring Boot and Java",
+    ],
+    repo: "https://github.com/tungolra/spring-react-movies",
+    site: "[offline]",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "Material UI",
+      "Bootstrap",
+      "MongoDB",
+      "SpringBoot",
+      "React",
+      "Java",
+      "Node.js",
+      "Javascript",
+      "Maven",
+    ],
+    type: "project",
+  },
+  {
     name: "Wealthy-Mi",
     img: "https://i.imgur.com/SWCYvDG.gif",
     pages: ["https://i.imgur.com/SWCYvDG.gif"],
@@ -460,7 +491,8 @@ export const projects = [
     name: "Getting Started With Spring Boot",
     img: stock,
     pages: [],
-    summary: "First Java Springboot application creating full CRUD functionality using PostgreSQL database and held in Docker. ",
+    summary:
+      "First Java Springboot application creating full CRUD functionality using PostgreSQL database and held in Docker. ",
     responsibilities: [],
     repo: "https://github.com/tungolra/spring-boot-example",
     site: "[offline]",
