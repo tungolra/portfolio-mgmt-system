@@ -13,7 +13,7 @@ A portfolio website showcasing my tech stack, featured projects, toolings, and w
 ## Pages
 
 ### Home Page 
-<img src="https://i.imgur.com/wQC7tHC.gif">
+<img src="https://i.imgur.com/JEljDD7.gif">
 
 ### Technologies
 
