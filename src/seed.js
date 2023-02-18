@@ -157,7 +157,7 @@ export const skills = [
     type: "Technologies",
     subtype: "Framework",
     skill: "Express",
-    img: "https://i.imgur.com/jTNhsgg.png",
+    img: "https://i.imgur.com/awaqvUm.png",
   },
   {
     type: "Technologies",

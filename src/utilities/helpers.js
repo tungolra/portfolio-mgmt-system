@@ -1,15 +1,16 @@
 import * as seed from "../seed";
 import { projectCard } from "../library/projectCard";
 import { skillCards } from "../library/skillCard";
+import { skillIcons } from "../library/skillIcons";
 
 export function allProjects() {
   return seed.projects.map((p) =>
-    projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
+    projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages, p)
   );
 }
 export function featuredProjects() {
   return seed.featured.map((p) =>
-    projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
+    projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages, p)
   );
 }
 
@@ -21,7 +22,7 @@ export function filterProjectsByType(str, obj) {
     }
   });
   return filterResults.map((p) =>
-    projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
+    projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages, p)
   );
 }
 
@@ -35,7 +36,7 @@ export function filterProjectsBySkill(str) {
   });
 
   return filterResults.map((p) =>
-    projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages)
+    projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages, p)
   );
 }
 
@@ -79,4 +80,15 @@ export function techUsed(obj) {
     });
   });
   return <>{skillCards("Technologies Used", skills)}</>;
+}
+export function techIcons(obj) {
+  let skills = [];
+  obj.skills.map((s) => {
+    seed.skills.map((skill) => {
+      if (s === skill.skill) {
+        skills.push(skill);
+      }
+    });
+  });
+  return <>{skillIcons(skills)}</>;
 }

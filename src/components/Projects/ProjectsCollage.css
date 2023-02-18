@@ -36,7 +36,6 @@
 
 .options-container {
   flex-direction: row;
-  
 }
 .filter-button {
   margin-right: 1vmin;
@@ -69,7 +68,6 @@
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  
 }
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
@@ -88,13 +86,35 @@
   background-color: rgba(0, 0, 0, 0.388);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  align-content: center;
+}
+.card-front {
+  padding: calc(50% - 100px) 0;
 }
 
-.card-front > img {
-  width: 100%;
+.card-front-details {
+  display: flex;
+  flex-direction: column;
+  padding: 2vmin 0;
+  background-color: rgba(0, 0, 0, 0.451);
+  height: 100%;
+}
+.card-front-details > h4 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #99ff99;
+}
+
+.card-front > .card-front-details > .skills-item {
   aspect-ratio: 1/1;
+  border-radius: 100%;
   object-fit: contain;
+  width: 100%;
+}
+.card-front > .card-front-details > .skills-item > img {
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  border: 1px solid white;
+  margin: 1vmin;
 }
 
 .card-back {
@@ -103,7 +123,8 @@
   transform: rotateY(180deg);
   justify-content: center;
 }
-.card-back > h4, .card-front > h4 {
+.card-back > h4,
+.card-front > h4 {
   font-size: 25px;
   font-weight: bold;
   color: #99ff99;
