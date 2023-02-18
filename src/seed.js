@@ -12,6 +12,12 @@ export const skills = [
   {
     type: "Languages",
     subtype: "Programming Language",
+    skill: "Typescript",
+    img: "https://i.imgur.com/HPlbDDQ.png",
+  },
+  {
+    type: "Languages",
+    subtype: "Programming Language",
     skill: "Java",
     img: "https://i.imgur.com/YJjKbt4.png",
   },
@@ -20,6 +26,12 @@ export const skills = [
     subtype: "Styling Language",
     skill: "CSS3",
     img: "https://i.imgur.com/jTNhsgg.png",
+  },
+  {
+    type: "Languages",
+    subtype: "Styling Framework",
+    skill: "Tailwind",
+    img: "https://i.imgur.com/0Q0d39h.png",
   },
   {
     type: "Languages",
@@ -44,6 +56,12 @@ export const skills = [
     subtype: "Styling Language",
     skill: "Bootstrap",
     img: "https://i.imgur.com/NsKingN.png",
+  },
+  {
+    type: "Technologies",
+    subtype: "Framework",
+    skill: "Angular",
+    img: "https://i.imgur.com/yldqsTl.jpg",
   },
   {
     type: "Technologies",
@@ -182,6 +200,31 @@ skills.map((skill) => {
 });
 
 export const projects = [
+  {
+    name: "E-Commerce Store",
+    img: "https://i.imgur.com/o0iFlPj.png",
+    pages: [
+      "https://i.imgur.com/o0iFlPj.png",
+      "https://i.imgur.com/nO3lRwS.png",
+      "https://i.imgur.com/MXacxPq.png",
+      "https://i.imgur.com/GxaoMBd.png",
+      "https://i.imgur.com/7Wq8OMz.png",
+    ],
+    summary:
+      "This is a test e-commerce website that uses Typescript and Angular. Stripe was integrated to process payments. Users can view and filter through a catalogue of products from Fakestore API, add and update their cart of purchases, and process payments.",
+
+    responsibilities: [
+      "Handled client-side scripting using Angular components.",
+      "Populated pages using Fakestore API.",
+      "Styled pages using Tailwind to create responsive UI/UX.",
+      "Integrated Stripe to process payments.",
+      "Configure server for post requests to Stripe API.",
+    ],
+    repo: "https://github.com/tungolra/angular-ts-ecommerce-example",
+    site: "[offline]",
+    skills: ["Tailwind", "Angular", "Typescript", "Node.js", "HTML5"],
+    type: "project",
+  },
   {
     name: "Movie Matters",
     img: "https://i.imgur.com/RjWIyoh.png",
