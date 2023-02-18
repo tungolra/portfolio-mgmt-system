@@ -8,13 +8,11 @@ import {
   filterProjectsBySkill,
 } from "../../utilities/helpers";
 
-
 export default function ProjectsCollage() {
   const [projectFilter, setProjectFilter] = useState({
     filter: featuredProjects(),
     header: "Featured",
   });
-
 
   const categoryButtonsByType = () => {
     const categories = [
@@ -33,8 +31,8 @@ export default function ProjectsCollage() {
     return (
       <div className="category-container">
         <h4>By Category</h4>
-          <div className="options-container">
-        {categories.map((c) => (
+        <div className="options-container">
+          {categories.map((c) => (
             <button
               className="filter-button"
               onClick={() =>
@@ -43,8 +41,8 @@ export default function ProjectsCollage() {
             >
               {c.category}
             </button>
-        ))}
-          </div>
+          ))}
+        </div>
       </div>
     );
   };
@@ -59,8 +57,8 @@ export default function ProjectsCollage() {
         {categories.map((c) => (
           <div className="category-container">
             <h4>{c.category}</h4>
-              <div className="options-container">
-            {c.data.map((s) => (
+            <div className="options-container">
+              {c.data.map((s) => (
                 <button
                   className="filter-button"
                   onClick={() =>
@@ -72,8 +70,8 @@ export default function ProjectsCollage() {
                 >
                   {s.skill}
                 </button>
-            ))}
-              </div>
+              ))}
+            </div>
           </div>
         ))}
       </>
@@ -90,7 +88,10 @@ export default function ProjectsCollage() {
       </div>
       <div className="projects-container">
         <div className="collage-container">
-          <h5>Viewing: {projectFilter.header}</h5>
+          <h5>
+            Viewing: {projectFilter.header} ({projectFilter.filter.length}/
+            {allProjects().length})
+          </h5>
           <div className="card-container">{projectFilter.filter}</div>
         </div>
       </div>
