@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./Skills.css";
-import { getSkillByLanguage, getSkillByTechnology } from "../../utilities/helpers";
-import { Modal, useMantineTheme } from "@mantine/core";
+import {
+  getSkillByLanguage,
+  getSkillByTechnology,
+} from "../../utilities/helpers";
 import { skillCards } from "../../library/skillCard";
 import {
   mapChildValues,
   mapChildKeys,
   generateColors,
-  countBySubtype
+  countBySubtype,
 } from "../../utilities/helpers";
 import {
   Chart as ChartJS,
@@ -17,8 +19,9 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
+} from "chart.js";
 import { Bar } from "react-chartjs-2";
+import axios from "axios";
 
 function HorizontalBarChart(...objects) {
   ChartJS.register(
@@ -64,7 +67,6 @@ function HorizontalBarChart(...objects) {
 }
 
 export default function Skills({ user }) {
-  // const [modalOpened, setModalOpened] = useState(false);
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
@@ -90,18 +92,18 @@ export default function Skills({ user }) {
           <div className="polar-area-chart">
             <h3>Programming Languages & Libraries </h3>
             {HorizontalBarChart(
-              seed.countBySubtype.ProgrammingLanguage,
-              seed.countBySubtype.MarkupLanguage,
-              seed.countBySubtype.StylingFramework,
-              seed.countBySubtype.StylingLanguage
+              countBySubtype.ProgrammingLanguage,
+              countBySubtype.MarkupLanguage,
+              countBySubtype.StylingFramework,
+              countBySubtype.StylingLanguage
             )}
           </div>
           <div className="polar-area-chart">
             <h3>Frameworks and Databases </h3>
             {HorizontalBarChart(
-              seed.countBySubtype.Framework,
-              seed.countBySubtype.Library,
-              seed.countBySubtype.Database
+              countBySubtype.Framework,
+              countBySubtype.Library,
+              countBySubtype.Database
             )}
           </div>
         </div>

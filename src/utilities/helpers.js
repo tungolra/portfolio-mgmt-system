@@ -1,5 +1,7 @@
 import { projectCard } from "../library/projectCard";
 import { skillCards } from "../library/skillCard";
+import { skillIcons } from "../library/skillIcons";
+import * as seed from "../seed.js";
 var projects = JSON.parse(localStorage.getItem('projects'));
 var skills = JSON.parse(localStorage.getItem('skills'));
 
@@ -12,7 +14,6 @@ projects?.map((project) => {
   }
   return featured;
 });
-import { skillIcons } from "../library/skillIcons";
 
 export const tooling = [];
 projects?.map((project) => {
@@ -41,7 +42,7 @@ export function filterProjects(obj, type, skill) {
       filteredProjects.push(project);
     }
   });
-  return filterResults.map((p) =>
+  return filteredProjects.map((p) =>
     projectCard(p.name, p.img, p.repo, p.site, p.summary, p.pages, p)
   );
 }
@@ -133,7 +134,7 @@ projects?.forEach((project) => {
 // Project Detail Page
 
 export function techUsed(obj) {
-  let skills = [];
+  let projectSkills = [];
   obj.skills.map((s) => {
     skills.map((skill) => {
       if (s === skill.skill) {
@@ -141,7 +142,7 @@ export function techUsed(obj) {
       }
     });
   });
-  return <>{skillCards("Technologies Used", skills)}</>;
+  return <>{skillCards("Technologies Used", projectSkills)}</>;
 }
 export function techIcons(obj) {
   let skills = [];
