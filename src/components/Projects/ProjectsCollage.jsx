@@ -89,7 +89,10 @@ export default function ProjectsCollage() {
       </div>
       <div className="projects-container">
         <div className="collage-container">
-          <h5>Viewing: {projectFilter.header}</h5>
+          <h5>
+            Viewing: {projectFilter.header} ({projectFilter.filter.length}/
+            {allProjects().length})
+          </h5>
           <div className="card-container">{projectFilter.filter}</div>
         </div>
       </div>

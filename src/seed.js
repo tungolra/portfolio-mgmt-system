@@ -11,9 +11,27 @@ export const skills = [
   },
   {
     type: "Languages",
+    subtype: "Programming Language",
+    skill: "Typescript",
+    img: "https://i.imgur.com/HPlbDDQ.png",
+  },
+  {
+    type: "Languages",
+    subtype: "Programming Language",
+    skill: "Java",
+    img: "https://i.imgur.com/YJjKbt4.png",
+  },
+  {
+    type: "Languages",
     subtype: "Styling Language",
     skill: "CSS3",
     img: "https://i.imgur.com/jTNhsgg.png",
+  },
+  {
+    type: "Languages",
+    subtype: "Styling Framework",
+    skill: "Tailwind",
+    img: "https://i.imgur.com/0Q0d39h.png",
   },
   {
     type: "Languages",
@@ -38,6 +56,24 @@ export const skills = [
     subtype: "Styling Language",
     skill: "Bootstrap",
     img: "https://i.imgur.com/NsKingN.png",
+  },
+  {
+    type: "Technologies",
+    subtype: "Framework",
+    skill: "Angular",
+    img: "https://i.imgur.com/yldqsTl.jpg",
+  },
+  {
+    type: "Technologies",
+    subtype: "Framework",
+    skill: "SpringBoot",
+    img: "https://i.imgur.com/fozEzEY.png",
+  },
+  {
+    type: "Technologies",
+    subtype: "Framework",
+    skill: "jQuery",
+    img: "https://i.imgur.com/dltSXkL.png",
   },
   {
     type: "Technologies",
@@ -121,7 +157,7 @@ export const skills = [
     type: "Technologies",
     subtype: "Framework",
     skill: "Express",
-    img: "https://i.imgur.com/jTNhsgg.png",
+    img: "https://i.imgur.com/awaqvUm.png",
   },
   {
     type: "Technologies",
@@ -132,6 +168,62 @@ export const skills = [
 ];
 
 export const projects = [
+  {
+    name: "E-Commerce Store",
+    img: "https://i.imgur.com/o0iFlPj.png",
+    pages: [
+      "https://i.imgur.com/o0iFlPj.png",
+      "https://i.imgur.com/nO3lRwS.png",
+      "https://i.imgur.com/MXacxPq.png",
+      "https://i.imgur.com/GxaoMBd.png",
+      "https://i.imgur.com/7Wq8OMz.png",
+    ],
+    summary:
+      "This is a test e-commerce website that uses Typescript and Angular. Stripe was integrated to process payments. Users can view and filter through a catalogue of products from Fakestore API, add and update their cart of purchases, and process payments.",
+
+    responsibilities: [
+      "Handled client-side scripting using Angular components.",
+      "Populated pages using Fakestore API.",
+      "Styled pages using Tailwind to create responsive UI/UX.",
+      "Integrated Stripe to process payments.",
+      "Configure server for post requests to Stripe API.",
+    ],
+    repo: "https://github.com/tungolra/angular-ts-ecommerce-example",
+    site: "[offline]",
+    skills: ["Tailwind", "Angular", "Typescript", "Node.js", "HTML5"],
+    type: "project",
+  },
+  {
+    name: "Movie Matters",
+    img: "https://i.imgur.com/RjWIyoh.png",
+    pages: [
+      "https://i.imgur.com/RjWIyoh.png",
+      "https://i.imgur.com/JSc7139.png",
+      "https://i.imgur.com/BqtcDx6.png",
+    ],
+    summary:
+      "Movie Matters is a movie review web application where users can view the latest movies and watch their trailers. Users can input reviews for each movie.",
+    responsibilities: [
+      "Frontend Development with React",
+      "Backend Development with Spring Boot and Java",
+    ],
+    repo: "https://github.com/tungolra/spring-react-movies",
+    site: "[offline]",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "Material UI",
+      "Bootstrap",
+      "MongoDB",
+      "SpringBoot",
+      "React",
+      "Java",
+      "Node.js",
+      "Javascript",
+      "Maven",
+    ],
+    type: "project",
+  },
   {
     name: "Wealthy-Mi",
     img: "https://i.imgur.com/SWCYvDG.gif",
@@ -381,6 +473,42 @@ export const projects = [
     site: "[offline]",
     skills: ["CSS3", "HTML5"],
     type: "tooling",
+  },
+  {
+    name: "Spring Boot OAuth2",
+    img: tool,
+    pages: [],
+    summary:
+      "Starter code for integrating social logins using GitHub and Google OAuth2.0 as authentication providers. jQuery is used on the front end, Bootstrap for minimal styling.",
+    responsibilities: [],
+    repo: "https://github.com/tungolra/springboot-social-auth",
+    site: "[offline]",
+    skills: ["Java", "SpringBoot", "Maven", "Bootstrap", "jQuery", "HTML5"],
+    type: "tooling",
+  },
+  {
+    name: "Spring Boot Native Authentication",
+    img: tool,
+    pages: [],
+    summary:
+      "Starter code for integrating Spring Security to secure a web application.",
+    responsibilities: [],
+    repo: "https://github.com/tungolra/springboot-auth-tooling",
+    site: "[offline]",
+    skills: ["Java", "SpringBoot", "Maven", "HTML5"],
+    type: "tooling",
+  },
+  {
+    name: "Getting Started With Spring Boot",
+    img: stock,
+    pages: [],
+    summary:
+      "First Java Springboot application creating full CRUD functionality using PostgreSQL database and held in Docker. ",
+    responsibilities: [],
+    repo: "https://github.com/tungolra/spring-boot-example",
+    site: "[offline]",
+    skills: ["Java", "PostgreSQL", "SpringBoot"],
+    type: "lab",
   },
   {
     name: "JS Tic-Tac-Toe",

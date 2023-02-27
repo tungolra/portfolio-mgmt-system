@@ -11,16 +11,24 @@ import {
 } from "../../utilities/helpers";
 import {
   Chart as ChartJS,
-  RadialLinearScale,
-  ArcElement,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
   Tooltip,
   Legend,
-} from "chart.js";
-import { PolarArea } from "react-chartjs-2";
-import axios from "axios";
+} from 'chart.js';
+import { Bar } from "react-chartjs-2";
 
-function PolarAreaChart(...objects) {
-  ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
+function HorizontalBarChart(...objects) {
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+  );
 
   const data = {
     labels: mapChildKeys(...objects),
@@ -34,9 +42,23 @@ function PolarAreaChart(...objects) {
     ],
   };
 
+  const options = {
+    indexAxis: "y",
+    scales: {
+      x: {
+        beginAtZero: true,
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  };
+
   return (
     <div>
-      <PolarArea data={data} />
+      <Bar data={data} options={options} />
     </div>
   );
 }
@@ -67,19 +89,19 @@ export default function Skills({ user }) {
         <div className="chart-container">
           <div className="polar-area-chart">
             <h3>Programming Languages & Libraries </h3>
-            {PolarAreaChart(
-              countBySubtype.ProgrammingLanguage,
-              countBySubtype.MarkupLanguage,
-              countBySubtype.StylingFramework,
-              countBySubtype.StylingLanguage
+            {HorizontalBarChart(
+              seed.countBySubtype.ProgrammingLanguage,
+              seed.countBySubtype.MarkupLanguage,
+              seed.countBySubtype.StylingFramework,
+              seed.countBySubtype.StylingLanguage
             )}
           </div>
           <div className="polar-area-chart">
             <h3>Frameworks and Databases </h3>
-            {PolarAreaChart(
-              countBySubtype.Framework,
-              countBySubtype.Library,
-              countBySubtype.Database
+            {HorizontalBarChart(
+              seed.countBySubtype.Framework,
+              seed.countBySubtype.Library,
+              seed.countBySubtype.Database
             )}
           </div>
         </div>
