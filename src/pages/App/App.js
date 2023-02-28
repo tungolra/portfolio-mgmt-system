@@ -7,7 +7,7 @@ import * as seed from "../../seed.js";
 import ProjectDetailPage from "../ProjectDetailPage/ProjectDetailPage";
 import AllWorkPage from "../AllWorkPage/AllWorkPage";
 import { getUser } from "../../utilities/users-service";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import LogInForm from "../../components/LogInForm/LogInForm";
 import NewEntry from "../NewEntry/NewEntry";
 import ResumePage from "../ResumePage/ResumePage";
@@ -18,7 +18,7 @@ import axios from "axios";
 
 function App() {
   const [user, setUser] = useState(getUser());
-  
+
   useEffect(() => {
     const fetchProjectData = async () => {
       try {
