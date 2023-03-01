@@ -270,8 +270,8 @@ export const projects = [
       "Contribute to frontend development of UI/UX features using Bootstrap, CSS/SCSS for a responsive, modern web page.",
       "Collaborated to create sensible Agile workflows, weekly SCRUMs, and architect a CI/CD pipeline managed using Git/GitHub.",
     ],
-    repo: "https://github.com/tungolra/mern-project",
-    site: "https://chatterbox-sei-55.herokuapp.com/",
+    repo: "https://github.com/tungolra/wealthy-mi",
+    site: "https://wealthy-mi.herokuapp.com/",
     skills: [
       "HTML5",
       "CSS3",
@@ -341,7 +341,7 @@ export const projects = [
       "Styled webpage using pure CSS.",
       "Completed integration testing.",
     ],
-    repo: "https://github.com/tungolra/portfolio-mgmt-system/tree/deployment",
+    repo: "https://github.com/tungolra/portfolio-mgmt-system/",
     site: "https://ralphtungol.herokuapp.com/",
     skills: [
       "HTML5",
